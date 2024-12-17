@@ -1,7 +1,8 @@
 using UnityEngine;
 
-namespace Mocchi.Entity.SO
+namespace Mochi.Entity.SO
 {
+    [CreateAssetMenu(fileName = "Enemy", menuName = "SO/Enemy")]
     public class EnemySO : ScriptableObject
     {
         public Sprite sprite;
