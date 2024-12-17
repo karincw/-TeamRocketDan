@@ -2,8 +2,10 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Tower
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -11,10 +13,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Tower
+  - Enemy
+  - Map
+  - Drag
   - 
   - 
   - 
@@ -41,3 +43,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Map
+    uniqueID: 300388647
+    locked: 0
+  - name: Tower
+    uniqueID: 1573341497
+    locked: 0
+  - name: Enemy
+    uniqueID: 2034262205
+    locked: 0
+  - name: Effect
+    uniqueID: 2221828833
+    locked: 0
+  - name: UI
+    uniqueID: 1821724213
+    locked: 0
+  m_RenderingLayers:
+  - Default

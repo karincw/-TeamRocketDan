@@ -8,12 +8,13 @@ namespace Karin
     }
 
     [CreateAssetMenu(menuName = "SO/Tower/MochiSO")]
-    public class MochiSO : ScriptableObject
+    public class MochiDataSO : ScriptableObject
     {
         public int damage;
         public int attackRange;
         public int attackCooldown;
         [TextArea(1, 3)]
         public string description;
+        public Sprite image;
     }
 }
