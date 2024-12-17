@@ -8,6 +8,9 @@ using static Controls;
 [CreateAssetMenu(menuName = "SO/InputReader")]
 public class InputReaderSO : ScriptableObject, IPlayerActions, IUIActions
 {
+
+    public event Action LeftClickEvent;
+
     private Controls _controls;
     public Controls Controls => _controls;
 
@@ -30,6 +33,7 @@ public class InputReaderSO : ScriptableObject, IPlayerActions, IUIActions
         _controls.UI.Disable();
     }
 
+    #region UIActions
     public void OnNavigate(InputAction.CallbackContext context)
     {
 
@@ -78,5 +82,15 @@ public class InputReaderSO : ScriptableObject, IPlayerActions, IUIActions
     public void OnTrackedDeviceOrientation(InputAction.CallbackContext context)
     {
 
+    }
+
+#endregion 
+
+    public void OnLeftClick(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            LeftClickEvent?.Invoke();
+        }
     }
 }
