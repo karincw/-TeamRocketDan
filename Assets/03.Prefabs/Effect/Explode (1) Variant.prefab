@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 15058286792556228, guid: 1c55d4b1054e98a4ba3101b3058b72e1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ef89dd1d25cd9064a9be478d7d7987c9, type: 2}
     - target: {fileID: 2556290081519530633, guid: 1c55d4b1054e98a4ba3101b3058b72e1, type: 3}
       propertyPath: m_Name
       value: Explode (1) Variant

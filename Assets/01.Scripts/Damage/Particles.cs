@@ -33,7 +33,7 @@ namespace Leo.Damage
 
         public void SetColor(Color color)
         {
-            _material.color = color;
+            _material.SetColor("_MainColor", color);
         }
     }
 }
