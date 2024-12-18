@@ -1,4 +1,4 @@
-﻿namespace _01.Scripts
+﻿namespace Mochi.Interface
 {
     public interface IStunable
     {
