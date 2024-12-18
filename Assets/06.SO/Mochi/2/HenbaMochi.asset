@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e24b4ab8ec2b4a478d57efc7de72c16, type: 3}
   m_Name: HenbaMochi
   m_EditorClassIdentifier: 
-  damage: 0
-  attackRange: 0
-  attackCooldown: 0
-  description: 
   image: {fileID: 21300000, guid: 76f3e4e700dd3e041927aaa57419ed8f, type: 3}
   ranking: 2
+  attackData:
+    damage: 1
+    attackRange: 2
+    attackCooldown: 1
+    attackEffect: {fileID: 7729544460333085849, guid: 8c459a3edd36fa641ba272708d49b07f, type: 3}
+    attackColor: {r: 0.6792453, g: 0.23253961, b: 0.12602346, a: 1}
+    isStarlite: 0
+    count: 0
+    starLiteImage: {fileID: 0}

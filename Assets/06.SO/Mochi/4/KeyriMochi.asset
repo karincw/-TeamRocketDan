@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e24b4ab8ec2b4a478d57efc7de72c16, type: 3}
   m_Name: KeyriMochi
   m_EditorClassIdentifier: 
-  damage: 0
-  attackRange: 0
-  attackCooldown: 0
-  description: 
   image: {fileID: 21300000, guid: dcce092505a4c0044878c177356c28eb, type: 3}
   ranking: 4
+  attackData:
+    damage: 1
+    attackRange: 2
+    attackCooldown: 1
+    attackEffect: {fileID: 4023789465206027091, guid: 9430c26f1d145614d98b0ccf1a9af5e6, type: 3}
+    attackColor: {r: 0.7686275, g: 0.74509805, b: 0.70980394, a: 1}
+    isStarlite: 0
+    count: 0
+    starLiteImage: {fileID: 0}
