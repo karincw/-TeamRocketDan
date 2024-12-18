@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e24b4ab8ec2b4a478d57efc7de72c16, type: 3}
   m_Name: MatchaMochi
   m_EditorClassIdentifier: 
-  damage: 1
-  attackRange: 2
-  attackCooldown: 1
-  description: 
   image: {fileID: 21300000, guid: af3c03757215d214c80e3478bd5d3534, type: 3}
   ranking: 1
+  attackData:
+    damage: 1
+    attackRange: 2
+    attackCooldown: 1
+    attackEffect: {fileID: 7729544460333085849, guid: 8c459a3edd36fa641ba272708d49b07f, type: 3}
+    attackColor: {r: 0.04242312, g: 0.24528301, b: 0.0444079, a: 1}
+    isStarlite: 0
+    count: 0
+    starLiteImage: {fileID: 0}
