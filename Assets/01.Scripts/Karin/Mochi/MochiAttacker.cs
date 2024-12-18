@@ -16,18 +16,6 @@ namespace Karin
         {
             base.Awake();
             _collider = GetComponent<CircleCollider2D>();
-
-
-            var attackData = _owner.MochiData.attackData;
-            if (attackData.isStarlite)
-            {
-                var effect = Instantiate(attackData.attackEffect, transform.position, Quaternion.identity);
-                if (effect is CircleSpinAttacker spin)
-                {
-                    spin.SetData(attackData.count, attackData.attackRange);
-                    spin.Play();
-                }
-            }
         }
 
         private void Update()
@@ -54,6 +42,18 @@ namespace Karin
         public override void SetUp()
         {
             _collider.radius = _owner.MochiData.attackData.attackRange;
+
+            var attackData = _owner.MochiData.attackData;
+            if (attackData.isStarlite)
+            {
+                var effect = Instantiate(attackData.attackEffect, transform);
+                if (effect is CircleSpinAttacker spin)
+                {
+                    spin.SetData(attackData.attackRange, attackData.count);
+                    spin.Play();
+                }
+            }
+
         }
 
         private void OnTriggerEnter2D(Collider2D collision)

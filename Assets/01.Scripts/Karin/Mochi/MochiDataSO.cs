@@ -31,9 +31,10 @@ namespace Karin
         public int attackRange;
         public int attackCooldown;
         public MonoBehaviour attackEffect;
-        [Header("StarLite")]
+        [Space, Header("StarLite")]
         public bool isStarlite;
         public int count;
+        public Sprite starLiteImage;
     }
 
 }

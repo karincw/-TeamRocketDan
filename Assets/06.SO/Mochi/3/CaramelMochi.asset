@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e24b4ab8ec2b4a478d57efc7de72c16, type: 3}
   m_Name: CaramelMochi
   m_EditorClassIdentifier: 
-  damage: 0
-  attackRange: 0
-  attackCooldown: 0
-  description: 
   image: {fileID: 21300000, guid: 1857637f55d7dd04187b22dad8ec9dcf, type: 3}
   ranking: 3
+  attackData:
+    damage: 3
+    attackRange: 3
+    attackCooldown: 1
+    attackEffect: {fileID: 6061211210597483990, guid: 138ed5eda92d2a14f98119a6d708b0fe, type: 3}
+    isStarlite: 1
+    count: 3
