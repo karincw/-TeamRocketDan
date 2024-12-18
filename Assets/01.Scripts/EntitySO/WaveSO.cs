@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using JSY;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Leo.Entity.SO
@@ -6,8 +7,8 @@ namespace Leo.Entity.SO
     [CreateAssetMenu(fileName = "Wave", menuName = "SO/Wave")]
     public class WaveSO : ScriptableObject
     {
-        public List<EnemySO> enemies;
+        public List<Enemy> enemies;
         public float spawnDelay;
-        public float waveDelay;
+        public int waveDelay;
     }
 }
