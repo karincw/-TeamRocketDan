@@ -723,9 +723,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: MochiBlast
       objectReference: {fileID: 0}
+    - target: {fileID: 7317735195811543085, guid: a9b8d7c01f726704090d5e6e1879f06a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d90cd433f14ee644ab91b1fa4936a918, type: 2}
     - target: {fileID: 8141952641938862390, guid: a9b8d7c01f726704090d5e6e1879f06a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
