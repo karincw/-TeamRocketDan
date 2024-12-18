@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Mocchi.Entity.SO
+namespace Mochi.Entity.SO
 {
-    [CreateAssetMenu(fileName = "Wave", menuName = "EntitySO/Wave")]
+    [CreateAssetMenu(fileName = "Wave", menuName = "SO/Wave")]
     public class WaveSO : ScriptableObject
     {
         public List<EnemySO> enemies;
