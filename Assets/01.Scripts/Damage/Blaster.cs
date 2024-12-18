@@ -3,7 +3,7 @@ using Leo.Core;
 using Leo.Interface;
 using UnityEngine;
 
-namespace Leo.Effect
+namespace Leo.Damage
 {
     public class Blaster : MonoBehaviour
     {
