@@ -6,15 +6,16 @@ namespace JSY.Boss
     public class Boss : Enemy
     {
         [SerializeField] private LayerMask _whatIsMochi;
-        [SerializeField] private float _stunTime = 1f;
+        [SerializeField] public float _stunTime = 1f;
         [SerializeField] private BossSkillSO _bossSkill;
         
         private Collider2D[] _colliders = new Collider2D[1];
         public bool IsSkillUse { get; set; }
 
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             _bossSkill = Instantiate(_bossSkill);
             _bossSkill.SetOwner(this);
             StartCoroutine(FindMochi());

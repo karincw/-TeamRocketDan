@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using DG.Tweening;
 using Leo.Damage;
 using Leo.Interface;
@@ -22,19 +23,30 @@ namespace Leo.Animation
             _material.SetColor("_MainColor", color);
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                StartSlash();
+            }
+        }
+
         [ContextMenu("StartSlash")]
         public void StartSlash()
         {
             transform.DOKill();
-            transform.DORotate(new Vector3(0, 0, -90), 0f);
 
-            Sequence sequence = DOTween.Sequence()
-                .Append(transform.DORotate(new Vector3(0, 0, -90), 0.2f))
-                .Join(transform.DORotate(new Vector3(0, 0, 0), 0.2f))
-                .Join(transform.DORotate(new Vector3(0, 0, 90), 0.2f))
-                .SetEase(Ease.Linear)
-                .OnComplete(() => Destroy(gameObject));
+            StartCoroutine(SlashEffect());
+        }
 
+        private IEnumerator SlashEffect()
+        {
+            _visual.SetActive(false);
+            _visual.transform.localPosition = new Vector3(1f, 1f);
+            yield return null;
+            _visual.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+            _visual.transform.localPosition = new Vector3(-1f, -1f);
         }
 
 #if UNITY_EDITOR

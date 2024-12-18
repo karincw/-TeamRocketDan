@@ -1,5 +1,3 @@
-using System;
-using Leo.Damage;
 using Leo.Interface;
 using UnityEngine;
 
