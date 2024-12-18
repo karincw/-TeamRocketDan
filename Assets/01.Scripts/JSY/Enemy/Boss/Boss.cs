@@ -13,8 +13,9 @@ namespace JSY.Boss
         public bool IsSkillUse { get; set; }
 
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             _bossSkill = Instantiate(_bossSkill);
             _bossSkill.SetOwner(this);
             StartCoroutine(FindMochi());
