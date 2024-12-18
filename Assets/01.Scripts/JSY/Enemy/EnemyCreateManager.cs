@@ -1,28 +1,34 @@
-using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace JSY
 {
     public class EnemyCreateManager : MonoBehaviour
     {
         [SerializeField] private Transform enemyParent;
-        [SerializeField] private Enemy enemyPrefab;
         [SerializeField] private List<MovePoint> movePoints = new List<MovePoint>();
 
-        private void Update()
+        private void Awake()
         {
-            if(Keyboard.current.spaceKey.wasPressedThisFrame)
-            {
-                CreateEnemy();
-            }
+            WaveManager.Instance.OnStartTurnEvent += HandleStartTurnEvent;
         }
 
-        private void CreateEnemy()
+        private void HandleStartTurnEvent()
         {
-            Enemy obj = Instantiate(enemyPrefab, movePoints[0].transform.position, Quaternion.identity, enemyParent);
-            obj.SetMovePoints(movePoints);
+            StartCoroutine(CreateEnemy());
+        }
+
+        private IEnumerator CreateEnemy()
+        {
+            var coolTime = new WaitForSeconds(WaveManager.Instance.GetWave().spawnDelay);
+            foreach (Enemy enemy in WaveManager.Instance.GetWave().enemies)
+            {
+                Enemy obj = Instantiate(enemy, movePoints[0].transform.position, Quaternion.identity, enemyParent);
+                obj.SetMovePoints(movePoints);
+                yield return coolTime;
+            }
+            WaveManager.Instance.TurnEnd();
         }
     }
 }
