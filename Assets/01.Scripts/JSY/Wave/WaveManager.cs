@@ -11,8 +11,11 @@ public class WaveManager : MonoSingleton<WaveManager>
 
     [SerializeField] private List<WaveSO> waves = new List<WaveSO>();
     private int waveCnt = 0;
+    protected override void Awake()
+    {
+    }
 
-    private void Awake()
+    private void Start()
     {
         OnChangeTurnEvent?.Invoke();
     }
@@ -31,6 +34,5 @@ public class WaveManager : MonoSingleton<WaveManager>
     public void InvokeStartTurn()
     {
         OnStartTurnEvent?.Invoke();
-        Debug.Log("¤±¤¤¤·¤©");
     }
 }

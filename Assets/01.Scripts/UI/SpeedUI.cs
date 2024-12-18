@@ -1,16 +1,21 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum Speed : int
+{
+    normalSpeed = 1,
+    twoSpeed = 2,
+    fourSpeed = 4,
+}
+
 namespace JSY
 {
     public class SpeedUI : MonoBehaviour
     {
         [SerializeField] private Sprite[] speedIcon;
+        private Speed speed = Speed.normalSpeed;
 
         private Image iconImage;
-
-        private float doubleSpeed = 2f, normalSpeed = 1f;
-        private bool isDouble = false;
 
         private void Awake()
         {
@@ -19,10 +24,11 @@ namespace JSY
 
         public void ChangeSpeed()
         {
-            isDouble = !isDouble;
-
-            iconImage.sprite = isDouble ? speedIcon[1] : speedIcon[0];
-            Time.timeScale = isDouble ? doubleSpeed : normalSpeed;
+            Debug.Log((int)speed);
+            speed = (Speed)((int)speed * 2);
+            if ((int)speed == 8) speed = Speed.normalSpeed;
+            iconImage.sprite = speedIcon[(int)speed];
+            Time.timeScale =  (int)speed;
         }
     }
 }

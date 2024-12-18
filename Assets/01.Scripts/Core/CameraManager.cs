@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Leo.Core
 {
     [RequireComponent(typeof(CinemachineImpulseSource))]
-    public class CameraManager : MonoSingleton<CameraManager>
+    public class CameraManager : MonoSingleton<CameraManager> 
     {
         private CinemachineImpulseSource _impulseSource;
         private bool _isShaking = false;

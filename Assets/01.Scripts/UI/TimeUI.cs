@@ -3,7 +3,6 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using DG.Tweening;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class TimeUI : MonoBehaviour
@@ -39,6 +38,7 @@ public class TimeUI : MonoBehaviour
         }
         rectTrm.DOAnchorPosY(0, 0.5f);
         WaveManager.Instance.InvokeStartTurn();
+        skipButton.gameObject.SetActive(false);
     }
 
     public void SkipWaveCoolTime()
