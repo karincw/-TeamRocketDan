@@ -4,7 +4,7 @@ namespace Karin
 {
     public enum TowerRanking : int
     {
-        zero, one, two, three, four, five
+        zero = 0, one, two, three, four, five
     }
 
     [CreateAssetMenu(menuName = "SO/Tower/MochiSO")]
