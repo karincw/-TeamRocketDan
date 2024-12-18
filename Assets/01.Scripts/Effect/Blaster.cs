@@ -13,7 +13,9 @@ namespace Leo.Effect
         
         public void SetTarget(Transform target)
         {
-            transform.right = target.position - transform.position;
+            Vector3 direction = target.position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
         }
         
         public void Shot()
@@ -25,8 +27,8 @@ namespace Leo.Effect
             Sequence sequence = DOTween.Sequence();
             sequence.Append(transform.DOScaleX(5, 0.5f))
                 .AppendInterval(_duration)
-                .OnComplete(() => _visual.SetActive(false));
-            CameraManager.Instance.ShakeCamera(0.1f, _duration);
+                .OnComplete(() => Destroy(gameObject));
+            CameraManager.Instance.ShakeCamera(0.05f, _duration);
         }
 
         private void OnTriggerEnter2D(Collider2D other)

@@ -6,13 +6,13 @@ namespace JSY
 {
     public class Enemy : MonoBehaviour
     {
-        private List<MovePoint> movePoints = new List<MovePoint>();
+        [SerializeField]private List<MovePoint> movePoints = new List<MovePoint>();
         private int value;
 
         private bool isTeleport;
         public void SetMovePoints(List<MovePoint> movePoints) => this.movePoints = movePoints;
 
-        private void Update()
+        protected virtual void Update()
         {
             if(Vector2.Distance(transform.position, movePoints[value].transform.position) <= 0.01f)
             {
