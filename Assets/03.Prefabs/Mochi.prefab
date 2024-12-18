@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vaildPosition: {x: 0, y: 0}
   _collisionCollider: {fileID: 4129908802999281165}
+  isDrag: 0
   _mochiData: {fileID: 11400000, guid: 3a635fdd7ec78ad46a5b6391ed8ec1d2, type: 2}
 --- !u!50 &4830257727826692993
 Rigidbody2D:

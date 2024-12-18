@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Karin
@@ -7,9 +8,32 @@ namespace Karin
         [SerializeField] protected Vector2 vaildPosition;
         [SerializeField] protected Collider2D _collisionCollider;
 
+        [HideInInspector] public bool isDrag;
+        private List<Collider2D> results = new();
+
         public void ColliderEnable(bool state)
         {
-            _collisionCollider.enabled = state;
+            _collisionCollider.isTrigger = state;
+        }
+
+        protected virtual void Update()
+        {
+            results.Clear();
+            _collisionCollider.Overlap(results);
+            if (results.Count > 0)
+            {
+                vaildPosition = transform.position;
+            }
+        }
+
+        public void VaildCheck()
+        {
+            Vector2 v = (Vector2)transform.position - vaildPosition;
+            bool vaild = !(v.magnitude > 1);
+            if (!vaild)
+            {
+                transform.position = vaildPosition;
+            }
         }
     }
 }
