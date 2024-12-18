@@ -7,17 +7,11 @@ namespace JSY.Boss
     {
         [SerializeField] private LayerMask _whatIsMochi;
         [SerializeField] private float _stunTime = 1f;
+        [SerializeField] private BossSkillSO _bossSkill;
         
         private void TakeSkill(Transform target)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, target.position - transform.position, 10f, _whatIsMochi);
-            if (hit.collider != null)
-            {
-                if (hit.collider.TryGetComponent(out IStunable stunable))
-                {
-                    stunable.Stun(_stunTime);
-                }
-            }
+            _bossSkill.UseSkill(target);
         }
     }
 }
