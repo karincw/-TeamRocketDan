@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Karin
 {
-    public enum TowerRanking
+    public enum TowerRanking : int
     {
         zero, one, two, three, four, five
     }
@@ -16,5 +16,6 @@ namespace Karin
         [TextArea(1, 3)]
         public string description;
         public Sprite image;
+        public TowerRanking ranking;
     }
 }
