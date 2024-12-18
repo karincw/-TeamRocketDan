@@ -24,6 +24,7 @@ namespace JSY
             var coolTime = new WaitForSeconds(WaveManager.Instance.GetWave().spawnDelay);
             foreach (Enemy enemy in WaveManager.Instance.GetWave().enemies)
             {
+                EnemyCountUI.Instance.UpdateCount(1);
                 Enemy obj = Instantiate(enemy, movePoints[0].transform.position, Quaternion.identity, enemyParent);
                 obj.SetMovePoints(movePoints);
                 yield return coolTime;
