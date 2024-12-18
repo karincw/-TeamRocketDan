@@ -1122,7 +1122,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "\uB9DB\uC788\uAE30\uB85C \uC720\uBA85\uD55C\n\uCD08\uCF54 \uC8FD\uC21C
+    \uACFC\uC790\uC785\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -1157,7 +1158,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1258,7 +1259,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "(\uC18C\uD658) \uC704\uC131 1\uAC1C\uB97C \uC18C\uD658\uD558\uC5EC\n\uC801\uC744
+    \uACF5\uACA9\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -1293,7 +1295,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1880,7 +1882,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "\uD608\uB2F9 \uD3ED\uD0C4 \uCEF5\uCF00\uC774\uD06C\uC785\uB2C8\uB2E4.\n\uBA4B\uC9C0\uAC8C
+    \uB808\uC774\uC800\uB97C \uC3E9\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -1915,7 +1918,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2670,10 +2673,10 @@ RectTransform:
   - {fileID: 713695311}
   m_Father: {fileID: 2106415474}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 90, y: -50}
+  m_SizeDelta: {x: 180, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &219922183
 MonoBehaviour:
@@ -3153,7 +3156,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "(\uB2E8\uC77C) \uC801\uC744 \uBCA0\uBA70 \uACF5\uACA9\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -3188,7 +3191,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3442,7 +3445,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "\uC5C4\uCCAD\uB098\uAC8C \uB2EC \uAC83 \uAC19\uC740\n\uB3C4\uB11B\uC785\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -3477,7 +3480,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4161,7 +4164,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "\uC774\uAC74 \uD398\uB808\uB85C\uB85C\uC250\uAC00 \uC544\uB2D9\uB2C8\uB2E4.\n\uD398\uB85C\uB85C\uC250
+    \uC6B4\uC11D\uC744 \uB5A8\uC5B4\uB728\uB9BD\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -4196,7 +4200,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4372,7 +4376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "(\uB2E8\uC77C) \uC801\uC744 \uBCA0\uBA70 \uACF5\uACA9\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -4407,7 +4411,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -5844,7 +5848,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "\uCD08\uCF5C\uB9BF \uD06C\uB9BC\uC774 \uD758\uB7EC\uB118\uCE58\uB294\n\uC640\uD50C\uC785\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -5879,7 +5883,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -6946,7 +6950,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &566633995
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6956,7 +6960,7 @@ RectTransform:
   m_GameObject: {fileID: 566633994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 548945073}
@@ -7090,7 +7094,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "\uB6B1\uB6B1\uD55C \uB9C8\uCE74\uB871\uC740 \uC544\uB2D9\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -7125,7 +7129,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -7515,7 +7519,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "\uCC9C\uC548\uC5D0\uC11C \uD314 \uAC83 \uAC19\uC740\n\uD638\uB450 \uACFC\uC790\uC785\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -7550,7 +7554,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -8493,7 +8497,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "\uAD7D\uACE0 \uC2F6\uAC8C \uC0DD\uAE34\n\uB9C8\uC2DC\uBA5C\uB85C\uC785\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -8528,7 +8532,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -9088,7 +9092,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "(\uC18C\uD658) \uC704\uC131 3\uAC1C\uB97C \uC18C\uD658\uD558\uC5EC \uC801\uC744
+    \uACF5\uACA9\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -9123,7 +9128,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -9277,10 +9282,10 @@ RectTransform:
   - {fileID: 842029747}
   m_Father: {fileID: 1826027245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 875, y: -95}
+  m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &742508063
 MonoBehaviour:
@@ -9611,10 +9616,10 @@ RectTransform:
   - {fileID: 1428391758}
   m_Father: {fileID: 2106415474}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 270, y: -50}
+  m_SizeDelta: {x: 180, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &779924837
 MonoBehaviour:
@@ -10279,7 +10284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "(\uB2E8\uC77C) \uC801\uC744 \uBCA0\uBA70 \uACF5\uACA9\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -10314,7 +10319,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -10392,10 +10397,10 @@ RectTransform:
   - {fileID: 1497882720}
   m_Father: {fileID: 2106415474}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 630, y: -50}
+  m_SizeDelta: {x: 180, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &837296584
 MonoBehaviour:
@@ -10536,7 +10541,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "(\uBC94\uC704) \uD3ED\uBC1C\uD558\uBA70 \uC8FC\uBCC0\uC5D0 \uC788\uB294
+    \uC801\uC744 \uACF5\uACA9\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -10571,7 +10577,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -10867,7 +10873,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "\uAC89\uC740 \uBC14\uC0AD\uD558\uACE0 \uC18D\uC740 \uCD09\uCD09\uD55C\n\uAE4C\uB20C\uB808\uC785\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -10902,7 +10908,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -11078,7 +11084,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "(\uBC94\uC704) \uC8FC\uBCC0\uC5D0 \uC788\uB294 \uC801\uC744 \uACF5\uACA9\uD558\uACE0,
+    \uC18D\uB3C4\uB97C \uAC10\uC18C\uC2DC\uD0B5\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -11113,7 +11120,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -11447,7 +11454,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "(\uB2E8\uC77C) \uD3ED\uBC1C\uD558\uBA70 \uC801\uC744\n\uACF5\uACA9\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -11482,7 +11489,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -12681,7 +12688,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "(\uBC94\uC704) \uD3ED\uBC1C\uD558\uBA70 \uC8FC\uBCC0\uC5D0 \uC788\uB294
+    \uC801\uC744 \uACF5\uACA9\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -12716,7 +12724,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -15739,10 +15747,10 @@ RectTransform:
   - {fileID: 908662270}
   m_Father: {fileID: 1826027245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 325, y: -265}
+  m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1279797309
 MonoBehaviour:
@@ -16504,7 +16512,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "(\uBC94\uC704) \uD3ED\uBC1C\uD558\uBA70 \uC8FC\uBCC0\uC5D0 \uC788\uB294
+    \uC801\uC744 \uACF5\uACA9\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -16539,7 +16548,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -16634,6 +16643,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   _mergeRadius: 0.1
+  _mergeEffect: {fileID: 0}
   _disableMergeDeleta: 0
 --- !u!1 &1339584315
 GameObject:
@@ -16663,7 +16673,7 @@ RectTransform:
   m_GameObject: {fileID: 1339584315}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1582647799}
@@ -16948,7 +16958,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "\uAD70\uCE68\uC774 \uB3C4\uB294 \uD478\uB529\uC785\uB2C8\uB2E4.\n\uB54C\uB54C\uB85C
+    \uBC29\uC5B4\uB825\uC774 \uC99D\uAC00\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -16983,7 +16994,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -17084,7 +17095,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "\uC548\uC5D0\uC11C \uB2EC\uB2EC\uD55C \uAFC0\uC774\n\uD750\uB97C \uAC83
+    \uAC19\uC740 \uAFC0\uB5A1\uC785\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -17119,7 +17131,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -17220,7 +17232,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "\uAE68\uAC00 \uB4E4\uC5B4\uC788\uB294 \uC1A1\uD3B8\uC785\uB2C8\uB2E4.\n\uAE68\uB97C
+    \uBFCC\uB9BD\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -17255,7 +17268,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -17921,7 +17934,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "(\uBC94\uC704) \uD3ED\uBC1C\uD558\uBA70 \uC8FC\uBCC0\uC5D0 \uC788\uB294
+    \uC801\uC744 \uACF5\uACA9\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -17956,7 +17970,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -19364,7 +19378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "\uB538\uAE30\uAC00 \uC62C\uB77C\uAC00\uC788\uB294\n\uD0C0\uB974\uD2B8\uC785\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -19399,7 +19413,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -19500,7 +19514,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "(\uB2E8\uC77C) \uC801\uC744 \uBCA0\uBA70 \uACF5\uACA9\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -19535,7 +19549,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -19613,10 +19627,10 @@ RectTransform:
   - {fileID: 227007626}
   m_Father: {fileID: 2106415474}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 810, y: -50}
+  m_SizeDelta: {x: 180, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1562368868
 MonoBehaviour:
@@ -20107,10 +20121,10 @@ RectTransform:
   - {fileID: 100441563}
   m_Father: {fileID: 1826027245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 325, y: -435}
+  m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600026316
 MonoBehaviour:
@@ -20591,10 +20605,10 @@ RectTransform:
   - {fileID: 1043145399}
   m_Father: {fileID: 1826027245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 875, y: -265}
+  m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1632019443
 MonoBehaviour:
@@ -20691,7 +20705,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "\uBCD1\uC544\uB9AC\uCC98\uB7FC \uC0DD\uAE34 \uB9CC\uC96C\uC785\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -20726,7 +20740,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -20805,10 +20819,10 @@ RectTransform:
   - {fileID: 1561085959}
   m_Father: {fileID: 1826027245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 325, y: -95}
+  m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1654966733
 MonoBehaviour:
@@ -21041,7 +21055,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "\uACE0\uC18C\uD558\uACE0 \uACE0\uC18C\uD55C \uC57D\uACFC\uC785\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -21076,7 +21090,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -24268,7 +24282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "(\uB2E8\uC77C) \uD3ED\uBC1C\uD558\uBA70 \uC801\uC744\n\uACF5\uACA9\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -24303,7 +24317,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -24898,10 +24912,10 @@ RectTransform:
   - {fileID: 1245507127}
   m_Father: {fileID: 2106415474}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 450, y: -50}
+  m_SizeDelta: {x: 180, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1975934115
 MonoBehaviour:
@@ -25622,7 +25636,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "\uD749\uD3ED\uD55C \uB2F9\uACE0 \uC0BC\uD615\uC81C\uC785\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -25657,7 +25671,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -26373,7 +26387,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134\u3147\u313B\u3134"
+  m_text: "(\uC18C\uD658) \uC704\uC131 2\uAC1C\uB97C \uC18C\uD658\uD558\uC5EC \uC801\uC744
+    \uACF5\uACA9\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
@@ -26408,7 +26423,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
