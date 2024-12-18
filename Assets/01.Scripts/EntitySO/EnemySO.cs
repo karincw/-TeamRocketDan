@@ -10,6 +10,7 @@ namespace Mochi.Entity.SO
         public int damage;
         public int defense;
         public float speed;
+        public bool isBoss;
     }
 }
 
