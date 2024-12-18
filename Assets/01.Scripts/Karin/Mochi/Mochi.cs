@@ -12,7 +12,9 @@ namespace Karin
         public MochiDataSO MochiData { get => _mochiData; set => _mochiData = value; }
 
         private List<MochiCompo> _mochiCompos;
-        public bool canAttack = true;
+        public bool CanAttack => !isStun && !moving;
+        public bool isStun = false;
+        private bool moving = false;
 
         [ContextMenu("SetUp")]
         public void SetUp()
@@ -26,6 +28,7 @@ namespace Karin
 
         public override void ShowRadius(bool state)
         {
+            moving = state;
             _mochiCompos.ForEach(compo =>
             {
                 if (compo is MochiVisualLoader loader)
@@ -42,9 +45,9 @@ namespace Karin
 
         private IEnumerator StunCoroutine(float time)
         {
-            canAttack = false;
+            isStun = true;
             yield return new WaitForSeconds(time);
-            canAttack = true;
+            isStun = false;
         }
     }
 }
