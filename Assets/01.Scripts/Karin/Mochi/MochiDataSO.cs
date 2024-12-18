@@ -13,8 +13,6 @@ namespace Karin
         public int damage;
         public int attackRange;
         public int attackCooldown;
-        [TextArea(1, 3)]
-        public string description;
         public Sprite image;
         public TowerRanking ranking;
     }
