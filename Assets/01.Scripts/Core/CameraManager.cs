@@ -8,6 +8,7 @@ namespace Leo.Core
     public class CameraManager : MonoSingleton<CameraManager>
     {
         private CinemachineImpulseSource _impulseSource;
+        private bool _isShaking = false;
 
         protected override void Awake()
         {
@@ -27,14 +28,16 @@ namespace Leo.Core
 
         private IEnumerator ShakeCameraCoroutine(float force, float time)
         {
+            if (_isShaking) yield break;
+            _isShaking = true;
             float elapsedTime = 0;
             while (elapsedTime < time)
             {
                 GenerateImpulse(force);
                 elapsedTime += Time.deltaTime;
-                Debug.Log(elapsedTime + " / " + time);
                 yield return null;
             }
+            _isShaking = false;
         }
 
         private void GenerateImpulse(float force)
