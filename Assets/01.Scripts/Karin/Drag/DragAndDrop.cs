@@ -1,6 +1,7 @@
 using DG.Tweening;
 using NUnit.Framework.Constraints;
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,6 +19,9 @@ namespace Karin
 
         [Header("Merge")]
         [SerializeField] private float _mergeRadius = 0.5f;
+
+        [Space, Header("Debug")]
+        [SerializeField] private bool _disableMergeDeleta;
 
         private void OnEnable()
         {
@@ -52,13 +56,16 @@ namespace Karin
             _interpolationVector = _dragObject.transform.position - mousePos;
             _interpolationVector.z = 10;
             _dragObject.ColliderEnable(false);
+            _dragObject.isDrag = true;
         }
 
         private void HandleLeftClickRelease()
         {
             if (_dragObject == null) return;
             _dragObject.ColliderEnable(true);
+            _dragObject.isDrag = false;
             MergeMochi();
+            _dragObject.VaildCheck();
             _dragObject = null;
         }
 
@@ -87,8 +94,11 @@ namespace Karin
             {
                 var newMochi = MochiManager.Instance.InstantiateRandomMochi(mochi.MochiData.ranking);
 
-                Destroy(mochi.gameObject);
-                Destroy(_dragObject.gameObject);
+                if (!_disableMergeDeleta)
+                {
+                    Destroy(mochi.gameObject);
+                    Destroy(_dragObject.gameObject);
+                }
 
                 newMochi.transform.position = mousePos;
             }
