@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using Leo.Interface;
+﻿using System.Collections;
 using UnityEngine;
 
 namespace JSY.Boss
@@ -12,6 +10,7 @@ namespace JSY.Boss
         [SerializeField] private BossSkillSO _bossSkill;
         
         private Collider2D[] _colliders = new Collider2D[1];
+        public bool IsSkillUse { get; set; }
 
 
         private void Start()
@@ -19,6 +18,12 @@ namespace JSY.Boss
             _bossSkill = Instantiate(_bossSkill);
             _bossSkill.SetOwner(this);
             StartCoroutine(FindMochi());
+        }
+
+        protected override void Update()
+        {
+            if (!IsSkillUse)
+                base.Update();
         }
 
         private IEnumerator FindMochi()
@@ -29,7 +34,8 @@ namespace JSY.Boss
                 yield return new WaitForSeconds(5f);
                 _colliders[0] = null;
                 _bossSkill.ResetSkill();
-                yield return null;
+                IsSkillUse = false;
+                yield return new WaitForSeconds(2f);
             }
         }
 
@@ -44,6 +50,7 @@ namespace JSY.Boss
         
         private void TakeSkill(Transform target)
         {
+            IsSkillUse = true;
             _bossSkill.UseSkill(target);
         }
     }

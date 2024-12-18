@@ -17,6 +17,7 @@ namespace JSY
         
         public void TakeDamage(int damage)
         {
+            Debug.Log("Hit");
             HP -= damage - (int)(defense * 0.5f);
         }
 

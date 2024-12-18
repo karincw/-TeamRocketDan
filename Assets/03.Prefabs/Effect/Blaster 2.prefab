@@ -49,7 +49,7 @@ MonoBehaviour:
   _particleSystem: {fileID: 1147917453764911925}
   _visual: {fileID: 1493078587633837340}
   _visual2: {fileID: 5933626515108123116}
-  _duration: 5
+  _duration: 2
 --- !u!1 &1493078587633837340
 GameObject:
   m_ObjectHideFlags: 0

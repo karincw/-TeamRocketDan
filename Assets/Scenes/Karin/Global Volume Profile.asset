@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed8cf8477b464c57b8454f2a59553f80, type: 3}
-  m_Name: Wave2
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: Global Volume Profile
   m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 6548117921923865800, guid: 5bbfc07203c98f84d915d2060362117b, type: 3}
-  spawnDelay: 0.5
-  waveDelay: 5
+  components: []

@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: e5b6794a92d52644da4d634dbd2ee88b, type: 2}
     - target: {fileID: 1434665147266607765, guid: 547540af18a42804ca8289a6d6b8ddcb, type: 3}
       propertyPath: m_Name
-      value: HoneyRicecake
+      value: HoneyRiceCake
       objectReference: {fileID: 0}
     - target: {fileID: 4051825845968048011, guid: 547540af18a42804ca8289a6d6b8ddcb, type: 3}
       propertyPath: m_LocalPosition.x

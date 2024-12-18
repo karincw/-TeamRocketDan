@@ -10,12 +10,14 @@ namespace Karin
     public class MochiAttacker : MochiCompo
     {
         private CircleCollider2D _collider;
-        private List<Enemy> enemies = new();
+        private List<Enemy> _enemies = new List<Enemy>();
+        private float lastAttacktime;
 
         protected override void Awake()
         {
             base.Awake();
             _collider = GetComponent<CircleCollider2D>();
+            lastAttacktime = Time.time;
         }
 
         private void Update()
@@ -29,13 +31,30 @@ namespace Karin
         public void Attack()
         {
             var attackData = _owner.MochiData.attackData;
-            if (attackData.isStarlite || enemies.Count < 0) return;
+            if (attackData.isStarlite || _enemies.Count < 1 || attackData.attackEffect == null) return;
 
-            var attackEffect = Instantiate(attackData.attackEffect, enemies[0].transform.position, Quaternion.identity);
-            if(attackEffect is IEffectable effect)
+            if (Time.time - lastAttacktime >= attackData.attackCooldown)
             {
-                effect.GetDamageCaster().SetDamage(attackData.damage);
-                effect.Play();
+                var attackEffect = Instantiate(attackData.attackEffect, _enemies[0].transform.position, Quaternion.identity);
+                if (attackEffect is IEffectable effect)
+                {
+                    if (attackEffect is IColorChangeable colorChange)
+                    {
+                        colorChange.SetColor(attackData.attackColor);
+                    }
+
+                    var damageCaster = effect.GetDamageCaster();
+                    if (damageCaster)
+                    {
+                        damageCaster.SetDamage(attackData.damage);
+                    }
+                    else
+                    {
+                        _enemies[0].EnemyHealth.TakeDamage(attackData.damage);
+                    }
+                    effect.Play();
+                }
+                lastAttacktime = Time.time;
             }
 
         }
@@ -51,6 +70,9 @@ namespace Karin
                 if (effect is CircleSpinAttacker spin)
                 {
                     spin.SetData(attackData.attackRange, attackData.count);
+                    StarLite sl = (spin.GetDamageCaster() as StarLite);
+                    sl.SetImage(attackData.starLiteImage);
+                    sl.SetDamage(attackData.damage);
                     spin.Play();
                 }
             }
@@ -61,7 +83,7 @@ namespace Karin
         {
             if (collision.CompareTag("Enemy"))
             {
-                enemies.Add(collision.gameObject.GetComponent<Enemy>());
+                _enemies.Add(collision.gameObject.GetComponent<Enemy>());
             }
         }
 
@@ -69,7 +91,7 @@ namespace Karin
         {
             if (collision.CompareTag("Enemy"))
             {
-                enemies.Remove(collision.gameObject.GetComponent<Enemy>());
+                _enemies.Remove(collision.gameObject.GetComponent<Enemy>());
             }
         }
 
