@@ -11,11 +11,6 @@ namespace JSY
         [SerializeField] private Enemy enemyPrefab;
         [SerializeField] private List<MovePoint> movePoints = new List<MovePoint>();
 
-        private void Awake()
-        {
-        
-        }
-
         private void Update()
         {
             if(Keyboard.current.spaceKey.wasPressedThisFrame)
