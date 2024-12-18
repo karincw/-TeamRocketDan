@@ -8,20 +8,20 @@ namespace Karin.PoolingSystem
     {
         [SerializeField] private PoolingListSO _poolList;
 
-        private Dictionary<string, Pool> _pools;
+        private Dictionary<PoolingType, Pool> _pools;
 
         private void Awake()
         {
-            _pools = new Dictionary<string, Pool>();
+            _pools = new Dictionary<PoolingType, Pool>();
 
             foreach (PoolItemSO item in _poolList.list)
             {
-                CreatePool(item.itemName, item.prefab, item.count);
+                CreatePool(item.type, item.prefab, item.count);
             }
         }
 
 
-        private void CreatePool(string itemName, GameObject prefab, int count)
+        private void CreatePool(PoolingType type, GameObject prefab, int count)
         {
             IPoolable poolable = prefab.GetComponent<IPoolable>();
             if (poolable == null)
@@ -31,32 +31,32 @@ namespace Karin.PoolingSystem
                 return;
             }
 
-            poolable.ItemName = itemName;
+            poolable.type = type;
             Pool pool = new Pool(poolable, transform, count);
-            _pools.Add(poolable.ItemName, pool);
+            _pools.Add(poolable.type, pool);
         }
 
-        public IPoolable Pop(string itemName)
+        public IPoolable Pop(PoolingType type)
         {
-            if (_pools.ContainsKey(itemName))
+            if (_pools.ContainsKey(type))
             {
-                IPoolable item = _pools[itemName].Pop();
+                IPoolable item = _pools[type].Pop();
 
                 item.ResetItem();
                 return item;
             }
-            Debug.LogError($"There is no pool {itemName}");
+            Debug.LogError($"There is no pool {type.ToString()}");
             return null;
         }
 
         public void Push(IPoolable item)
         {
-            if (_pools.ContainsKey(item.ItemName))
+            if (_pools.ContainsKey(item.type))
             {
-                _pools[item.ItemName].Push(item);
+                _pools[item.type].Push(item);
                 return;
             }
-            Debug.LogError($"There is no pool {item.ItemName}");
+            Debug.LogError($"There is no pool {item.name}");
         }
     }
 

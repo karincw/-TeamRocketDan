@@ -6,7 +6,9 @@ namespace Karin.PoolingSystem
     [CreateAssetMenu(menuName = "SO/Pool/Item")]
     public class PoolItemSO : ScriptableObject
     {
-        public string itemName;
+        public PoolingType type;
+        public string typeName;
+        public string name;
         public GameObject prefab;
         public int count;
 

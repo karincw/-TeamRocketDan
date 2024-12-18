@@ -21,9 +21,8 @@ namespace Karin.PoolingSystem
             {
                 GameObject gameObj = GameObject.Instantiate(_prefab, _parent);
                 gameObj.SetActive(false);
-                gameObj.name = _poolable.ItemName;
-                gameObj.GetComponent<IPoolable>().ItemName = _poolable.ItemName;
                 IPoolable item = gameObj.GetComponent<IPoolable>();
+                item.type = _poolable.type;
                 _pool.Push(item);
             }
         }
@@ -34,8 +33,8 @@ namespace Karin.PoolingSystem
             if (_pool.Count == 0)
             {
                 GameObject gameObj = GameObject.Instantiate(_prefab, _parent);
-                gameObj.name = _poolable.ItemName;
                 item = gameObj.GetComponent<IPoolable>();
+                item.type = _poolable.type;
             }
             else
             {
