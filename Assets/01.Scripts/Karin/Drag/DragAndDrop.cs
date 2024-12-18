@@ -1,7 +1,3 @@
-using DG.Tweening;
-using NUnit.Framework.Constraints;
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -55,14 +51,16 @@ namespace Karin
             _dragObject = col.attachedRigidbody.GetComponent<DragAndDropObject>();
             _interpolationVector = _dragObject.transform.position - mousePos;
             _interpolationVector.z = 10;
-            _dragObject.ColliderEnable(false);
+            _dragObject.ColliderTrigger(true);
             _dragObject.isDrag = true;
+
+
         }
 
         private void HandleLeftClickRelease()
         {
             if (_dragObject == null) return;
-            _dragObject.ColliderEnable(true);
+            _dragObject.ColliderTrigger(false);
             _dragObject.isDrag = false;
             MergeMochi();
             _dragObject.VaildCheck();
@@ -71,6 +69,8 @@ namespace Karin
 
         private void MergeMochi()
         {
+            if ((_dragObject as Mochi).MochiData.ranking == TowerRanking.five)
+                return;
             Camera cam = Camera.main;
             Vector3 mousePos = cam.ScreenToWorldPoint(Mouse.current.position.value);
             mousePos.z = 0;
@@ -83,7 +83,7 @@ namespace Karin
                 {
                     var m = col.attachedRigidbody.GetComponent<DragAndDropObject>();
                     var otherMochi = m as Mochi;
-                    if (otherMochi.MochiData.ranking == (_dragObject as Mochi).MochiData.ranking)
+                    if (otherMochi.MochiData == (_dragObject as Mochi).MochiData)
                     {
                         mochi = otherMochi;
                         break;

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Karin
@@ -11,7 +12,7 @@ namespace Karin
         [HideInInspector] public bool isDrag;
         private List<Collider2D> results = new();
 
-        public void ColliderEnable(bool state)
+        public void ColliderTrigger(bool state)
         {
             _collisionCollider.isTrigger = state;
         }
@@ -20,7 +21,7 @@ namespace Karin
         {
             results.Clear();
             _collisionCollider.Overlap(results);
-            if (results.Count > 0)
+            if (results.Count(n => n.CompareTag("Platform")) > 0)
             {
                 vaildPosition = transform.position;
             }
