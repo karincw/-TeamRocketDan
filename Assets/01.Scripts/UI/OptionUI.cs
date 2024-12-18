@@ -20,7 +20,7 @@ public class OptionUI : MonoBehaviour
 
     private void Awake()
     {
-        Transform panel = transform.GetChild(1);
+        Transform panel = transform.GetChild(1).GetChild(1);
         bgmSlider = panel.Find("BGMSlider").GetComponent<Slider>();
         sfxSlider = panel.Find("SFXSlider").GetComponent<Slider>();
         infoButton = panel.Find("InfoBtn").GetComponent<Button>();
@@ -32,7 +32,7 @@ public class OptionUI : MonoBehaviour
 
     private void HandleInfoButton()
     {
-        throw new NotImplementedException();
+        
     }
 
     private void HandleExitButton()
