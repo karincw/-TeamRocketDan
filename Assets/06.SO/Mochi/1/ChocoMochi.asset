@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e24b4ab8ec2b4a478d57efc7de72c16, type: 3}
   m_Name: ChocoMochi
   m_EditorClassIdentifier: 
-  damage: 1
-  attackRange: 1
-  attackCooldown: 1
-  description: 
   image: {fileID: 21300000, guid: 55e74f124e13c1d4f80876d125760436, type: 3}
   ranking: 1
+  attackData:
+    damage: 2
+    attackRange: 3
+    attackCooldown: 1
+    attackEffect: {fileID: 1502846425501331241, guid: 73f84e1036e673f40961e5a463015adc, type: 3}
+    isStarlite: 0
+    count: 0
+    starLiteImage: {fileID: 0}

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 namespace Karin
 {
@@ -15,6 +16,7 @@ namespace Karin
 
         [Header("Merge")]
         [SerializeField] private float _mergeRadius = 0.5f;
+        [SerializeField] private ParticleSystem _mergeEffect;
 
         [Space, Header("Debug")]
         [SerializeField] private bool _disableMergeDeleta;
@@ -100,6 +102,8 @@ namespace Karin
                 {
                     Destroy(mochi.gameObject);
                     Destroy(_dragObject.gameObject);
+                    _mergeEffect.gameObject.transform.position = mousePos;
+                    _mergeEffect.Play();
                 }
 
                 newMochi.transform.position = mousePos;
