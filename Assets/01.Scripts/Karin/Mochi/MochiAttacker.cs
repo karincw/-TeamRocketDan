@@ -18,5 +18,10 @@ namespace Karin
             _collider.radius = _owner.MochiData.attackRange;
         }
 
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            
+        }
+
     }
 }

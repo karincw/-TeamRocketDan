@@ -85,8 +85,10 @@ namespace Karin
             }
             if (mochi != null)
             {
-                var nextData = MochiManager.Instance.GetNextMochi(mochi.MochiData.ranking);
-                var newMochi = MochiManager.Instance.InstantiateMochi(nextData);
+                var newMochi = MochiManager.Instance.InstantiateRandomMochi(mochi.MochiData.ranking);
+
+                Destroy(mochi.gameObject);
+                Destroy(_dragObject.gameObject);
 
                 newMochi.transform.position = mousePos;
             }
