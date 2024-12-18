@@ -7,5 +7,6 @@ namespace Mochi.Entity.SO
     public class WaveSO : ScriptableObject
     {
         public List<EnemySO> enemies;
+        public float spawnInterval;
     }
 }
