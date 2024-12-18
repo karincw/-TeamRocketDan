@@ -3,18 +3,17 @@ using UnityEngine;
 namespace Karin
 {
     [RequireComponent(typeof(SpriteRenderer))]
-    public class MochiVisualLoader : MonoBehaviour
+    public class MochiVisualLoader : MochiCompo
     {
-        private Mochi _owner;
         private SpriteRenderer _renderer;
 
-        private void Awake()
+        protected override void Awake()
         {
-            _owner = GetComponentInParent<Mochi>();
+            base.Awake();
             _renderer = GetComponent<SpriteRenderer>();
         }
 
-        private void Start()
+        public override void SetUp()
         {
             _renderer.sprite = _owner.MochiData.image;
         }

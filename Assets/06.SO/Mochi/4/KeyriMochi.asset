@@ -17,3 +17,4 @@ MonoBehaviour:
   attackCooldown: 0
   description: 
   image: {fileID: 0}
+  ranking: 4

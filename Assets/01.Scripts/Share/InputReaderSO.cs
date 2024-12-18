@@ -10,6 +10,7 @@ public class InputReaderSO : ScriptableObject, IPlayerActions, IUIActions
 {
 
     public event Action LeftClickEvent;
+    public event Action LeftClickReleaseEvent;
 
     private Controls _controls;
     public Controls Controls => _controls;
@@ -91,6 +92,10 @@ public class InputReaderSO : ScriptableObject, IPlayerActions, IUIActions
         if(context.performed)
         {
             LeftClickEvent?.Invoke();
+        }
+        else if(context.canceled)
+        {
+            LeftClickReleaseEvent?.Invoke();
         }
     }
 }
