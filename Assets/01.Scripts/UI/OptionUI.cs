@@ -9,15 +9,17 @@ namespace JSY
     {
         [SerializeField] private Image background;
         [SerializeField] private RectTransform popupUI;
-        [SerializeField] private RectTransform infoUI;
+        [SerializeField] private RectTransform mochiInfo;
+        [SerializeField] private RectTransform enemyInfo;
         [SerializeField] private CanvasGroup popupCanvasGroup;
 
         private Slider bgmSlider, sfxSlider;
-        private Button infoButton, exitButton;
+        private Button mochiInfoButton, enemyInfoButton, exitButton;
 
         private bool isOpen = false;
         private bool isAnimating = false;
         private bool isDicOpen = false;
+        private bool isMochi = false;
 
         float durationTime = 0.2f;
 
@@ -26,10 +28,12 @@ namespace JSY
             Transform panel = transform.GetChild(1).GetChild(1);
             bgmSlider = panel.Find("BGMSlider").GetComponent<Slider>();
             sfxSlider = panel.Find("SFXSlider").GetComponent<Slider>();
-            infoButton = panel.Find("InfoBtn").GetComponent<Button>();
+            mochiInfoButton = panel.Find("MochiInfoBtn").GetComponent<Button>();
+            enemyInfoButton = panel.Find("EnemyInfoBtn").GetComponent<Button>();
             exitButton = panel.Find("ExitBtn").GetComponent<Button>();
 
-            infoButton.onClick.AddListener(SettingInfoPanel);
+            mochiInfoButton.onClick.AddListener(SettingMochiInfoPanel);
+            enemyInfoButton.onClick.AddListener(SettingEnemyInfoPanel);
             exitButton.onClick.AddListener(HandleExitButton);
         }
         private void HandleExitButton()
@@ -45,7 +49,12 @@ namespace JSY
                 if (!isDicOpen)
                     SettingOptionPanel();
                 if (isDicOpen)
-                    SettingInfoPanel();
+                {
+                    if(isMochi)
+                        SettingInfoPanel(mochiInfo);
+                    else
+                        SettingInfoPanel(enemyInfo);
+                }
             }
         }
 
@@ -56,10 +65,22 @@ namespace JSY
             SettingPanel(popupUI, isOpen);
         }
 
-        public void SettingInfoPanel()
+        public void SettingMochiInfoPanel()
+        {
+            isMochi = true;
+            SettingInfoPanel(mochiInfo);
+        }
+
+        public void SettingEnemyInfoPanel()
+        {
+            isMochi = false;
+            SettingInfoPanel(enemyInfo);
+        }
+
+        public void SettingInfoPanel(RectTransform panel)
         {
             isDicOpen = !isDicOpen;
-            SettingPanel(infoUI, isDicOpen);
+            SettingPanel(panel, isDicOpen);
         }
 
         private void SettingPanel(RectTransform panel, bool isOpen)

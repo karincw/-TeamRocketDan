@@ -29,6 +29,10 @@ namespace JSY
                 ModifyMoney(400);
             }
 #endif
+            if(Keyboard.current.spaceKey.wasPressedThisFrame)
+            {
+                HandleBuyButton();
+            }
         }
 
         private void ModifyMoney(int value)

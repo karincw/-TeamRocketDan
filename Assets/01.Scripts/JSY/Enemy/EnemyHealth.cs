@@ -22,6 +22,7 @@ namespace JSY
 
         public void Die()
         {
+            EnemyCountUI.Instance.UpdateCount(-1);
             Destroy(gameObject);
         }
     }
