@@ -1,3 +1,4 @@
+using JSY;
 using TMPro;
 using UnityEngine;
 
@@ -22,7 +23,7 @@ public class EnemyCountUI : MonoSingleton<EnemyCountUI>
             if(!isEnd)
             {
                 isEnd = true;
-                Debug.Log("게임이 끝났습니다.");
+                ResultUI.Instance.GameOver();
             }
             return;
         }
