@@ -9,6 +9,8 @@ public class OptionUI : MonoBehaviour
     [SerializeField] private RectTransform popupUI;
     [SerializeField] private CanvasGroup popupCanvasGroup;
 
+    private Slider bgmSlider, sfxSlider;
+
     private bool isOpen = false;
     private bool isAnimating = false;
 
