@@ -1,18 +1,25 @@
 ﻿using System;
 using DG.Tweening;
+using Leo.Damage;
+using Leo.Interface;
 using UnityEngine;
 
 namespace Leo.Animation
 {
-    public class Slash : MonoBehaviour
+    public class Slash : MonoBehaviour, IEffectable
     {
         [SerializeField] private GameObject _visual;
-        private void Update()
+        [SerializeField] private TrailRenderer _trailRenderer;
+        private Material _material;
+        private void Awake()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                StartSlash();
-            }
+            _material = Instantiate(_trailRenderer.material);
+            _trailRenderer.material = _material;
+        }
+        
+        public void SetColor(Color color)
+        {
+            _material.color = color;
         }
 
         [ContextMenu("StartSlash")]
@@ -37,5 +44,19 @@ namespace Leo.Animation
             Gizmos.DrawWireSphere(transform.position, 0.5f);
         }
         #endif
+        public void SetPos(Transform target)
+        {
+            transform.position = target.position;
+        }
+
+        public void Play()
+        {
+            StartSlash();
+        }
+
+        public DamageCaster GetDamageCaster()
+        {
+            return null;
+        }
     }
 }
