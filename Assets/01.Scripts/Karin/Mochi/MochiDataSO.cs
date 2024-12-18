@@ -1,3 +1,4 @@
+using Leo.Interface;
 using UnityEngine;
 
 namespace Karin
@@ -13,6 +14,14 @@ namespace Karin
         public Sprite image;
         public TowerRanking ranking;
         public AttackData attackData;
+
+        private void OnValidate()
+        {
+            if(attackData.attackEffect is not IEffectable)
+            {
+                attackData.attackEffect = null;
+            }
+        }
     }
 
     [System.Serializable]
@@ -21,6 +30,11 @@ namespace Karin
         public int damage;
         public int attackRange;
         public int attackCooldown;
+        public MonoBehaviour attackEffect;
+        [Space, Header("StarLite")]
+        public bool isStarlite;
+        public int count;
+        public Sprite starLiteImage;
     }
 
 }

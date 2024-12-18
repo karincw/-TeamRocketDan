@@ -25,6 +25,12 @@ namespace Leo.Damage
             transform.position = target.position;
         }
 
+        public void SetData(int distance, int count)
+        {
+            _distance = distance;
+            _count = count;
+        }
+
         public void Play()
         {
             for (int i = 0; i < _count; i++)

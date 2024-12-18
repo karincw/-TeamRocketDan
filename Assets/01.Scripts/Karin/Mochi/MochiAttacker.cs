@@ -1,7 +1,9 @@
+using DG.Tweening;
 using JSY;
+using Leo.Damage;
+using Leo.Interface;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace Karin
 {
@@ -20,13 +22,38 @@ namespace Karin
         {
             if (_owner.CanAttack)
             {
-
+                Attack();
             }
+        }
+
+        public void Attack()
+        {
+            var attackData = _owner.MochiData.attackData;
+            if (attackData.isStarlite || enemies.Count < 0) return;
+
+            var attackEffect = Instantiate(attackData.attackEffect, enemies[0].transform.position, Quaternion.identity);
+            if(attackEffect is IEffectable effect)
+            {
+                
+            }
+
         }
 
         public override void SetUp()
         {
             _collider.radius = _owner.MochiData.attackData.attackRange;
+
+            var attackData = _owner.MochiData.attackData;
+            if (attackData.isStarlite)
+            {
+                var effect = Instantiate(attackData.attackEffect, transform);
+                if (effect is CircleSpinAttacker spin)
+                {
+                    spin.SetData(attackData.attackRange, attackData.count);
+                    spin.Play();
+                }
+            }
+
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
