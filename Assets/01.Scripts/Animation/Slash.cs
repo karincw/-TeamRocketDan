@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Leo.Animation
 {
-    public class Slash : MonoBehaviour, IEffectable
+    public class Slash : MonoBehaviour, IEffectable, IColorChangeable
     {
         [SerializeField] private GameObject _visual;
         [SerializeField] private TrailRenderer _trailRenderer;
