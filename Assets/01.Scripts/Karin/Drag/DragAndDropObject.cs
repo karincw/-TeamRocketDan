@@ -33,7 +33,7 @@ namespace Karin
         public void VaildCheck()
         {
             Vector2 v = (Vector2)transform.position - vaildPosition;
-            bool vaild = !(v.magnitude > 1);
+            bool vaild = !(v.magnitude > 0.5f);
             if (!vaild)
             {
                 transform.position = vaildPosition;

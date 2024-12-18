@@ -23,7 +23,7 @@ namespace Karin
         {
             _renderer.sprite = _owner.MochiData.image;
             _starRenderer.sprite = starImage[(int)_owner.MochiData.ranking];
-            _radiusRenderer.transform.localScale = Vector3.one * (_owner.MochiData.attackRange * 2 + 0.55f + _owner.MochiData.attackRange * 0.15f);
+            _radiusRenderer.transform.localScale = Vector3.one * (_owner.MochiData.attackData.attackRange * 2 + 0.55f + _owner.MochiData.attackData.attackRange * 0.15f);
             SetAttackDistance(false);
         }
 
