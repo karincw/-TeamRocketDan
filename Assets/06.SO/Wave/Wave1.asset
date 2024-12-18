@@ -13,8 +13,21 @@ MonoBehaviour:
   m_Name: Wave1
   m_EditorClassIdentifier: 
   enemies:
+  - {fileID: 905299708636873479, guid: bdeed6b9fa0d8b94fa4c23c7525092a0, type: 3}
+  - {fileID: 905299708636873479, guid: 33fa2f3c61625ce4f8bd528581e8e893, type: 3}
+  - {fileID: 905299708636873479, guid: 67eda937d0bdcea4f8c09c8b81aa9820, type: 3}
   - {fileID: 905299708636873479, guid: 1c15671365959e443853e4137d6f8093, type: 3}
-  - {fileID: 905299708636873479, guid: 1c15671365959e443853e4137d6f8093, type: 3}
-  - {fileID: 905299708636873479, guid: 1c15671365959e443853e4137d6f8093, type: 3}
+  - {fileID: 905299708636873479, guid: b4fc8ca8660beec4c9d6633be827ba25, type: 3}
+  - {fileID: 905299708636873479, guid: 55153e52e4aeba7438a075d16dba1805, type: 3}
+  - {fileID: 905299708636873479, guid: 0001b5f15a78eb04bbbd5c2bee6df2bc, type: 3}
+  - {fileID: 905299708636873479, guid: 5e86c6fc1c0e6904b8fcd5754b5a1875, type: 3}
+  - {fileID: 905299708636873479, guid: 6cdfbdfebf7de824f8dc49d8dafb9e9b, type: 3}
+  - {fileID: 905299708636873479, guid: d6928df41387d3a4b94910a2cb119589, type: 3}
+  - {fileID: 905299708636873479, guid: b1cc963b9b9fe924a8f3ff4ecf31f4c4, type: 3}
+  - {fileID: 905299708636873479, guid: 8e9cc01cffa31304bbc450ec2f4a7a28, type: 3}
+  - {fileID: 905299708636873479, guid: a112ca578dd530b45bf16a552ae592ab, type: 3}
+  - {fileID: 905299708636873479, guid: fdc4258a30fff8c43aa1ca751cca7581, type: 3}
+  - {fileID: 905299708636873479, guid: a12477394f3f1a04fae8dcfe3164b0da, type: 3}
+  - {fileID: 905299708636873479, guid: c8596e4d9a6d783499c4f560ec97913a, type: 3}
   spawnDelay: 1
   waveDelay: 10
