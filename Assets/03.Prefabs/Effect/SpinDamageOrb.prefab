@@ -4888,7 +4888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 1
   <SrCompo>k__BackingField: {fileID: 3387273366154476125}
-  _trailRenderer: {fileID: 0}
+  _trailRenderer: {fileID: 1577202119659183484}
 --- !u!1 &4198151976292052911
 GameObject:
   m_ObjectHideFlags: 0
