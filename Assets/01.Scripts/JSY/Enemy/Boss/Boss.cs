@@ -26,8 +26,9 @@ namespace JSY.Boss
             while (true)
             {
                 FindTarget();
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(5f);
                 _colliders[0] = null;
+                _bossSkill.ResetSkill();
                 yield return null;
             }
         }

@@ -1,5 +1,4 @@
-﻿using System;
-using Leo.Interface;
+﻿using Leo.Interface;
 using UnityEngine;
 
 namespace Leo.Damage

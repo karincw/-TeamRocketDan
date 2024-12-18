@@ -1,29 +1,14 @@
 ﻿using System;
+using Leo.Interface;
 using UnityEngine;
 
 namespace Leo.Damage
 {
-    public class CircleSpinAttacker : MonoBehaviour
+    public class CircleSpinAttacker : MonoBehaviour, IEffectable
     {
         [SerializeField] private DamageCaster damageCaster;
         [SerializeField] private int _count;
         [SerializeField] private float _distance;
-
-        private void Start()
-        {
-            for (int i = 0; i < _count; i++)
-            {
-                var position = new Vector2(
-                    transform.position.x + _distance * Mathf.Cos(2 * Mathf.PI / _count * i),
-                    transform.position.y + _distance * Mathf.Sin(2 * Mathf.PI / _count * i));
-                
-                    Instantiate(
-                        damageCaster,
-                        position,
-                        Quaternion.identity,
-                        transform);
-            }
-        }
 
         private void Update()
         {
@@ -33,6 +18,27 @@ namespace Leo.Damage
         private void SpinAttack()
         {
             transform.Rotate(0, 0, 360 * Time.deltaTime);
+        }
+
+        public void SetPos(Transform target)
+        {
+            transform.position = target.position;
+        }
+
+        public void Play()
+        {
+            for (int i = 0; i < _count; i++)
+            {
+                var position = new Vector2(
+                    transform.position.x + _distance * Mathf.Cos(2 * Mathf.PI / _count * i),
+                    transform.position.y + _distance * Mathf.Sin(2 * Mathf.PI / _count * i));
+                
+                Instantiate(
+                    damageCaster,
+                    position,
+                    Quaternion.identity,
+                    transform);
+            }
         }
     }
 }
