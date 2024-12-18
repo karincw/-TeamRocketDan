@@ -1,12 +1,11 @@
-﻿using System;
-using Leo.Interface;
+﻿using Leo.Interface;
 using UnityEngine;
 
 namespace Leo.Damage
 {
     public class CircleSpinAttacker : MonoBehaviour, IEffectable
     {
-        [SerializeField] private DamageCaster damageCaster;
+        [SerializeField] private StarLite damageCaster;
         [SerializeField] private int _count;
         [SerializeField] private float _distance;
 

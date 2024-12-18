@@ -1,12 +1,16 @@
 using Leo.Damage;
 using UnityEngine;
 
-public class StarLite : DamageCaster
+namespace Leo.Damage
 {
-    [field:SerializeField] public SpriteRenderer SrCompo { get; private set; }
-
-    public void SetImage(Sprite sprite)
+    public class StarLite : DamageCaster
     {
-        SrCompo.sprite = sprite;
+        [field:SerializeField] public SpriteRenderer SrCompo { get; private set; }
+
+        public void SetImage(Sprite sprite)
+        {
+            SrCompo.sprite = sprite;
+        }
     }
+
 }
