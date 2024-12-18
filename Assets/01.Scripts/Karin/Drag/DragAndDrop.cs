@@ -52,6 +52,7 @@ namespace Karin
             _interpolationVector = _dragObject.transform.position - mousePos;
             _interpolationVector.z = 10;
             _dragObject.ColliderTrigger(true);
+            _dragObject.ShowRadius(true);
             _dragObject.isDrag = true;
 
 
@@ -61,6 +62,7 @@ namespace Karin
         {
             if (_dragObject == null) return;
             _dragObject.ColliderTrigger(false);
+            _dragObject.ShowRadius(false);
             _dragObject.isDrag = false;
             MergeMochi();
             _dragObject.VaildCheck();
