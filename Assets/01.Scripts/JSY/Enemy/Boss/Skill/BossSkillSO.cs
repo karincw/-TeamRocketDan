@@ -10,5 +10,6 @@ namespace JSY.Boss
             _owner = owner;
         }
         public abstract void UseSkill(Transform target);
+        public virtual void ResetSkill(){}
     }
 }

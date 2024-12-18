@@ -10,8 +10,8 @@ namespace JSY.Boss
         public override void UseSkill(Transform target)
         {
             var blaster = Instantiate(this.blaster, _owner.transform);
-            blaster.SetTarget(target);
-            blaster.Shot();
+            blaster.SetPos(target);
+            blaster.Play();
         }
     }
 }
