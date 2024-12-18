@@ -16,6 +16,9 @@ namespace Karin
         {
             _collisionCollider.isTrigger = state;
         }
+        public virtual void ShowRadius(bool state)
+        {
+        }
 
         protected virtual void Update()
         {

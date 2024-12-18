@@ -24,6 +24,17 @@ namespace Karin
             });
         }
 
+        public override void ShowRadius(bool state)
+        {
+            _mochiCompos.ForEach(compo =>
+            {
+                if (compo is MochiVisualLoader loader)
+                {
+                    loader.SetAttackDistance(state);
+                }
+            });
+        }
+
         public void Stun(float duration)
         {
             StartCoroutine(StunCoroutine(duration));

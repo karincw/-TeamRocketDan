@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace Karin
 {
-    [RequireComponent(typeof(SpriteRenderer))]
     public class MochiVisualLoader : MochiCompo
     {
         private SpriteRenderer _renderer;
@@ -11,11 +10,11 @@ namespace Karin
         private SpriteRenderer _radiusRenderer;
 
         [SerializeField] private List<Sprite> starImage;
-
+         
         protected override void Awake()
         {
             base.Awake();
-            _renderer = GetComponent<SpriteRenderer>();
+            _renderer = transform.Find("Visual").GetComponent<SpriteRenderer>();
             _starRenderer = transform.Find("Star").GetComponent<SpriteRenderer>();
             _radiusRenderer = transform.Find("AttackRadiius").GetComponent<SpriteRenderer>();
         }
