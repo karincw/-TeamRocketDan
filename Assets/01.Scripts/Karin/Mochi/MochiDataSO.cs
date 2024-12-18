@@ -31,6 +31,7 @@ namespace Karin
         public int attackRange;
         public int attackCooldown;
         public MonoBehaviour attackEffect;
+        [ColorUsage(showAlpha:true, hdr:true)]public Color attackColor;
         [Space, Header("StarLite")]
         public bool isStarlite;
         public int count;

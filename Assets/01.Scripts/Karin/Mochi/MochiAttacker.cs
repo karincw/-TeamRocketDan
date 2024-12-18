@@ -38,6 +38,11 @@ namespace Karin
                 var attackEffect = Instantiate(attackData.attackEffect, _enemies[0].transform.position, Quaternion.identity);
                 if (attackEffect is IEffectable effect)
                 {
+                    if (attackEffect is IColorChangeable colorChange)
+                    {
+                        colorChange.SetColor(attackData.attackColor);
+                    }
+
                     var damageCaster = effect.GetDamageCaster();
                     if (damageCaster)
                     {

@@ -16,34 +16,34 @@ namespace Leo.Animation
             _material = Instantiate(_trailRenderer.material);
             _trailRenderer.material = _material;
         }
-        
+
         public void SetColor(Color color)
         {
-            _material.color = color;
+            _material.SetColor("_MainColor", color);
         }
 
         [ContextMenu("StartSlash")]
         public void StartSlash()
         {
             transform.DOKill();
-            transform.DORotate(new Vector3(0, 0, -90), 0f).OnComplete(() => _visual.SetActive(true));
-            Sequence sequence = DOTween.Sequence();
-            sequence.Append(transform.DORotate(new Vector3(0, 0, -90), 0.2f))
+            transform.DORotate(new Vector3(0, 0, -90), 0f);
+
+            Sequence sequence = DOTween.Sequence()
+                .Append(transform.DORotate(new Vector3(0, 0, -90), 0.2f))
                 .Join(transform.DORotate(new Vector3(0, 0, 0), 0.2f))
                 .Join(transform.DORotate(new Vector3(0, 0, 90), 0.2f))
                 .SetEase(Ease.Linear)
-                .OnComplete(() => _visual.SetActive(false));
-            
-            sequence.Play();
+                .OnComplete(() => Destroy(gameObject));
+
         }
-        
-        #if UNITY_EDITOR
+
+#if UNITY_EDITOR
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, 0.5f);
         }
-        #endif
+#endif
         public void SetPos(Transform target)
         {
             transform.position = target.position;
