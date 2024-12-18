@@ -2,7 +2,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-namespace Mochi.Animation
+namespace Leo.Animation
 {
     public class Slash : MonoBehaviour
     {

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Blaster
+  m_Name: Blaster
   m_Shader: {fileID: -6465566751694194690, guid: 4c07adade6e91a042bd95bfb512eb706, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -46,11 +46,11 @@ Material:
     - _QueueOffset: 0
     m_Colors:
     - _BGColor: {r: 1, g: 1, b: 1, a: 0}
-    - _MainColor: {r: 0, g: 6.21782, b: 11.984315, a: 0}
+    - _MainColor: {r: 0, g: 6.2745094, b: 11.984313, a: 0}
     - _Tiling: {r: 5, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &3695124505604683227
+--- !u!114 &7829968770407660515
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

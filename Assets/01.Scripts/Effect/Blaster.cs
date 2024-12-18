@@ -1,9 +1,9 @@
 ﻿using DG.Tweening;
-using Mochi.Core;
-using Mochi.Interface;
+using Leo.Core;
+using Leo.Interface;
 using UnityEngine;
 
-namespace Mochi.Effect
+namespace Leo.Effect
 {
     public class Blaster : MonoBehaviour
     {

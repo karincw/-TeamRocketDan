@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Mochi.Entity.SO
+namespace Leo.Entity.SO
 {
     [CreateAssetMenu(fileName = "Enemy", menuName = "SO/Enemy")]
     public class EnemySO : ScriptableObject

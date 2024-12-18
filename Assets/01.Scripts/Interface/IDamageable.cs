@@ -1,4 +1,4 @@
-﻿namespace Mochi.Interface
+﻿namespace Leo.Interface
 {
     public interface IDamageable
     {

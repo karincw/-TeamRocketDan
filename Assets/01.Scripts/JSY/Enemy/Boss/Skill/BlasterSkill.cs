@@ -1,4 +1,4 @@
-﻿using Mochi.Effect;
+﻿using Leo.Effect;
 using UnityEngine;
 
 namespace JSY.Boss

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using DG.Tweening;
 
-namespace Mochi.Animation
+namespace Leo.Animation
 {
     public class BounceAnimation : MonoBehaviour
     {

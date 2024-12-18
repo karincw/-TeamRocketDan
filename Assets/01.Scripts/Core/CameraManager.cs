@@ -2,8 +2,9 @@ using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 
-namespace Mochi.Core
+namespace Leo.Core
 {
+    [RequireComponent(typeof(CinemachineImpulseSource))]
     public class CameraManager : MonoSingleton<CameraManager>
     {
         private CinemachineImpulseSource _impulseSource;
