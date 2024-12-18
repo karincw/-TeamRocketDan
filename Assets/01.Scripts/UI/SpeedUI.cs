@@ -1,25 +1,28 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SpeedUI : MonoBehaviour
+namespace JSY
 {
-    [SerializeField] private Sprite[] speedIcon;
-
-    private Image iconImage;
-
-    private float doubleSpeed = 2f, normalSpeed = 1f;
-    private bool isDouble = false;
-
-    private void Awake()
+    public class SpeedUI : MonoBehaviour
     {
-        iconImage = transform.Find("Icon").GetComponent<Image>();
-    }
+        [SerializeField] private Sprite[] speedIcon;
 
-    public void ChangeSpeed()
-    {
-        isDouble = !isDouble;
+        private Image iconImage;
 
-        iconImage.sprite = isDouble ? speedIcon[1] : speedIcon[0];
-        Time.timeScale = isDouble ? doubleSpeed : normalSpeed;
+        private float doubleSpeed = 2f, normalSpeed = 1f;
+        private bool isDouble = false;
+
+        private void Awake()
+        {
+            iconImage = transform.Find("Icon").GetComponent<Image>();
+        }
+
+        public void ChangeSpeed()
+        {
+            isDouble = !isDouble;
+
+            iconImage.sprite = isDouble ? speedIcon[1] : speedIcon[0];
+            Time.timeScale = isDouble ? doubleSpeed : normalSpeed;
+        }
     }
 }

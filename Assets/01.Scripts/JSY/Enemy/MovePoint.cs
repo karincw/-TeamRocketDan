@@ -1,6 +1,10 @@
 using UnityEngine;
 
-public class MovePoint : MonoBehaviour
+
+namespace JSY
 {
-    public bool isTeleport = false;
+    public class MovePoint : MonoBehaviour
+    {
+        public bool isTeleport = false;
+    }
 }
