@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0167caa5e967d194d99b95bdee1c613b
+guid: 6ce7d294170c3444cbfc7c061cc356f3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1783592097966440371
-    second: grass, road s-3461540952_0
+      213: -4931723460476928275
+    second: puding_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.1}
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grass, road s-3461540952_0
+      name: Mochi_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1216
-        height: 832
+        x: 26
+        y: 102
+        width: 464
+        height: 322
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d404480df686f37e0800000000000000
-      internalID: -1783592097966440371
+      spriteID: 2f040ea4e75233670800000000000000
+      internalID: 8517192544640057586
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      grass, road s-3461540952_0: -1783592097966440371
+      Mochi_0: 8517192544640057586
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

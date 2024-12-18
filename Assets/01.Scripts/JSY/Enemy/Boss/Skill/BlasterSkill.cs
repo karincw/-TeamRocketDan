@@ -1,9 +1,8 @@
-﻿using Leo.Effect;
+﻿using Leo.Damage;
 using UnityEngine;
 
 namespace JSY.Boss
 {
-    
     [CreateAssetMenu(fileName = "BossSkill", menuName = "SO/Enemy/Boss/Skill/BlasterSkill")]
     public class BlasterSkill : BossSkillSO
     {
