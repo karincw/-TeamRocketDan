@@ -19,6 +19,8 @@ namespace JSY
         {
             Debug.Log("Hit");
             HP -= damage - (int)(defense * 0.5f);
+            if (HP <= 0)
+                Die();
         }
 
         public void Die()
