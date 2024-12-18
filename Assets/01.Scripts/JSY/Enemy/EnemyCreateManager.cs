@@ -7,6 +7,7 @@ namespace JSY
     public class EnemyCreateManager : MonoBehaviour
     {
         [SerializeField] private Transform enemyParent;
+        [SerializeField] private Transform startTrm;
         [SerializeField] private List<MovePoint> movePoints = new List<MovePoint>();
 
         private void Awake()
@@ -25,7 +26,7 @@ namespace JSY
             foreach (Enemy enemy in WaveManager.Instance.GetWave().enemies)
             {
                 EnemyCountUI.Instance.UpdateCount(1);
-                Enemy obj = Instantiate(enemy, movePoints[0].transform.position, Quaternion.identity, enemyParent);
+                Enemy obj = Instantiate(enemy, startTrm.position, Quaternion.identity, enemyParent);
                 obj.SetMovePoints(movePoints);
                 yield return coolTime;
             }

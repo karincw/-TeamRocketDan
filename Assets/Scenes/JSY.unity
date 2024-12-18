@@ -9957,6 +9957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 3a635fdd7ec78ad46a5b6391ed8ec1d2, type: 2}
+  moneyText: {fileID: 90547634}
 --- !u!1 &1428391757
 GameObject:
   m_ObjectHideFlags: 0
@@ -10685,6 +10686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyParent: {fileID: 1261976402}
+  startTrm: {fileID: 1254066897}
   movePoints:
   - {fileID: 1254066898}
   - {fileID: 1703303085}
