@@ -3,18 +3,17 @@ using UnityEngine.UIElements;
 
 namespace Karin
 {
-    public class MochiAttacker : MonoBehaviour
+    public class MochiAttacker : MochiCompo
     {
-        private Mochi _owner;
         private CircleCollider2D _collider;
 
-        private void Awake()
+        protected override void Awake()
         {
-            _owner = GetComponentInParent<Mochi>();
+            base.Awake();
             _collider = GetComponent<CircleCollider2D>();
         }
 
-        private void Start()
+        public override void SetUp()
         {
             _collider.radius = _owner.MochiData.attackRange;
         }

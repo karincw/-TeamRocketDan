@@ -16,4 +16,5 @@ MonoBehaviour:
   attackRange: 0
   attackCooldown: 0
   description: 
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: fe5d228776cffed4189aadaf79a8066b, type: 3}
+  ranking: 2
