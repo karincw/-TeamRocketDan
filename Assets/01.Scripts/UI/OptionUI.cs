@@ -8,6 +8,7 @@ public class OptionUI : MonoBehaviour
 {
     [SerializeField] private Image background;
     [SerializeField] private RectTransform popupUI;
+    [SerializeField] private RectTransform infoUI;
     [SerializeField] private CanvasGroup popupCanvasGroup;
 
     private Slider bgmSlider, sfxSlider;
@@ -15,6 +16,7 @@ public class OptionUI : MonoBehaviour
 
     private bool isOpen = false;
     private bool isAnimating = false;
+    private bool isDicOpen = false;
 
     float durationTime = 0.2f;
 
@@ -26,15 +28,9 @@ public class OptionUI : MonoBehaviour
         infoButton = panel.Find("InfoBtn").GetComponent<Button>();
         exitButton = panel.Find("ExitBtn").GetComponent<Button>();
 
-        infoButton.onClick.AddListener(HandleInfoButton);
+        infoButton.onClick.AddListener(SettingInfoPanel);
         exitButton.onClick.AddListener(HandleExitButton);
     }
-
-    private void HandleInfoButton()
-    {
-        
-    }
-
     private void HandleExitButton()
     {
         // Scene ÀÌµ¿
@@ -45,38 +41,64 @@ public class OptionUI : MonoBehaviour
     {
         if (Keyboard.current.escapeKey.wasReleasedThisFrame)
         {
-            SettingPanel();
+            if (!isDicOpen)
+                SettingOptionPanel();
+            if (isDicOpen)
+                SettingInfoPanel();
         }
     }
 
-    public void SettingPanel()
+    public void SettingOptionPanel()
+    {
+        isOpen = !isOpen;
+        popupCanvasGroup.blocksRaycasts = isOpen;
+        SettingPanel(popupUI, isOpen);
+    }
+    
+    public void SettingInfoPanel()
+    {
+        isDicOpen = !isDicOpen;
+        SettingPanel(infoUI, isDicOpen);
+    }
+
+    private void SettingPanel(RectTransform panel, bool isOpen)
     {
         if (isAnimating) return;
         isAnimating = true;
 
-        isOpen = !isOpen;
-
         if (isOpen)
-            ActiveUI(true);
+            ActiveUI(panel, true, true);
 
         float fadeValue = isOpen ? 0.6f : 0f;
         float sizeValue = isOpen ? 1f : 0f;
 
         Sequence seq = DOTween.Sequence();
-        seq.Append(background.DOFade(fadeValue, durationTime));
-        seq.Join(popupUI.DOScale(sizeValue, durationTime));
+        seq.AppendCallback(() =>
+        {
+            if (isOpen || (!this.isOpen && !isDicOpen))
+                background.DOFade(fadeValue, durationTime);
+        });
+        seq.Join(panel.DOScale(sizeValue, durationTime));
         seq.OnComplete(() =>
         {
-            popupCanvasGroup.blocksRaycasts = isOpen;
+            
             isAnimating = false;
             if (!isOpen)
-                ActiveUI(false);
+            {
+                if(!this.isOpen && !isDicOpen)
+                {
+                    ActiveUI(panel, false, true);
+                }
+                else
+                    ActiveUI(panel, false);
+            }
         });
     }
 
-    private void ActiveUI(bool isTrue)
+    private void ActiveUI(RectTransform panel, bool isTrue, bool isEnd = false)
     {
-        background.gameObject.SetActive(isTrue);
-        popupUI.gameObject.SetActive(isTrue);
+        if(isEnd)
+            background.gameObject.SetActive(isTrue);
+        panel.gameObject.SetActive(isTrue);
     }
 }

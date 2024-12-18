@@ -16,7 +16,7 @@ namespace JSY
         private void Start()
         {
             speedButton.onClick.AddListener(UIManager.Instance.speedUI.ChangeSpeed);
-            optionButton.onClick.AddListener(UIManager.Instance.optionUI.SettingPanel);
+            optionButton.onClick.AddListener(UIManager.Instance.optionUI.SettingOptionPanel);
         }
     }
 }

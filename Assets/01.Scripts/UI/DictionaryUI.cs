@@ -14,7 +14,7 @@ namespace JSY
 
         private void Awake()
         {
-            Transform buttonGroup = transform.GetChild(0).Find("ButtonGroup");
+            Transform buttonGroup = transform.GetChild(0).GetChild(0).Find("ButtonGroup");
 
             star1Button = buttonGroup.Find("Star1Btn").GetComponent<Button>();
             star2Button = buttonGroup.Find("Star2Btn").GetComponent<Button>();
