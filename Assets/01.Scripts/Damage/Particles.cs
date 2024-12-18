@@ -13,7 +13,9 @@ namespace Leo.Damage
         protected virtual void Awake()
         {
             _damageCaster = GetComponent<DamageCaster>();
-            _material = Instantiate(_particleSystem.GetComponent<Renderer>().material);
+            var renderer = _particleSystem.GetComponent<Renderer>();    
+            _material = Instantiate(renderer.material);
+            renderer.material = _material;
         }
 
         public void SetPos(Transform target)
