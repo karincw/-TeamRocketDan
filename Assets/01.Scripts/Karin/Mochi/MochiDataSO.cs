@@ -32,10 +32,14 @@ namespace Karin
         public int attackCooldown;
         public MonoBehaviour attackEffect;
         [ColorUsage(showAlpha:true, hdr:true)]public Color attackColor;
+
         [Space, Header("StarLite")]
         public bool isStarlite;
         public int count;
         public Sprite starLiteImage;
+
+        [Space, Header("Explosion")]
+        public Vector3 size;
     }
 
 }
