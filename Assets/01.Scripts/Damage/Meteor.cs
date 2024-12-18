@@ -10,6 +10,7 @@ namespace Leo.Damage
         [SerializeField] private float _rotSpeed = 10f;
         [SerializeField] private float _fallSpeed = 5f;
         [SerializeField] private Vector2 _fallDir;
+        [SerializeField] private ParticleSystem _explodeParticle;
 
         private void Update()
         {
@@ -21,7 +22,9 @@ namespace Leo.Damage
         {
             if (other.TryGetComponent(out IStunable stun))
             {
+                Instantiate(_explodeParticle, transform.position, Quaternion.identity);
                 stun.Stun(5);
+                Destroy(gameObject);
             }
         }
     }

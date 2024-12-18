@@ -175,6 +175,7 @@ MonoBehaviour:
   _rotSpeed: 100
   _fallSpeed: 10
   _fallDir: {x: 1, y: -1}
+  _explodeParticle: {fileID: 2172850329758423866, guid: 6c593b31a0f34274c80280f151e4ffba, type: 3}
 --- !u!1 &2550389382253661763
 GameObject:
   m_ObjectHideFlags: 0
