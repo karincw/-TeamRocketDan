@@ -23,5 +23,10 @@ namespace Karin
             mochi.SetUp();
             return mochi;
         }
+
+        public Mochi InstantiateRandomMochi(TowerRanking rank)
+        {
+            return InstantiateMochi(GetNextMochi(rank));
+        }
     }
 }
