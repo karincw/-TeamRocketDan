@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Leo.Damage;
+using UnityEngine;
 
 namespace Leo.Interface
 {
@@ -6,5 +7,6 @@ namespace Leo.Interface
     {
         public void SetPos(Transform target);
         public void Play();
+        public DamageCaster GetDamageCaster();
     }
 }
