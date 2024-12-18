@@ -40,5 +40,10 @@ namespace Leo.Damage
                     transform);
             }
         }
+
+        public DamageCaster GetDamageCaster()
+        {
+            return damageCaster;
+        }
     }
 }

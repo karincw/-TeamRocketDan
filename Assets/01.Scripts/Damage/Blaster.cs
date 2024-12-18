@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Leo.Damage
 {
-    public class Blaster : MonoBehaviour, IEffectable
+    public class Blaster : MonoBehaviour
     {
         [SerializeField] private ParticleSystem _particleSystem;
         [SerializeField] private GameObject _visual;
