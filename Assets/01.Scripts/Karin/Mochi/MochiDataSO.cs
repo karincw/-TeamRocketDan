@@ -29,7 +29,7 @@ namespace Karin
     {
         public int damage;
         public int attackRange;
-        public int attackCooldown;
+        public float attackCooldown;
         public MonoBehaviour attackEffect;
         [ColorUsage(showAlpha:true, hdr:true)]public Color attackColor;
 

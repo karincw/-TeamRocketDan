@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dddd127325fa146997a74419690f41, type: 3}
   m_Name: Pudding
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  damage: 2
-  defense: 2
-  speed: 2
-  reward: 100
+  maxHealth: 120
+  speed: 3
+  defense: 4
+  reward: 200
   sprite: {fileID: 21300000, guid: 6ce7d294170c3444cbfc7c061cc356f3, type: 3}

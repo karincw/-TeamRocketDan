@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dddd127325fa146997a74419690f41, type: 3}
   m_Name: Dango
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  damage: 2
-  defense: 2
-  speed: 2
-  reward: 1
+  maxHealth: 12
+  speed: 2.5
+  defense: 0
+  reward: 2
   sprite: {fileID: 21300000, guid: 1bd217bfb225fe64689f63a3c5313ea1, type: 3}
