@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using DG.Tweening;
+using System;
 
 namespace Leo.Animation
 {
@@ -19,6 +20,11 @@ namespace Leo.Animation
             sequence.SetLoops(-1);
             sequence.SetEase(_ease);
             sequence.Play();
+        }
+
+        private void OnDestroy()
+        {
+            DOTween.Kill(transform);
         }
     }
 }
