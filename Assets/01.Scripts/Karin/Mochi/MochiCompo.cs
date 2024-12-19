@@ -12,5 +12,6 @@ namespace Karin
         }
 
         public abstract void SetUp();
+        public virtual void Release() { }
     }
 }

@@ -73,7 +73,10 @@ namespace Karin
 
         public void OnPush()
         {
-            // Push
+            _mochiCompos.ForEach(compo =>
+            {
+                compo.Release();
+            });
         }
     }
 }

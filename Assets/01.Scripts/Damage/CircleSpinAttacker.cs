@@ -39,6 +39,7 @@ namespace Leo.Damage
 
         public void Play()
         {
+            Debug.LogError("dsadssdas");
             for (int i = 0; i < _count; i++)
             {
                 var position = new Vector2(
@@ -85,16 +86,16 @@ namespace Leo.Damage
 
         public void ResetItem()
         {
-            
         }
 
         public void OnPush()
         {
+            transform.parent = PoolManager.Instance.transform;
             foreach (var star in _starLites)
             {
                 Destroy(star.gameObject);
             }
-            transform.parent = PoolManager.Instance.transform;
+            _starLites.Clear();
         }
     }
 }

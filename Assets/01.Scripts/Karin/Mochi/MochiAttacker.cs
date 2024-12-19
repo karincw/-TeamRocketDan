@@ -13,6 +13,7 @@ namespace Karin
         private CircleCollider2D _collider;
         private List<Enemy> _enemies = new List<Enemy>();
         private float lastAttacktime;
+        private CircleSpinAttacker effect;
 
         protected override void Awake()
         {
@@ -72,6 +73,14 @@ namespace Karin
 
         }
 
+        public override void Release()
+        {
+            if (effect is not null)
+            {
+                PoolManager.Instance.Push(effect);
+            }
+        }
+
         public override void SetUp()
         {
             _collider.radius = _owner.MochiData.attackData.attackRange;
@@ -79,8 +88,9 @@ namespace Karin
             var attackData = _owner.MochiData.attackData;
             if (attackData.isStarlite)
             {
-                var effect = PoolManager.Instance.Pop(attackData.attackEffect) as CircleSpinAttacker;
+                 effect = PoolManager.Instance.Pop(attackData.attackEffect) as CircleSpinAttacker;
                 effect.transform.parent = transform;
+                effect.SetPos(transform);
                 if (effect is not null)
                 {
                     effect.SetData(attackData.attackRange, attackData.count, 1);
