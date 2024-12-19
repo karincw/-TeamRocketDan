@@ -8,6 +8,8 @@ namespace Leo.Entity.SO
     public class WaveSO : ScriptableObject
     {
         public List<Enemy> enemies;
+        public bool isBoss;
+        public int bossTimeLimit;
         public float spawnDelay;
         public int waveDelay;
     }
