@@ -1,10 +1,11 @@
 using System;
 using UnityEngine;
 
-public class DontDestroyOnLoadObj : MonoBehaviour
+public class DontDestroyOnLoadObj : MonoSingleton<DontDestroyOnLoadObj>
 {
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         DontDestroyOnLoad(gameObject);
     }
 }

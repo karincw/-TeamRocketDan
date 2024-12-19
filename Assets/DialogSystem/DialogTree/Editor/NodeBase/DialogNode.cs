@@ -1,5 +1,5 @@
+#if UNITY_EDITOR || PLATFORM_STANDALONE_WIN
 using UnityEngine.UIElements;
-
 namespace Karin.DialogSystem.Tree
 {
     public abstract class DialogNode : NodeSO
@@ -14,6 +14,7 @@ namespace Karin.DialogSystem.Tree
             return node;
         }
 
+#if  UNITY_EDITOR
         private void OnValidate()
         {
             if (view == null) return;
@@ -21,5 +22,8 @@ namespace Karin.DialogSystem.Tree
             var dialogText = view.Q<TextField>("DialogText");
             dialogText.value = script.outputText;
         }
+#endif
     }
+        
 }
+#endif

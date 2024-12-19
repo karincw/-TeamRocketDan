@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using TMPro;
 using UnityEngine;
 
@@ -23,3 +24,4 @@ namespace Karin.DialogSystem.Tree
         }
     }
 }
+#endif
