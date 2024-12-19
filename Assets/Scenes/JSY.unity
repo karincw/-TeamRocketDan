@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe6338702789ac47960498ddb57f768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameOverSound: {fileID: 0}
   background: {fileID: 11601761}
   panel: {fileID: 1107148692}
   resultValueGroup: {fileID: 72626748}
@@ -6305,6 +6306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5ee02ab9fde5a46b98f194d51484bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _soundObject: {fileID: 0}
   _dragObject: {fileID: 0}
   _inputReader: {fileID: 11400000, guid: 5e21b4f1feeebf0458d329a03f559710, type: 2}
   _pointRadius: 0.1
@@ -12595,6 +12597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad87a42737f260145b9ee23ddfa997dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  warningSound: {fileID: 0}
   waves:
   - {fileID: 11400000, guid: 9df782cd5e26804489fc492e9d7ea46e, type: 2}
   - {fileID: 11400000, guid: 5390723363d04144a8cec17c8a07e401, type: 2}
@@ -24343,19 +24346,72 @@ MonoBehaviour:
   dialogDictionary:
     _serializedList:
     - Key: 1
-      Value: {fileID: 11400000, guid: 0294065bdf72cf14ebfca58dda571e11, type: 2}
+      Value:
+        texts:
+        - "\uB9C8\uC655\uB2D8, \uB9CC\uB098\uC11C \uBC18\uAC11\uC2B5\uB2C8\uB2E4."
+        - "\uC800\uB294 \uB514\uC800\uD2B8\uC655\uAD6D\uC5D0 \uC0B4\uACE0\uC788\uB294
+          \uB9C8\uC655\uB2D8\uC758 \uBE44\uC11C, \uBC31\uC124\uC774\uB77C\uACE0 \uD569\uB2C8\uB2E4."
+        - "\uB9C8\uC655\uB2D8\uC740 \uC655\uAD6D\uC744 \uC9C0\uBC30\uD558\uB824\uACE0
+          \uD558\uC168\uC9C0\uB9CC, \uB514\uC800\uD2B8 \uC8FC\uBBFC\uB4E4\uC758 \uBC18\uBC1C\uC774
+          \uAC70\uC138\uC9C0\uB294 \uBC14\uB78C\uC5D0 \uADF8\uB9CC \uACF5\uACA9\uC744
+          \uB2F9\uD558\uC168\uC2B5\uB2C8\uB2E4."
+        - "\uD589\uBCF5\uD55C \uC655\uAD6D\uC744 \uB2E4\uC2DC \uC9C0\uBC30\uD558\uAE30
+          \uC704\uD574, \uB9C8\uC655\uB2D8\uC758 \uAD70\uB2E8\uC744 \uC9C0\uD718\uD558\uC5EC
+          \uB514\uC800\uD2B8 \uC8FC\uBBFC\uB4E4\uC744 \uC81C\uC555\uD574\uC57C \uD569\uB2C8\uB2E4."
+        - "\uB108\uBB34 \uB098\uC05C \uAC70 \uC544\uB2C8\uB0D0\uACE0\uC694?"
+        - "\uC544\uB2C8\uC5D0\uC694."
+        - "\uC800\uD76C\uB294 \uB514\uC800\uD2B8 \uC655\uAD6D\uC774 \uB354\uC6B1
+          \uBB34\uAD81\uD55C \uBC1C\uC804\uC744 \uC704\uD55C \uAC81\uB2C8\uB2E4."
+        - "\uC544\uBB34\uD2BC, \uBA3C\uC800 \uB9C8\uC655\uB2D8\uC758 \uAD70\uB2E8\uC744
+          \uB9CC\uB4E4\uC5B4 \uBD05\uC2DC\uB2E4."
     - Key: 2
-      Value: {fileID: 11400000, guid: 18d066e26e7c1624eaaa31eef7c0ca28, type: 2}
+      Value:
+        texts:
+        - "\uC544\uB798\uC758 \uBC84\uD2BC\uC744 \uB204\uB974\uBA74 \uB9C8\uC655\uB2D8\uC758
+          \uBAA8\uCC0C\uB97C \uB9CC\uB4E4 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+        - "\uBAA8\uCC0C\uB97C \uC0DD\uC131\uD560 \uB54C\uB9C8\uB2E4 40\uCF54\uC778\uC774
+          \uC18C\uBAA8\uB418\uBA70, \uCF54\uC778\uC740 \uC801\uC744 \uC8FD\uC77C
+          \uB54C\uB9C8\uB2E4 \uD68D\uB4DD\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+        - "\uBAA8\uCC0C\uC758 \uC704\uCE58\uB97C \uC6C0\uC9C1\uC774\uAE30 \uC704\uD574\uC11C\uB294
+          \uBAA8\uCC0C\uB97C \uC7A1\uC544\uC11C \uC774\uB3D9\uD574\uC57C \uD569\uB2C8\uB2E4."
+        - "\uBAA8\uCC0C\uB97C \uD074\uB9AD\uD558\uC5EC \uC6D0\uD558\uB294 \uC704\uCE58\uB85C
+          \uC774\uB3D9\uD574 \uBD05\uC2DC\uB2E4."
     - Key: 3
-      Value: {fileID: 11400000, guid: ceba4c13170101a4f93c4b705a9bda7f, type: 2}
+      Value:
+        texts:
+        - "\uC798\uD558\uC168\uC2B5\uB2C8\uB2E4. \uC774\uB7F0\uC2DD\uC73C\uB85C \uB9C8\uC655\uB2D8\uC758
+          \uAD70\uB2E8\uC744 \uC5C5\uADF8\uB808\uC774\uB4DC \uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+        - "\uB9C8\uC9C0\uB9C9\uC73C\uB85C \uB3C4\uAC10\uC5D0 \uB300\uD574 \uC54C\uB824\uB4DC\uB9AC\uB3C4\uB85D
+          \uD558\uACA0\uC2B5\uB2C8\uB2E4."
+        - "\uC6B0\uCE21 \uC0C1\uB2E8\uC758 \uC124\uC815 \uBC84\uD2BC\uC744 \uB20C\uB7EC
+          \uC124\uC815 \uD654\uBA74\uC744 \uD65C\uC131\uD654 \uD574\uBD05\uC2DC\uB2E4."
     - Key: 4
-      Value: {fileID: 11400000, guid: 53ce83df369fb3d4f87d107350b14281, type: 2}
+      Value:
+        texts:
+        - "\uC6D0\uD558\uC2DC\uB294 \uC815\uBCF4\uC5D0 \uB530\uB77C \uB3C4\uAC10\uC744
+          \uC120\uD0DD\uD574\uC8FC\uC2DC\uBA74 \uB429\uB2C8\uB2E4."
+        - "\uC544\uBB34 \uB3C4\uAC10 \uBC84\uD2BC\uC744 \uB20C\uB7EC \uB3C4\uAC10
+          \uD654\uBA74\uC744 \uD65C\uC131\uD654 \uD574\uBD05\uC2DC\uB2E4."
     - Key: 5
-      Value: {fileID: 11400000, guid: 151dc01dd3002f14c9c7b516119a3db4, type: 2}
+      Value:
+        texts:
+        - "\uB3C4\uAC10 \uD654\uBA74\uC758 \uC0C1\uB2E8 \uBD80\uBD84\uC5D0\uB294
+          \uCE90\uB9AD\uD130 \uC885\uB958 \uBC84\uD2BC\uC774 \uC788\uACE0, \uD558\uB2E8
+          \uBD80\uBD84\uC5D0\uB294 \uCE90\uB9AD\uD130\uC758 \uC815\uBCF4\uAC00 \uB2F4\uACA8\uC788\uC2B5\uB2C8\uB2E4."
+        - "\uB514\uC800\uD2B8 \uC655\uAD6D\uC744 \uC9C0\uBC30\uD558\uB294\uB370 \uC774\uC815\uB3C4
+          \uC815\uBCF4\uBA74 \uCDA9\uBD84\uD560 \uAC83 \uAC19\uC2B5\uB2C8\uB2E4."
+        - "\uB9C8\uC655\uB2D8\uC774 \uBB34\uC0AC\uD788 \uB514\uC800\uD2B8 \uC655\uAD6D\uC744
+          \uC815\uBCF5\uD558\uC2E4 \uC218 \uC788\uC73C\uB9AC\uB77C \uBBFF\uACA0\uC2B5\uB2C8\uB2E4."
   _board:
     canvas: {fileID: 1245268452}
     audioSource: {fileID: 1245268454}
     owner: {fileID: 0}
+  noTouchs:
+  - {fileID: 2098844203}
+  - {fileID: 2098844202}
+  - {fileID: 2098844201}
+  - {fileID: 1536287626}
+  - {fileID: 1090730877}
 --- !u!114 &1245268452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79937,7 +79993,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1915809395131577160, guid: 2bd42d6fa4c52b24cae0149c5f1a047c, type: 3}
     m_RemovedGameObjects:
     - {fileID: 763972086656679400, guid: 2bd42d6fa4c52b24cae0149c5f1a047c, type: 3}
     m_AddedGameObjects:
