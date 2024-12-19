@@ -34,7 +34,6 @@ namespace JSY
             skipButton.gameObject.SetActive(true);
             if (waveRoutine != null)
                 StopCoroutine(waveRoutine);
-            Debug.Log("WaveDelay");
             seq = DOTween.Sequence()
             .AppendCallback(() =>
             {

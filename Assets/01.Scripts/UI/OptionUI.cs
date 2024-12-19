@@ -1,6 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace JSY
@@ -14,7 +15,6 @@ namespace JSY
         [SerializeField] private CanvasGroup popupCanvasGroup;
         [SerializeField] private Button popupCancelButton, mochiCancelButton, enemyCancelButton;
 
-        private Slider bgmSlider, sfxSlider;
         private Button mochiInfoButton, enemyInfoButton, exitButton;
 
         private bool isOpen = false;
@@ -27,12 +27,9 @@ namespace JSY
         private void Awake()
         {
             Transform panel = transform.GetChild(1).GetChild(1);
-            bgmSlider = panel.Find("BGMSlider").GetComponent<Slider>();
-            sfxSlider = panel.Find("SFXSlider").GetComponent<Slider>();
             mochiInfoButton = panel.Find("MochiInfoBtn").GetComponent<Button>();
             enemyInfoButton = panel.Find("EnemyInfoBtn").GetComponent<Button>();
             exitButton = panel.Find("ExitBtn").GetComponent<Button>();
-
 
             mochiInfoButton.onClick.AddListener(SettingMochiInfoPanel);
             enemyInfoButton.onClick.AddListener(SettingEnemyInfoPanel);
@@ -44,8 +41,7 @@ namespace JSY
         }
         private void HandleExitButton()
         {
-            // Scene 이동
-            Debug.Log("타이틀로 이동합니다.");
+            SceneManager.LoadScene("TitleScene");
         }
 
         private void Update()

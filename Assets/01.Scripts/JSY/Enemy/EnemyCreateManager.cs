@@ -3,6 +3,7 @@ using Leo.Entity.SO;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace JSY
@@ -45,11 +46,16 @@ namespace JSY
                 WaveManager.Instance.TurnEnd();
         }
 
-        public void UpdatePoints(Transform startTrm,  List<MovePoint> movePoints)
+        public void UpdatePoints(Transform startTrm, List<MovePoint> movePoints)
         {
             this.movePoints.Clear();
             this.startTrm = startTrm;
-            this.movePoints = movePoints;
+            this.movePoints = movePoints.ToList();
+        }
+
+        public void DeadEnemy()
+        {
+            gameObject.SetActive(false);
         }
     }
 }

@@ -46,6 +46,7 @@ namespace JSY
         public void Die()
         {
             EnemyCountUI.Instance.UpdateCount(-1);
+            ResultUI.Instance.AddDeadEnemy();
             MoneyUI.Instance.ModifyMoney(reward);
             PoolManager.Instance.Push(_owner);
         }
