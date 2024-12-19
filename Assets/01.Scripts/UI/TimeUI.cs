@@ -16,6 +16,8 @@ namespace JSY
         private Coroutine checkEnemyRoutine;
         private RectTransform rectTrm => transform as RectTransform;
 
+        private Sequence seq;
+
         private void Awake()
         {
             timeText = transform.Find("TimeTxt").GetComponent<TextMeshProUGUI>();
@@ -27,16 +29,19 @@ namespace JSY
         private void WaveDelay()
         {
             skipButton.gameObject.SetActive(true);
-            if (waveRoutine != null) 
+            if (waveRoutine != null)
                 StopCoroutine(waveRoutine);
-            Sequence seq = DOTween.Sequence();
-            seq.AppendCallback(() =>
+            Debug.Log("WaveDelay");
+            seq = DOTween.Sequence()
+            .AppendCallback(() =>
             {
+                Debug.Log(WaveManager.Instance.GetWave().waveDelay);
                 waveRoutine = StartCoroutine(SetTimePanel(WaveManager.Instance.GetWave().waveDelay));
-            });
-            seq.AppendInterval(WaveManager.Instance.GetWave().waveDelay);
-            seq.AppendCallback(() =>
+            })
+            .AppendInterval(WaveManager.Instance.GetWave().waveDelay)
+            .OnComplete(() =>
             {
+                Debug.Log("??????????????" + WaveManager.Instance.GetWave().waveDelay);
                 WaveManager.Instance.InvokeStartTurn();
                 skipButton.gameObject.SetActive(false);
             });
@@ -47,7 +52,7 @@ namespace JSY
             if (waveRoutine != null)
                 StopCoroutine(waveRoutine);
             if (checkEnemyRoutine != null)
-                StopCoroutine(waveRoutine);
+                StopCoroutine(checkEnemyRoutine);
 
             Sequence seq = DOTween.Sequence();
             seq.AppendCallback(() =>
@@ -87,7 +92,7 @@ namespace JSY
             var waitTime = new WaitForSeconds(1f);
             for (int i = 0; i <= time; i++)
             {
-                timeText.text = time - i + "초";
+                timeText.text = time - i + "초"; 
                 yield return waitTime;
             }
             rectTrm.DOAnchorPosY(0, 0.5f);
@@ -99,6 +104,7 @@ namespace JSY
             rectTrm.DOAnchorPosY(0, 0.5f);
             WaveManager.Instance.InvokeStartTurn();
             skipButton.gameObject.SetActive(false);
+            seq.Kill();
         }
     }
 }

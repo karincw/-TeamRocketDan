@@ -31,7 +31,9 @@ namespace JSY
             waveRepeatCount++;
             if (waveRepeatCount > waves.Count - 1)
                 waveRepeatCount = 0;
+
             OnChangeTurnEvent?.Invoke();
+            Debug.Log("TurnEnd :Invoke OnChangeTurnEvent");
         }
 
         public void InvokeStartTurn()

@@ -1,3 +1,4 @@
+using Karin;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,7 @@ namespace JSY
     public class MapManager : MonoBehaviour
     {
         [SerializeField] private List<MapObject> mapPrefabs = new List<MapObject>();
+        private Transform spawnPos;
 
         private int mapIndex = 0, nextMapIndex;
         private bool isChange = false;
@@ -25,6 +27,10 @@ namespace JSY
             WaveManager.Instance.OnChangeTurnEvent += HandleChangeTurnEvent;
 
             EnemyCreateManager.Instance.UpdatePoints(mapPrefabs[mapIndex].startTrm, mapPrefabs[mapIndex].pointGroup);
+
+            spawnPos = mapPrefabs[mapIndex].levelObj.transform.Find("Platform");
+            MochiMove.Instance.UpdatePosition(spawnPos);
+            MochiManager.Instance.UpdateSpawnPos(spawnPos);
         }
         
         private void HandleChangeTurnEvent()
@@ -35,6 +41,9 @@ namespace JSY
             mapPrefabs[mapIndex].levelObj.gameObject.SetActive(false);
             mapIndex = nextMapIndex;
             mapPrefabs[mapIndex].levelObj.gameObject.SetActive(true);
+            spawnPos = mapPrefabs[mapIndex].levelObj.transform.Find("Platform");
+            MochiMove.Instance.UpdatePosition(spawnPos);
+            MochiManager.Instance.UpdateSpawnPos(spawnPos);
             EnemyCreateManager.Instance.UpdatePoints(mapPrefabs[mapIndex].startTrm, mapPrefabs[mapIndex].pointGroup);
         }
 
@@ -43,7 +52,7 @@ namespace JSY
             Debug.Log("isChange " + isChange);
             isChange = true;
             nextMapIndex++;
-            if(mapIndex >= mapPrefabs.Count) nextMapIndex = 0;
+            if(nextMapIndex >= mapPrefabs.Count) nextMapIndex = 0;
         }
     }
 }

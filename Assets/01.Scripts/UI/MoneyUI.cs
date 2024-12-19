@@ -46,7 +46,6 @@ namespace JSY
             if (money < 40) return;
             ModifyMoney(-40);
             Mochi mochi = MochiManager.Instance.InstantiateMochi(data);
-            mochi.transform.position = Vector2.zero;
         }
     }
 }
