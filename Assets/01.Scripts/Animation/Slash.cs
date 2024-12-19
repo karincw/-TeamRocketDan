@@ -70,5 +70,10 @@ namespace Leo.Animation
         {
             return null;
         }
+
+        public void SetSize(float size)
+        {
+            transform.localScale = new Vector3(size, size, 1);
+        }
     }
 }
