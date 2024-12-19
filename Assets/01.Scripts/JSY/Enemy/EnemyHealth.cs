@@ -1,6 +1,7 @@
 using Karin.PoolingSystem;
 using Leo.Entity.SO;
 using Leo.Interface;
+using Leo.Sound;
 using UnityEngine;
 
 namespace JSY
@@ -9,6 +10,7 @@ namespace JSY
     {
         [SerializeField] private AttackText attackText;
         [SerializeField] private EnemyHealthBar healthBar;
+        [SerializeField] private SoundObject _deadSound;
         public int HP { get; set; }
         public int defense { get; set; }
         private int maxHP;
@@ -49,6 +51,7 @@ namespace JSY
             EnemyCountUI.Instance.UpdateCount(-1);
             ResultUI.Instance.AddDeadEnemy();
             MoneyUI.Instance.ModifyMoney(reward);
+            _deadSound.Play();
             PoolManager.Instance.Push(_owner);
         }
     }

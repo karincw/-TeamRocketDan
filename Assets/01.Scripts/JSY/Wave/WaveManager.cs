@@ -1,4 +1,5 @@
 using Leo.Entity.SO;
+using Leo.Sound;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ namespace JSY
 {
     public class WaveManager : MonoSingleton<WaveManager>
     {
+        [SerializeField] private SoundObject warningSound;
         public event Action OnChangeTurnEvent;
         public event Action OnStartTurnEvent;
         public event Action OnStartBossTurnEvent;
@@ -42,6 +44,7 @@ namespace JSY
             {
                 OnStartBossTurnEvent?.Invoke();
                 NoticeUI.Instance.Notice("보스가 출몰합니다!");
+                warningSound.Play();
             }
             else
                 NoticeUI.Instance.Notice("적이 출몰합니다!");

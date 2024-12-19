@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Leo.Sound
 {
@@ -7,7 +8,7 @@ namespace Leo.Sound
     public class SoundObject : MonoBehaviour
     {
         [SerializeField] private AudioClip _audioClip;
-        [SerializeField] private bool _isBgm;
+        [FormerlySerializedAs("_isPlayObAwake")] [FormerlySerializedAs("_isBgm")] [SerializeField] private bool _isPlayOnAwake;
         private AudioSource _audioSource;
 
         private void Awake()
@@ -18,7 +19,7 @@ namespace Leo.Sound
 
         private void Start()
         {
-            if (_isBgm)
+            if (_isPlayOnAwake)
             {
                 Play();
             }

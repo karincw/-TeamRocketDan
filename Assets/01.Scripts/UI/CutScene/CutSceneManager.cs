@@ -1,4 +1,5 @@
 using Leo.Sound;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,7 +12,13 @@ namespace Leo.UI
         [SerializeField] private SoundObject _soundObject;
          public int _index = 0;
 
-        private void Update()
+         private void Start()
+         {
+                _cutSceneCells[_index].Play();
+                _index++;
+         }
+
+         private void Update()
         {
             if (_index >= _cutSceneCells.Count)
             {

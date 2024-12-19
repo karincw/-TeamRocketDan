@@ -1781,7 +1781,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 82980311}
-  - component: {fileID: 82980312}
   m_Layer: 5
   m_Name: BottomPanel
   m_TagString: Untagged
@@ -1813,21 +1812,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 500}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &82980312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82980310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75cc0fb6cf068604c866b93c8e772790, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: 7ff80f65ccad14d478c06693fd862e35, type: 2}
-  bgmSlider: {fileID: 1067194094}
-  sfxSlider: {fileID: 1009622833}
 --- !u!1 &84873398
 GameObject:
   m_ObjectHideFlags: 0
@@ -3966,7 +3950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: f4702041e5384a94b82f98c5a8c9cec6, type: 3}
-  _isBgm: 1
+  _isPlayOnAwake: 1
 --- !u!82 &295873533
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3980,7 +3964,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9280,7 +9264,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 82980312}
+      - m_Target: {fileID: 1929459122}
         m_TargetAssemblyTypeName: SoundUI, Assembly-CSharp
         m_MethodName: SetSFXLevel
         m_Mode: 0
@@ -9572,7 +9556,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 82980312}
+      - m_Target: {fileID: 1929459122}
         m_TargetAssemblyTypeName: SoundUI, Assembly-CSharp
         m_MethodName: SetBGMLevel
         m_Mode: 0
@@ -21867,7 +21851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: cc2b9f1277c8eda40bd8deb6aeaf3b13, type: 3}
-  _isBgm: 0
+  _isPlayOnAwake: 0
 --- !u!82 &1514789569
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22614,7 +22598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: cc2b9f1277c8eda40bd8deb6aeaf3b13, type: 3}
-  _isBgm: 0
+  _isPlayOnAwake: 0
 --- !u!82 &1556945932
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27300,6 +27284,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1374576118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1929459121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1929459123}
+  - component: {fileID: 1929459122}
+  m_Layer: 0
+  m_Name: GameObject (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1929459122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929459121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75cc0fb6cf068604c866b93c8e772790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 7ff80f65ccad14d478c06693fd862e35, type: 2}
+  bgmSlider: {fileID: 1067194094}
+  sfxSlider: {fileID: 1009622833}
+--- !u!4 &1929459123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929459121}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1932666193
 GameObject:
   m_ObjectHideFlags: 0
@@ -28457,7 +28488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: cc2b9f1277c8eda40bd8deb6aeaf3b13, type: 3}
-  _isBgm: 0
+  _isPlayOnAwake: 0
 --- !u!82 &1957655462
 AudioSource:
   m_ObjectHideFlags: 0
@@ -31242,3 +31273,4 @@ SceneRoots:
   - {fileID: 622206840}
   - {fileID: 1374576118}
   - {fileID: 295873535}
+  - {fileID: 1929459123}
