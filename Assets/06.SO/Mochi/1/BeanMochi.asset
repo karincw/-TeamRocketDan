@@ -25,3 +25,4 @@ MonoBehaviour:
     starLiteImage: {fileID: 2379641805153947552, guid: c2258ca99317ac941b80a43630073111, type: 3}
     speedTimeMultiply: 1
     size: 1
+  circleSpinAttacker: {fileID: 7489302735481407548, guid: 7cbc103117cece044b9a998c263fd673, type: 3}

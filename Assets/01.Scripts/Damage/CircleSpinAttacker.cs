@@ -5,9 +5,8 @@ using UnityEngine;
 
 namespace Leo.Damage
 {
-    public class CircleSpinAttacker : MonoBehaviour, IEffectable, IColorChangeable, IPoolable
+    public class CircleSpinAttacker : MonoBehaviour, IEffectable, IColorChangeable
     {
-        [field:SerializeField] public PoolingType type { get; set; }
         [SerializeField] private StarLite damageCaster;
         [SerializeField] private int _count;
         [SerializeField] private float _distance;
@@ -53,13 +52,6 @@ namespace Leo.Damage
                 _starLites.Add(star);
             }
         }
-        public void SetActive(bool state)
-        {
-            _starLites.ForEach(star =>
-            {
-                star.canAttack = state;
-            });
-        }
 
         public DamageCaster GetDamageCaster()
         {
@@ -81,26 +73,6 @@ namespace Leo.Damage
             {
                 star.transform.localScale = new Vector3(size, size, 1);
             }
-        }
-
-        
-        public GameObject GetGameObject()
-        {
-            return gameObject;
-        }
-
-        public void ResetItem()
-        {
-        }
-
-        public void OnPush()
-        {
-            transform.parent = PoolManager.Instance.transform;
-            foreach (var star in _starLites)
-            {
-                Destroy(star.gameObject);
-            }
-            _starLites.Clear();
         }
     }
 }

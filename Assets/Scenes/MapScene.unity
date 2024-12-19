@@ -7086,11 +7086,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3107022869005696627, guid: 47e0e742a6880f74bac219d4a97c87a0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5107404812171327238, guid: 47e0e742a6880f74bac219d4a97c87a0, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5107404812171327238, guid: 47e0e742a6880f74bac219d4a97c87a0, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.size
@@ -30913,6 +30913,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapPrefabs:
+  - levelObj: {fileID: 495815656}
+    startTrm: {fileID: 97739976}
+    pointGroup:
+    - {fileID: 495815655}
+    - {fileID: 495815654}
+    - {fileID: 495815653}
+    - {fileID: 495815652}
+    - {fileID: 495815651}
+    - {fileID: 495815650}
+    - {fileID: 495815649}
   - levelObj: {fileID: 1501364287}
     startTrm: {fileID: 97739976}
     pointGroup:
@@ -30942,16 +30952,6 @@ MonoBehaviour:
     - {fileID: 1570244679}
     - {fileID: 1570244678}
     - {fileID: 1570244677}
-  - levelObj: {fileID: 495815656}
-    startTrm: {fileID: 97739976}
-    pointGroup:
-    - {fileID: 495815655}
-    - {fileID: 495815654}
-    - {fileID: 495815653}
-    - {fileID: 495815652}
-    - {fileID: 495815651}
-    - {fileID: 495815650}
-    - {fileID: 495815649}
 --- !u!1 &934047886
 GameObject:
   m_ObjectHideFlags: 0
@@ -37597,7 +37597,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3028279746592570884, guid: e004ad748e20f134ab0a8eaa227a3f02, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3028279746592570884, guid: e004ad748e20f134ab0a8eaa227a3f02, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.size
@@ -43805,7 +43805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7276252957506785470, guid: e004ad748e20f134ab0a8eaa227a3f02, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7882416706152016773, guid: e004ad748e20f134ab0a8eaa227a3f02, type: 3}
       propertyPath: m_LocalPosition.x

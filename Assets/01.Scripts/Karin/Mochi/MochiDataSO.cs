@@ -1,4 +1,5 @@
 using Karin.PoolingSystem;
+using Leo.Damage;
 using Leo.Interface;
 using UnityEngine;
 
@@ -15,6 +16,7 @@ namespace Karin
         public Sprite image;
         public TowerRanking ranking;
         public AttackData attackData;
+        public CircleSpinAttacker circleSpinAttacker;
     }
 
     [System.Serializable]
