@@ -91,15 +91,12 @@ namespace Karin
                  effect = PoolManager.Instance.Pop(attackData.attackEffect) as CircleSpinAttacker;
                 effect.transform.parent = transform;
                 effect.SetPos(transform);
-                if (effect is not null)
-                {
-                    effect.SetData(attackData.attackRange, attackData.count, 1);
-                    StarLite sl = (effect.GetDamageCaster() as StarLite);
-                    sl.SetImage(attackData.starLiteImage);
-                    sl.SetDamage(attackData.damage);
-                    effect.Play();
-                    effect.SetColor(attackData.attackColor);
-                }
+                effect.SetData(attackData.attackRange, attackData.count, 1);
+                StarLite sl = (effect.GetDamageCaster() as StarLite);
+                sl.SetImage(attackData.starLiteImage);
+                sl.SetDamage(attackData.damage);
+                effect.Play();
+                effect.SetColor(attackData.attackColor);
             }
 
         }
