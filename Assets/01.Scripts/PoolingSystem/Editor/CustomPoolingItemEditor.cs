@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using Karin.PoolingSystem;
 using UnityEditor;
 using UnityEngine;
@@ -89,3 +90,4 @@ public class CustomPoolingItemEditor : Editor
         serializedObject.ApplyModifiedProperties();
     }
 }
+#endif
