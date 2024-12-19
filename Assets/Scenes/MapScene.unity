@@ -30913,16 +30913,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapPrefabs:
-  - levelObj: {fileID: 495815656}
-    startTrm: {fileID: 97739976}
-    pointGroup:
-    - {fileID: 495815655}
-    - {fileID: 495815654}
-    - {fileID: 495815653}
-    - {fileID: 495815652}
-    - {fileID: 495815651}
-    - {fileID: 495815650}
-    - {fileID: 495815649}
   - levelObj: {fileID: 1501364287}
     startTrm: {fileID: 97739976}
     pointGroup:
@@ -30952,6 +30942,16 @@ MonoBehaviour:
     - {fileID: 1570244679}
     - {fileID: 1570244678}
     - {fileID: 1570244677}
+  - levelObj: {fileID: 495815656}
+    startTrm: {fileID: 97739976}
+    pointGroup:
+    - {fileID: 495815655}
+    - {fileID: 495815654}
+    - {fileID: 495815653}
+    - {fileID: 495815652}
+    - {fileID: 495815651}
+    - {fileID: 495815650}
+    - {fileID: 495815649}
 --- !u!1 &934047886
 GameObject:
   m_ObjectHideFlags: 0
