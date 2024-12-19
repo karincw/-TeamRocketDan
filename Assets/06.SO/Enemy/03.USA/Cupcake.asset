@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dddd127325fa146997a74419690f41, type: 3}
   m_Name: Cupcake
   m_EditorClassIdentifier: 
-  maxHealth: 250
-  speed: 1
-  defense: 2
+  maxHealth: 400
+  speed: 10
+  defense: 0
   reward: 400
   sprite: {fileID: 21300000, guid: 3ed2b5d2c8e6cc44aa419f0486b38d86, type: 3}

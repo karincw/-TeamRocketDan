@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dddd127325fa146997a74419690f41, type: 3}
   m_Name: Ferrero
   m_EditorClassIdentifier: 
-  maxHealth: 500
-  speed: 2
-  defense: 4
+  maxHealth: 600
+  speed: 3
+  defense: 0
   reward: 600
   sprite: {fileID: 21300000, guid: dc30cfebcdd854d46afff824e24cf80b, type: 3}

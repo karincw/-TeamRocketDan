@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dddd127325fa146997a74419690f41, type: 3}
   m_Name: Yakgwa
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  speed: 0.5
+  maxHealth: 15
+  speed: 0.8
   defense: 0
   reward: 2
   sprite: {fileID: 21300000, guid: f84ad3a8d2d99b4459e92fe7c3139f8e, type: 3}

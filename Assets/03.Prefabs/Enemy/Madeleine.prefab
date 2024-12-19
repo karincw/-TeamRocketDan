@@ -269,6 +269,6 @@ MonoBehaviour:
   movePoints: []
   _enemySO: {fileID: 11400000, guid: 67fd1390496c02f40a52f1bf3b1ddae8, type: 2}
   <type>k__BackingField: 16
-  _liftTime: 5
+  _liftTime: 50
   _lifeText: {fileID: 6016261611387381742}
   _particleSystem: {fileID: 2172850329758423866, guid: 6c593b31a0f34274c80280f151e4ffba, type: 3}

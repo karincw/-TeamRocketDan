@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7621a99552334cf0bdc1a5753fb569f5, type: 3}
   m_Name: DefenceUpSkill
   m_EditorClassIdentifier: 
+  UpgradeDefense: 2

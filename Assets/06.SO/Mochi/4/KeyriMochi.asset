@@ -24,4 +24,4 @@ MonoBehaviour:
     count: 0
     starLiteImage: {fileID: 0}
     speedTimeMultiply: 0
-    size: 1.5
+    size: 2

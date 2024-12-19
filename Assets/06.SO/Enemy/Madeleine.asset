@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dddd127325fa146997a74419690f41, type: 3}
   m_Name: Madeleine
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  speed: 1
+  maxHealth: 200
+  speed: 2
   defense: 0
-  reward: 4
+  reward: 100
   sprite: {fileID: 21300000, guid: b6d40ff6806d1d9488dadb18c3e2ee83, type: 3}

@@ -4887,6 +4887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
+  canAttack: 1
   <SrCompo>k__BackingField: {fileID: 3387273366154476125}
   _particleSystem: {fileID: 598869836132968086}
   _trailRenderer: {fileID: 1577202119659183484}
