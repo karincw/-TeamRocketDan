@@ -1,10 +1,11 @@
+using Karin.PoolingSystem;
 using System.Collections.Generic;
 using Leo.Entity.SO;
 using UnityEngine;
 
 namespace JSY
 {
-    public class Enemy : MonoBehaviour
+    public class Enemy : MonoBehaviour, IPoolable
     {
         [SerializeField] private List<MovePoint> movePoints = new List<MovePoint>();
         [SerializeField] protected EnemySO _enemySO;
@@ -21,6 +22,11 @@ namespace JSY
         }
 
         protected virtual void Start()
+        {
+            Init();
+        }
+
+        private void Init()
         {
             EnemyHealth.SetData(_enemySO);
             _spriteCompo.sprite = _enemySO.sprite;
@@ -56,5 +62,18 @@ namespace JSY
             else if(transform.position.x > target.x)
                 _spriteCompo.flipX = false;
         }
+
+        #region Pool
+        [field:SerializeField]public PoolingType type { get; set; }
+        public GameObject GetGameObject()
+        {
+            return gameObject;
+        }
+
+        public void ResetItem()
+        {
+            Init();
+        }
+        #endregion
     }
 }
