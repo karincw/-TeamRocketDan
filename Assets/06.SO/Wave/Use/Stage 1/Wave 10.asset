@@ -15,6 +15,6 @@ MonoBehaviour:
   enemies:
   - {fileID: -8095141106176499412, guid: 1f449008aed6a004d86c12cc5f534349, type: 3}
   isBoss: 1
-  bossTimeLimit: 150
+  bossTimeLimit: 50
   spawnDelay: 0.5
   waveDelay: 50
