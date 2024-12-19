@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dddd127325fa146997a74419690f41, type: 3}
   m_Name: Macaroon
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  damage: 2
-  defense: 2
-  speed: 2
+  maxHealth: 20
+  speed: 8
+  defense: 0
   reward: 8
   sprite: {fileID: 21300000, guid: 000c35e79ca6f0148bb9d712fc535ec9, type: 3}

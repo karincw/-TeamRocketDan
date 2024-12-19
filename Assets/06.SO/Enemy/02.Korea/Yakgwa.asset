@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Yakgwa
   m_EditorClassIdentifier: 
   maxHealth: 10
-  damage: 2
-  defense: 2
-  speed: 2
-  reward: 4
+  speed: 0.5
+  defense: 0
+  reward: 2
   sprite: {fileID: 21300000, guid: f84ad3a8d2d99b4459e92fe7c3139f8e, type: 3}
