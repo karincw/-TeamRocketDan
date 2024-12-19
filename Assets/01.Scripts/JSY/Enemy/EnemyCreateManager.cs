@@ -1,3 +1,4 @@
+using Leo.Entity.SO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,15 +23,17 @@ namespace JSY
 
         private IEnumerator CreateEnemy()
         {
-            var coolTime = new WaitForSeconds(WaveManager.Instance.GetWave().spawnDelay);
-            foreach (Enemy enemy in WaveManager.Instance.GetWave().enemies)
+            WaveSO wave = WaveManager.Instance.GetWave();
+            var coolTime = new WaitForSeconds(wave.spawnDelay);
+            foreach (Enemy enemy in wave.enemies)
             {
                 EnemyCountUI.Instance.UpdateCount(1);
                 Enemy obj = Instantiate(enemy, startTrm.position, Quaternion.identity, enemyParent);
                 obj.SetMovePoints(movePoints);
                 yield return coolTime;
             }
-            WaveManager.Instance.TurnEnd();
+            if(!wave.isBoss)
+                WaveManager.Instance.TurnEnd();
         }
     }
 }
