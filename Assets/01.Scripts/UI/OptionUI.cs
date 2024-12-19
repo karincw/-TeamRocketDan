@@ -12,6 +12,7 @@ namespace JSY
         [SerializeField] private RectTransform mochiInfo;
         [SerializeField] private RectTransform enemyInfo;
         [SerializeField] private CanvasGroup popupCanvasGroup;
+        [SerializeField] private Button popupCancelButton, mochiCancelButton, enemyCancelButton;
 
         private Slider bgmSlider, sfxSlider;
         private Button mochiInfoButton, enemyInfoButton, exitButton;
@@ -32,9 +33,14 @@ namespace JSY
             enemyInfoButton = panel.Find("EnemyInfoBtn").GetComponent<Button>();
             exitButton = panel.Find("ExitBtn").GetComponent<Button>();
 
+
             mochiInfoButton.onClick.AddListener(SettingMochiInfoPanel);
             enemyInfoButton.onClick.AddListener(SettingEnemyInfoPanel);
             exitButton.onClick.AddListener(HandleExitButton);
+
+            popupCancelButton.onClick.AddListener(SettingOptionPanel);
+            mochiCancelButton.onClick.AddListener(SettingMochiInfoPanel);
+            enemyCancelButton.onClick.AddListener(SettingEnemyInfoPanel);
         }
         private void HandleExitButton()
         {

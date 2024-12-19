@@ -2,21 +2,24 @@ using System;
 using TMPro;
 using UnityEngine;
 
-public class WaveUI : MonoBehaviour
+namespace JSY
 {
-    private TextMeshProUGUI waveText;
-    private int waveCount = -1;
-
-    private void Awake()
+    public class WaveUI : MonoBehaviour
     {
-        waveText = GetComponentInChildren<TextMeshProUGUI>();
-        HandleStartTurnEvent();
-        WaveManager.Instance.OnStartTurnEvent += HandleStartTurnEvent;
-    }
+        private TextMeshProUGUI waveText;
+        private int waveCount = -1;
 
-    private void HandleStartTurnEvent()
-    {
-        waveCount++;
-        waveText.text = "웨이브 " + waveCount;
+        private void Awake()
+        {
+            waveText = GetComponentInChildren<TextMeshProUGUI>();
+            HandleStartTurnEvent();
+            WaveManager.Instance.OnStartTurnEvent += HandleStartTurnEvent;
+        }
+
+        private void HandleStartTurnEvent()
+        {
+            waveCount++;
+            waveText.text = "웨이브 " + waveCount;
+        }
     }
 }
