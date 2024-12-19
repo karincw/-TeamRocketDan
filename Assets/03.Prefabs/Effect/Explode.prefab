@@ -4916,7 +4916,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5013,7 +5013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: 09e260ffcb8ed2b4db268ade0734b45e, type: 3}
-  _isBgm: 1
+  _isPlayOnAwake: 1
 --- !u!1 &6577382077626297493
 GameObject:
   m_ObjectHideFlags: 0

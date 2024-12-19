@@ -15,6 +15,7 @@ namespace JSY
         public int defense { get; set; }
         private int maxHP;
         public int reward { get; set; }
+        public bool IsDead => HP <= 0;
         
         private Enemy _owner;
         public void SetOwner(Enemy owner)
@@ -48,6 +49,7 @@ namespace JSY
 
         public void Die()
         {
+            Debug.Log("Die");
             EnemyCountUI.Instance.UpdateCount(-1);
             ResultUI.Instance.AddDeadEnemy();
             MoneyUI.Instance.ModifyMoney(reward);

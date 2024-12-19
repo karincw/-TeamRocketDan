@@ -12,6 +12,7 @@ namespace JSY
 
         protected override void Awake()
         {
+            base.Awake();
             countText = GetComponentInChildren<TextMeshProUGUI>();
             UpdateCount(0);
         }

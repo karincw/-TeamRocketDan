@@ -8,6 +8,7 @@ namespace JSY
     public class Enemy : MonoBehaviour, IPoolable
     {
         [SerializeField] private List<MovePoint> movePoints = new List<MovePoint>();
+        private CircleCollider2D _collider;
         [SerializeField] protected EnemySO _enemySO;
         private int value;
         public EnemyHealth EnemyHealth { get; private set; }
@@ -25,6 +26,7 @@ namespace JSY
             _spriteCompo = GetComponentInChildren<SpriteRenderer>();
             EnemyHealth.SetOwner(this);
             _enemySO = Instantiate(_enemySO);
+            _collider = GetComponent<CircleCollider2D>();
         }
 
         protected virtual void Start()
@@ -79,10 +81,12 @@ namespace JSY
         public virtual void ResetItem()
         {
             Init();
+            _collider.enabled = true;
         }
 
         public void OnPush()
         {
+            _collider.enabled = false;
             transform.parent = PoolManager.Instance.transform;
         }
 

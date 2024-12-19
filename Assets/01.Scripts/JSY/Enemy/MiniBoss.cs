@@ -35,10 +35,5 @@ namespace JSY
             _timer -= Time.deltaTime;
             SetLifeText(Mathf.RoundToInt(_timer));
         }
-
-        private void OnDestroy()
-        {
-            EnemyCountUI.Instance.UpdateCount(-1);
-        }
     }
 }

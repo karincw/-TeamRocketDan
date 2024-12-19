@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -6161515972007796094, guid: 1c55d4b1054e98a4ba3101b3058b72e1, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6161515972007796094, guid: 1c55d4b1054e98a4ba3101b3058b72e1, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
@@ -214,4 +218,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 0}
-  _isBgm: 0
+  _isPlayOnAwake: 0
