@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e7f46d2d071984cbe18b3d78cd6d1f, type: 3}
   m_Name: Pool_Bamboo
   m_EditorClassIdentifier: 
-  type: 0
   typeName: Bamboo
   name: Bamboo
   prefab: {fileID: 5019023869508416858, guid: e9efd8010116e484b91dda5b6314e740, type: 3}

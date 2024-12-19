@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e7f46d2d071984cbe18b3d78cd6d1f, type: 3}
   m_Name: Pool_Walnut
   m_EditorClassIdentifier: 
-  type: 0
   typeName: Walnut
   name: Walnut
   prefab: {fileID: 5019023869508416858, guid: e1cd53c19ed6c304e937f6fda72024dc, type: 3}

@@ -1,3 +1,4 @@
+using Karin.PoolingSystem;
 using Leo.Entity.SO;
 using Leo.Interface;
 using UnityEngine;
@@ -13,6 +14,12 @@ namespace JSY
         private int maxHP;
         public int reward { get; set; }
         
+        private Enemy _owner;
+        public void SetOwner(Enemy owner)
+        {
+            _owner = owner;
+        }
+        
         public void SetData(EnemySO enemySO)
         {
             HP = enemySO.maxHealth;
@@ -20,6 +27,7 @@ namespace JSY
             maxHP = enemySO.maxHealth;
             HP = Mathf.Clamp(HP, 0, enemySO.maxHealth);
             reward = enemySO.reward;
+            healthBar.SetHealthBar((float)HP / maxHP);
         }
         
         public void TakeDamage(int damage)
@@ -39,7 +47,7 @@ namespace JSY
         {
             EnemyCountUI.Instance.UpdateCount(-1);
             MoneyUI.Instance.ModifyMoney(reward);
-            Destroy(gameObject);
+            PoolManager.Instance.Push(_owner);
         }
     }
 }

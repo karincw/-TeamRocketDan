@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74e7f46d2d071984cbe18b3d78cd6d1f, type: 3}
-  m_Name: Pool_Ferrero
+  m_Name: Pool_Boss_Ferrero
   m_EditorClassIdentifier: 
   type: 0
-  typeName: Ferrero
+  typeName: Boss_Ferrero
   name: Ferrero
   prefab: {fileID: 5019023869508416858, guid: b1449c3d1dbd1494dae0b13ca1e03c57, type: 3}
   count: 5

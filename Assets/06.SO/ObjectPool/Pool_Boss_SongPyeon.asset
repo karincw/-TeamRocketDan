@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74e7f46d2d071984cbe18b3d78cd6d1f, type: 3}
-  m_Name: Pool_SongPyeon
+  m_Name: Pool_Boss_SongPyeon
   m_EditorClassIdentifier: 
-  type: 0
-  typeName: SongPyeon
+  type: 1
+  typeName: Boss_SongPyeon
   name: SongPyeon
   prefab: {fileID: 5019023869508416858, guid: 1f449008aed6a004d86c12cc5f534349, type: 3}
   count: 5

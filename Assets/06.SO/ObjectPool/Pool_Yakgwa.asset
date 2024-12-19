@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e7f46d2d071984cbe18b3d78cd6d1f, type: 3}
   m_Name: Pool_Yakgwa
   m_EditorClassIdentifier: 
-  type: 0
   typeName: Yakgwa
   name: Yakgwa
   prefab: {fileID: 5019023869508416858, guid: 855f10e348393004299437d806888058, type: 3}

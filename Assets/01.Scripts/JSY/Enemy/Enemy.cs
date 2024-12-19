@@ -19,6 +19,7 @@ namespace JSY
         {
             EnemyHealth = GetComponent<EnemyHealth>();
             _spriteCompo = GetComponentInChildren<SpriteRenderer>();
+            EnemyHealth.SetOwner(this);
         }
 
         protected virtual void Start()
@@ -74,6 +75,13 @@ namespace JSY
         {
             Init();
         }
+
+        public void OnPush()
+        {
+            Init();
+            transform.parent = PoolManager.Instance.transform;
+        }
+
         #endregion
     }
 }

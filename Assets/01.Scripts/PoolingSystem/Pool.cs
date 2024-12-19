@@ -47,6 +47,7 @@ namespace Karin.PoolingSystem
 
         public void Push(IPoolable item)
         {
+            item.OnPush();
             item.GetGameObject().SetActive(false);
             _pool.Push(item);
         }

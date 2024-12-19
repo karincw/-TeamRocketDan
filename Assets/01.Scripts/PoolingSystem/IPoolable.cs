@@ -9,6 +9,7 @@ namespace Karin.PoolingSystem
         public string name { get; set; }
         public GameObject GetGameObject();
         public void ResetItem();
+        public void OnPush();
     }
 
 }

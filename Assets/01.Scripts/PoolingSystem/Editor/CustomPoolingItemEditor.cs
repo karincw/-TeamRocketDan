@@ -67,7 +67,7 @@ public class CustomPoolingItemEditor : Editor
                         return;
                     }
                     enumNameProp.stringValue = prevName;
-                    ((PoolItemSO)target).type = (PoolingType)System.Enum.Parse(typeof(PoolingType), prevName);
+                    
                 }
 
 

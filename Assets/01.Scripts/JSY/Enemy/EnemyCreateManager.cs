@@ -36,6 +36,8 @@ namespace JSY
             {
                 EnemyCountUI.Instance.UpdateCount(1);
                 Enemy obj = PoolManager.Instance.Pop(enemy) as Enemy;
+                obj.transform.position = startTrm.position;
+                obj.transform.parent = enemyParent;
                 obj.SetMovePoints(movePoints);
                 yield return coolTime;
             }

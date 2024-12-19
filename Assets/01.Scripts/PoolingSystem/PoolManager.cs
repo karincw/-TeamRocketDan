@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +17,7 @@ namespace Karin.PoolingSystem
 
             foreach (PoolItemSO item in _poolList.list)
             {
-                CreatePool(item.type, item.prefab, item.count);
+                CreatePool((PoolingType)Enum.Parse(typeof(PoolingType), item.typeName), item.prefab, item.count);
             }
         }
 

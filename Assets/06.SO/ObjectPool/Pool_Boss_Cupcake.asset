@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74e7f46d2d071984cbe18b3d78cd6d1f, type: 3}
-  m_Name: Pool_Cupcake
+  m_Name: Pool_Boss_Cupcake
   m_EditorClassIdentifier: 
   type: 0
-  typeName: Cupcake
+  typeName: Boss_Cupcake
   name: Cupcake
   prefab: {fileID: 5019023869508416858, guid: 8d6726fa496d69e4c8d45a089a97a082, type: 3}
   count: 5
