@@ -34176,7 +34176,19 @@ MonoBehaviour:
   m_Value: 0.0001
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2031786509}
+        m_TargetAssemblyTypeName: SoundUI, Assembly-CSharp
+        m_MethodName: SetSFXLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1218495839
 GameObject:
   m_ObjectHideFlags: 0
@@ -37024,7 +37036,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1465808495}
-  - component: {fileID: 1465808496}
   m_Layer: 5
   m_Name: BottomPanel
   m_TagString: Untagged
@@ -37056,21 +37067,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 500}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &1465808496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1465808494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75cc0fb6cf068604c866b93c8e772790, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: 7ff80f65ccad14d478c06693fd862e35, type: 2}
-  bgmSlider: {fileID: 1699886410}
-  sfxSlider: {fileID: 1185109963}
 --- !u!1 &1470285495
 GameObject:
   m_ObjectHideFlags: 0
@@ -73395,7 +73391,19 @@ MonoBehaviour:
   m_Value: 0.0001
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2031786509}
+        m_TargetAssemblyTypeName: SoundUI, Assembly-CSharp
+        m_MethodName: SetBGMLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1711055277
 GameObject:
   m_ObjectHideFlags: 0
@@ -77922,6 +77930,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2031786507}
   - component: {fileID: 2031786508}
+  - component: {fileID: 2031786509}
   m_Layer: 5
   m_Name: OptionUI
   m_TagString: Untagged
@@ -77972,6 +77981,21 @@ MonoBehaviour:
   popupCancelButton: {fileID: 243544162}
   mochiCancelButton: {fileID: 1024867778}
   enemyCancelButton: {fileID: 848406230}
+--- !u!114 &2031786509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031786506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75cc0fb6cf068604c866b93c8e772790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 7ff80f65ccad14d478c06693fd862e35, type: 2}
+  bgmSlider: {fileID: 1699886410}
+  sfxSlider: {fileID: 1185109963}
 --- !u!1 &2032017135
 GameObject:
   m_ObjectHideFlags: 0
