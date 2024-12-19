@@ -33,7 +33,6 @@ namespace JSY
                 waveRepeatCount = 0;
 
             OnChangeTurnEvent?.Invoke();
-            Debug.Log("TurnEnd :Invoke OnChangeTurnEvent");
         }
 
         public void InvokeStartTurn()

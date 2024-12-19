@@ -1,4 +1,4 @@
-﻿using Leo.Interface;
+using Leo.Interface;
 using UnityEngine;
 
 namespace Leo.Damage
@@ -6,6 +6,7 @@ namespace Leo.Damage
     public class DamageCaster : MonoBehaviour
     {
         [SerializeField] private int _damage;
+        public bool canAttack = true;
         
         public void SetDamage(int damage)
         {
@@ -14,7 +15,7 @@ namespace Leo.Damage
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.TryGetComponent(out IDamageable damageable))
+            if (canAttack && other.TryGetComponent(out IDamageable damageable))
             {
                 damageable.TakeDamage(_damage);
             }

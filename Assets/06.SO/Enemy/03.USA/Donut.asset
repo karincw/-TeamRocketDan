@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dddd127325fa146997a74419690f41, type: 3}
   m_Name: Donut
   m_EditorClassIdentifier: 
-  maxHealth: 12
+  maxHealth: 20
   speed: 6
   defense: 0
   reward: 4

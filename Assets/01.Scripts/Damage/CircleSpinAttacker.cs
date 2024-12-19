@@ -1,4 +1,4 @@
-﻿using Karin.PoolingSystem;
+using Karin.PoolingSystem;
 using System.Collections.Generic;
 using Leo.Interface;
 using UnityEngine;
@@ -39,7 +39,6 @@ namespace Leo.Damage
 
         public void Play()
         {
-            Debug.LogError("dsadssdas");
             for (int i = 0; i < _count; i++)
             {
                 var position = new Vector2(
@@ -51,9 +50,15 @@ namespace Leo.Damage
                     position,
                     Quaternion.identity,
                     transform);
-                Debug.Log("Play");
                 _starLites.Add(star);
             }
+        }
+        public void SetActive(bool state)
+        {
+            _starLites.ForEach(star =>
+            {
+                star.canAttack = state;
+            });
         }
 
         public DamageCaster GetDamageCaster()
