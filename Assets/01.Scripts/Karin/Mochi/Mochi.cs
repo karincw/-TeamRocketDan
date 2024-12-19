@@ -1,3 +1,4 @@
+using Leo.Animation;
 using Leo.Interface;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,6 +16,10 @@ namespace Karin
         public bool CanAttack => !isStun && !moving;
         public bool isStun = false;
         private bool moving = false;
+
+        [Space, Header("Stun")]
+        [SerializeField] private EllipticalMotion stunEffect;
+        [SerializeField] private Vector3 _interpolatePosition;
 
         [ContextMenu("SetUp")]
         public void SetUp()
@@ -46,8 +51,11 @@ namespace Karin
         private IEnumerator StunCoroutine(float time)
         {
             isStun = true;
+            var se = Instantiate(stunEffect, transform);
+            se.SetCenter(transform.position + _interpolatePosition);
             yield return new WaitForSeconds(time);
             isStun = false;
+            Destroy(se.gameObject);
         }
     }
 }
