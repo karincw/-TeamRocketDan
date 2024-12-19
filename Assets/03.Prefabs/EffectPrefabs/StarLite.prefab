@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27772709ab5549d28ede9852b9004675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <type>k__BackingField: 22
   damageCaster: {fileID: 9174230761098547460, guid: a06c2b366c45fbe428960eb940ecbefb, type: 3}
   _count: 0
   _distance: 0
+  _speed: 0

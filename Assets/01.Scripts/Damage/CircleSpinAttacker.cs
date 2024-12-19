@@ -1,11 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using Karin.PoolingSystem;
+using System.Collections.Generic;
 using Leo.Interface;
 using UnityEngine;
 
 namespace Leo.Damage
 {
-    public class CircleSpinAttacker : MonoBehaviour, IEffectable, IColorChangeable
+    public class CircleSpinAttacker : MonoBehaviour, IEffectable, IColorChangeable, IPoolable
     {
+        [field:SerializeField] public PoolingType type { get; set; }
         [SerializeField] private StarLite damageCaster;
         [SerializeField] private int _count;
         [SerializeField] private float _distance;
@@ -73,6 +75,26 @@ namespace Leo.Damage
             {
                 star.transform.localScale = new Vector3(size, size, 1);
             }
+        }
+
+        
+        public GameObject GetGameObject()
+        {
+            return gameObject;
+        }
+
+        public void ResetItem()
+        {
+            
+        }
+
+        public void OnPush()
+        {
+            foreach (var star in _starLites)
+            {
+                Destroy(star.gameObject);
+            }
+            transform.parent = PoolManager.Instance.transform;
         }
     }
 }

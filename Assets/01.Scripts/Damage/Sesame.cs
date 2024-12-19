@@ -9,7 +9,6 @@ namespace Leo.Damage
         [SerializeField] private SpriteRenderer _sr;
         [SerializeField] private float _speed;
         [SerializeField] private float _lifeTime;
-
         private float _stunDuration;
         private void Start()
         {

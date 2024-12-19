@@ -18,7 +18,7 @@ MonoBehaviour:
     damage: 1
     attackRange: 2
     attackCooldown: 1
-    attackEffect: {fileID: 7489302735481407548, guid: 7cbc103117cece044b9a998c263fd673, type: 3}
+    attackEffect: 22
     attackColor: {r: 0.40784317, g: 0.12941177, b: 0.17254902, a: 1}
     isStarlite: 1
     count: 1

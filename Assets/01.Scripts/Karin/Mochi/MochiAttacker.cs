@@ -1,5 +1,6 @@
 using DG.Tweening;
 using JSY;
+using Karin.PoolingSystem;
 using Leo.Damage;
 using Leo.Interface;
 using System.Collections.Generic;
@@ -36,7 +37,9 @@ namespace Karin
             if (Time.time - lastAttacktime >= attackData.attackCooldown)
             {
                 if (_enemies.Count < 1) return;
-                var attackEffect = Instantiate(attackData.attackEffect, _enemies[0].transform.position, Quaternion.identity);
+                //var attackEffect = Instantiate(attackData.attackEffect, _enemies[0].transform.position, Quaternion.identity);
+                var attackEffect = PoolManager.Instance.Pop(attackData.attackEffect) as IEffectable;
+                attackEffect.SetPos(_enemies[0].transform);
                 if (attackEffect is IEffectable effect)
                 {
                     if (attackEffect is IColorChangeable colorChange)
@@ -71,15 +74,16 @@ namespace Karin
             var attackData = _owner.MochiData.attackData;
             if (attackData.isStarlite)
             {
-                var effect = Instantiate(attackData.attackEffect, transform);
-                if (effect is CircleSpinAttacker spin)
+                var effect = PoolManager.Instance.Pop(attackData.attackEffect) as CircleSpinAttacker;
+                effect.transform.parent = transform;
+                if (effect is not null)
                 {
-                    spin.SetData(attackData.attackRange, attackData.count, 1);
-                    StarLite sl = (spin.GetDamageCaster() as StarLite);
+                    effect.SetData(attackData.attackRange, attackData.count, 1);
+                    StarLite sl = (effect.GetDamageCaster() as StarLite);
                     sl.SetImage(attackData.starLiteImage);
                     sl.SetDamage(attackData.damage);
-                    spin.Play();
-                    spin.SetColor(attackData.attackColor);
+                    effect.Play();
+                    effect.SetColor(attackData.attackColor);
                 }
             }
 

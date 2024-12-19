@@ -1,3 +1,4 @@
+using Karin.PoolingSystem;
 using Leo.Interface;
 using UnityEngine;
 
@@ -14,14 +15,6 @@ namespace Karin
         public Sprite image;
         public TowerRanking ranking;
         public AttackData attackData;
-
-        private void OnValidate()
-        {
-            if(attackData.attackEffect is not IEffectable)
-            {
-                attackData.attackEffect = null;
-            }
-        }
     }
 
     [System.Serializable]
@@ -30,7 +23,7 @@ namespace Karin
         public int damage;
         public int attackRange;
         public float attackCooldown;
-        public MonoBehaviour attackEffect;
+        public PoolingType attackEffect;
         [ColorUsage(showAlpha:true, hdr:true)]public Color attackColor;
 
         [Space, Header("StarLite")]

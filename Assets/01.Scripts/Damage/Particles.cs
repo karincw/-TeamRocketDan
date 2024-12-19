@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Karin.PoolingSystem;
 using Leo.Interface;
 using UnityEngine;
 
 namespace Leo.Damage
 {
-    public class Particles : MonoBehaviour, IEffectable, IColorChangeable
+    public class Particles : MonoBehaviour, IEffectable, IColorChangeable, IPoolable
     {
         private static readonly int MainColor = Shader.PropertyToID("_MainColor");
         [SerializeField] private ParticleSystem _particleSystem;
@@ -42,6 +42,21 @@ namespace Leo.Damage
         public void SetSize(float size)
         {
             transform.localScale = new Vector3(size, size, 1);
+        }
+
+        [field:SerializeField] public PoolingType type { get; set; }
+        public GameObject GetGameObject()
+        {
+            return gameObject;
+        }
+
+        public void ResetItem()
+        {
+        }
+
+        public void OnPush()
+        {
+            transform.parent = PoolManager.Instance.transform;
         }
     }
 }
