@@ -10,6 +10,11 @@ namespace JSY.Boss
         [SerializeField] private BossSkillSO _bossSkill;
         [SerializeField] private bool isStop;
         private Collider2D[] _colliders = new Collider2D[1];
+
+        [Header("Pudding")] 
+        [SerializeField] private GameObject _shild;
+        [SerializeField] private bool _isPudding;
+        
         public bool IsSkillUse { get; set; }
 
 
@@ -45,6 +50,8 @@ namespace JSY.Boss
                 _colliders[0] = null;
                 _bossSkill.ResetSkill();
                 IsSkillUse = false;
+                if (_isPudding)
+                    _shild.SetActive(false);
                 yield return new WaitForSeconds(2f);
             }
         }
@@ -62,6 +69,10 @@ namespace JSY.Boss
         {
             if (isStop)
                 IsSkillUse = true;
+            if (_isPudding)
+            {
+                _shild.SetActive(true);
+            }
             _bossSkill.UseSkill(target);
         }
     }
