@@ -1,22 +1,28 @@
 
 using AYellowpaper.SerializedCollections;
-using Karin.DialogSystem.Tree;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 namespace Karin.DialogSystem
 {
+    [Serializable]
+    public struct Texts
+    {
+        public List<string> texts;
+    }
+
     [RequireComponent(typeof(DialogCanvas))]
     public class DialogSystem : MonoBehaviour
     {
         public static bool IsPlayed = false;
         [SerializedDictionary("Type", "Dialog")]
-        public SerializedDictionary<DialogType, DialogTree> dialogDictionary;
-        [SerializeField] private BlackBoard _board = new();
-        private DialogTree _currentDialog;
+        public SerializedDictionary<DialogType, Texts> dialogDictionary;
         public Action EndEvent;
+        [SerializeField] private Karin.DialogSystem.Tree.BlackBoard _board;
+        [SerializeField] private List<GameObject> noTouchs;
 
         private void Awake()
         {
@@ -40,15 +46,6 @@ namespace Karin.DialogSystem
                 activator.PlayDialogEvent -= HandlePlayDialog;
             });
         }
-
-        private void Update()
-        {
-            if (IsPlayed)
-            {
-                _currentDialog.Update();
-            }
-        }
-
         private void HandlePlayDialog(DialogType type)
         {
             if (IsPlayed)
@@ -56,9 +53,32 @@ namespace Karin.DialogSystem
                 Debug.LogError("You cannot play dialogSystem at otherDialogSystem is running");
                 return;
             }
-            _currentDialog = dialogDictionary[type].Clone();
-            _currentDialog.Bind(_board);
-            IsPlayed = true;
+            StartCoroutine(PlayTextsCoroutine(type, dialogDictionary[type].texts));
+        }
+
+        public IEnumerator PlayTextsCoroutine(DialogType type, List<string> texts)
+        {
+            AllDisable();
+            foreach (string text in texts)
+            {
+                _board.canvas.SetDialogText(text, 1.3f, false);
+                yield return new WaitForSeconds(2.3f);
+            }
+            _board.canvas.SetDialogText("", 0.01f, true);
+            HandleEndEvent(type);
+        }
+
+        private void AllDisable()
+        {
+            for (int i = 0; i < noTouchs.Count; ++i)
+                noTouchs[i].SetActive(false);
+        }
+
+        private void HandleEndEvent(DialogType type)
+        {
+            AllDisable();
+            int index = dialogDictionary.Values.ToList().FindIndex(x => x.Equals(dialogDictionary[type]));
+            noTouchs[index].SetActive(true);
         }
 
     }

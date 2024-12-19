@@ -11,13 +11,7 @@ namespace JSY
         [SerializeField] private DialogActivator activator;
         [SerializeField] private List<GameObject> noTouchs;
 
-        private void Awake()    
-        {
-            dialog.EndEvent += HandleEndEvent;
-            activator.PlayDialogEvent += HandleStartEvent;
-        }
-
-        private void HandleStartEvent(DialogType type)
+        private void HandleStartEvent()
         {
             for(int i = 0; i < noTouchs.Count; ++i)
                 noTouchs[i].SetActive(false);
@@ -25,7 +19,8 @@ namespace JSY
 
         private void HandleEndEvent()
         {
-            noTouchs[(int)activator.dialogType-1].SetActive(true);
+            HandleStartEvent();
+            noTouchs[(int)activator.dialogType].SetActive(true);
         }
     }
 }
