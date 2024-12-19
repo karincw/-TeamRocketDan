@@ -1,5 +1,6 @@
 using System;
 using TMPro;
+using UnityEngine;
 
 namespace JSY
 {
@@ -7,13 +8,13 @@ namespace JSY
     {
         private TextMeshProUGUI countText;
         private int enemyCount = 0;
-        private int maxCount = 30;
+        [SerializeField]private int maxCount = 30;
 
         public bool isEnd { get; private set; }
 
         protected override void Awake()
         {
-            base.Awake();
+            base.Awake(); 
             countText = GetComponentInChildren<TextMeshProUGUI>();
             UpdateCount(0);
         }
@@ -28,7 +29,7 @@ namespace JSY
 
         private void Update()
         {
-            UpdateCount(0);
+            UpdateCount(0); 
         }
 
         public void UpdateCount(int value)
