@@ -21,6 +21,14 @@ namespace JSY.Boss
             transform.localScale = new Vector3(1.5f, 1.5f, 1f);
             StartCoroutine(FindMochi());
         }
+        
+        public override void ResetItem()
+        {
+            base.ResetItem();
+            
+            _bossSkill.SetOwner(this);
+            StartCoroutine(FindMochi());
+        }
 
         protected override void Update()
         {
