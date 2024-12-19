@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.Rendering;
 
 namespace JSY
 {
@@ -37,13 +38,11 @@ namespace JSY
             seq = DOTween.Sequence()
             .AppendCallback(() =>
             {
-                Debug.Log(WaveManager.Instance.GetWave().waveDelay);
                 waveRoutine = StartCoroutine(SetTimePanel(WaveManager.Instance.GetWave().waveDelay));
             })
             .AppendInterval(WaveManager.Instance.GetWave().waveDelay)
             .OnComplete(() =>
             {
-                Debug.Log("??????????????" + WaveManager.Instance.GetWave().waveDelay);
                 WaveManager.Instance.InvokeStartTurn();
                 skipButton.gameObject.SetActive(false);
             });
@@ -56,28 +55,18 @@ namespace JSY
             if (checkEnemyRoutine != null)
                 StopCoroutine(checkEnemyRoutine);
 
-            bossSeq = DOTween.Sequence();
-            bossSeq.AppendCallback(() =>
-            {
-                checkEnemyRoutine = StartCoroutine(CheckEnemy());
-                waveRoutine = StartCoroutine(SetTimePanel(WaveManager.Instance.GetWave().bossTimeLimit));
-            });
-            bossSeq.AppendInterval(WaveManager.Instance.GetWave().bossTimeLimit);
-            bossSeq.AppendCallback(() =>
-            {
-                StopCoroutine(waveRoutine);
-                if (EnemyCountUI.Instance.IsAllDead())
-                    WaveManager.Instance.TurnEnd();
-                else
-                    EnemyCountUI.Instance.GameOver();
-            });
+            waveRoutine = StartCoroutine(SetTimePanel(WaveManager.Instance.GetWave().bossTimeLimit));
+            checkEnemyRoutine = StartCoroutine(CheckEnemy());
         }
 
         private IEnumerator CheckEnemy()
         {
+            float startTime = Time.time;
             yield return new WaitForSeconds(1f);
             while (true)
             {
+                if(Time.time - startTime > WaveManager.Instance.GetWave().bossTimeLimit +1) EnemyCountUI.Instance.GameOver();
+
                 if (EnemyCountUI.Instance.IsAllDead())
                 {
                     WaveManager.Instance.TurnEnd();
