@@ -25,7 +25,7 @@ namespace Karin
 
         private void Update()
         {
-
+            effect?.SetActive(_owner.CanAttack);
             if (_owner.CanAttack)
                 Attack();
         }

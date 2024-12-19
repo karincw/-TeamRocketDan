@@ -53,12 +53,12 @@ namespace Karin
 
         private IEnumerator StunCoroutine(float time)
         {
-            stunEffect.SetCenter(transform.position + _interpolatePosition);
-            stunEffect.gameObject.SetActive(true);
+            //stunEffect.SetCenter(transform.position + _interpolatePosition);
+            //stunEffect.gameObject.SetActive(true);
             isStun = true;
             yield return new WaitForSeconds(time);
             isStun = false;
-            stunEffect.gameObject.SetActive(false);
+            //stunEffect.gameObject.SetActive(false);
         }
 
         
