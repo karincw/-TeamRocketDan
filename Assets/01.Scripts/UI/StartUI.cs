@@ -27,7 +27,7 @@ public class StartUI : MonoBehaviour
 
     private void HandleStartButton()
     {
-        SceneManager.LoadScene("MapScene");
+        SceneManager.LoadScene("CutScene");
     }
 
     private void HandleExitButton()
