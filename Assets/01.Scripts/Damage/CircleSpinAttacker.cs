@@ -9,6 +9,7 @@ namespace Leo.Damage
         [SerializeField] private StarLite damageCaster;
         [SerializeField] private int _count;
         [SerializeField] private float _distance;
+        [SerializeField] private int _speed;
         
         private List<StarLite> _starLites = new List<StarLite>();
 
@@ -19,7 +20,7 @@ namespace Leo.Damage
 
         private void SpinAttack()
         {
-            transform.Rotate(0, 0, 360 * Time.deltaTime);
+            transform.Rotate(0, 0, 360 * Time.deltaTime * _speed);
         }
 
         public void SetPos(Transform target)
@@ -27,10 +28,11 @@ namespace Leo.Damage
             transform.position = target.position;
         }
 
-        public void SetData(int distance, int count)
+        public void SetData(int distance, int count, int speed)
         {
             _distance = distance;
             _count = count;
+            _speed = speed;
         }
 
         public void Play()

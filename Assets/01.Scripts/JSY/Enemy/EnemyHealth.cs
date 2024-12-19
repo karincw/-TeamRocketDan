@@ -14,11 +14,14 @@ namespace JSY
         {
             HP = enemySO.maxHealth;
             defense = enemySO.defense;
+            HP = Mathf.Clamp(HP, 0, enemySO.maxHealth);
         }
         
         public void TakeDamage(int damage)
         {
             int hitAmount = damage - Mathf.CeilToInt(defense * 0.5f);
+            if (hitAmount < 0)
+                hitAmount = 0;
             var text = Instantiate(attackText, transform.position, Quaternion.identity);
             text.SetText(hitAmount.ToString());
             HP -= hitAmount;
