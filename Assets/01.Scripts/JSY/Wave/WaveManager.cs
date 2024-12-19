@@ -16,6 +16,10 @@ namespace JSY
         [SerializeField] private List<WaveSO> waves = new List<WaveSO>();
         private int waveRepeatCount = 0;
         private int waveCount = 0;
+        private int repeatCount = 0;
+        private int add = 40;
+
+        public int PoweredHp(int hp) => repeatCount != 0 ? hp * repeatCount + 40 * repeatCount : hp;
         protected override void Awake()
         {
         }
@@ -32,7 +36,10 @@ namespace JSY
         {
             waveRepeatCount++;
             if (waveRepeatCount > waves.Count - 1)
+            {
+                repeatCount++;
                 waveRepeatCount = 0;
+            }
 
             OnChangeTurnEvent?.Invoke();
         }

@@ -6,7 +6,7 @@ namespace JSY
     {
         private TextMeshProUGUI countText;
         private int enemyCount = 0;
-        private int maxCount = 35;
+        private int maxCount = 30;
 
         public bool isEnd { get; private set; }
 

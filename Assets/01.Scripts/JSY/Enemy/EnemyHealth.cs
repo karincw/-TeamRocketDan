@@ -25,14 +25,15 @@ namespace JSY
         
         public void SetData(EnemySO enemySO)
         {
-            HP = enemySO.maxHealth;
+            var hp = WaveManager.Instance.PoweredHp(enemySO.maxHealth);
+            HP = hp;
             defense = enemySO.defense;
-            maxHP = enemySO.maxHealth;
-            HP = Mathf.Clamp(HP, 0, enemySO.maxHealth);
+            maxHP = hp;
+            HP = Mathf.Clamp(HP, 0, hp);
             reward = enemySO.reward;
             healthBar.SetHealthBar((float)HP / maxHP);
         }
-        
+
         public void TakeDamage(int damage)
         {
             int hitAmount = damage - Mathf.CeilToInt(defense * 0.5f);
