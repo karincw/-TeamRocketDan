@@ -71,7 +71,7 @@ namespace JSY
             return gameObject;
         }
 
-        public void ResetItem()
+        public virtual void ResetItem()
         {
             Init();
         }

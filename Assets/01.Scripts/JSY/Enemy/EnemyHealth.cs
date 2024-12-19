@@ -36,11 +36,12 @@ namespace JSY
             if (hitAmount < 0)
                 hitAmount = 0;
             var text = Instantiate(attackText, transform.position, Quaternion.identity);
-            text.SetText(hitAmount.ToString());
+            
             HP -= hitAmount;
             healthBar.SetHealthBar((float)HP / maxHP);
             if (HP <= 0)
                 Die();
+            text.SetText(hitAmount.ToString());
         }
 
         public void Die()
