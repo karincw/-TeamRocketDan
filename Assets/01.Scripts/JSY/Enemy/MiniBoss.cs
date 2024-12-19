@@ -1,4 +1,6 @@
+using Karin.PoolingSystem;
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -16,18 +18,31 @@ namespace JSY
             base.Start();
             transform.localScale = new Vector3(1.2f, 1.2f, 1f);
             _timer = _liftTime;
-            Destroy(gameObject, _liftTime);
+            //EnemyCountUI.Instance.UpdateCount(1);
+            Destroy();
         }
-        
+
+        private void Destroy()
+        {
+            StartCoroutine(DestroyCoroutine());
+        }
+
+        private IEnumerator DestroyCoroutine()
+        {
+            yield return new WaitForSeconds(_liftTime);
+            PoolManager.Instance.Push(this);
+        }
+
         public void SetLifeText(int life)
         {
             _lifeText.text = life.ToString();
         }
 
-        /*private void OnDestroy()
+        public override void ResetItem()
         {
-            EnemyCountUI.Instance.UpdateCount(-1);    
-        }*/
+            base.ResetItem();
+            _timer = _liftTime;
+        }
 
         protected override void Update()
         {
