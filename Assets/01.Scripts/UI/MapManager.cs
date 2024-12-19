@@ -32,7 +32,13 @@ namespace JSY
             MochiMove.Instance.UpdatePosition(spawnPos);
             MochiManager.Instance.UpdateSpawnPos(spawnPos);
         }
-        
+
+        private void OnDestroy()
+        {
+            WaveManager.Instance.OnStartBossTurnEvent -= HandleBossTurnEvent;
+            WaveManager.Instance.OnChangeTurnEvent -= HandleChangeTurnEvent;
+        }
+
         private void HandleChangeTurnEvent()
         {
             if (!isChange) return;

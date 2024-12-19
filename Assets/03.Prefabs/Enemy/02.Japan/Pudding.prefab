@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePoints: []
   _enemySO: {fileID: 11400000, guid: 5f85267882b93aa4e8ae9c69a72ca909, type: 2}
-  <type>k__BackingField: 0
+  <type>k__BackingField: 7
   _whatIsMochi:
     serializedVersion: 2
     m_Bits: 64

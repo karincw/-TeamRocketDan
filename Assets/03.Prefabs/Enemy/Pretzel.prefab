@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: _enemySO
       value: 
       objectReference: {fileID: 11400000, guid: dc7e4dbd52db51a42b1612a55096dbcb, type: 2}
+    - target: {fileID: 801249604580453463, guid: a2a2cf27af2fe8e44b6c9310adcd0523, type: 3}
+      propertyPath: <type>k__BackingField
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 6347415984543276275, guid: a2a2cf27af2fe8e44b6c9310adcd0523, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -58,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 875634fcf2c406044a675c1d9ef31552, type: 3}
     - target: {fileID: 8341936785702468077, guid: a2a2cf27af2fe8e44b6c9310adcd0523, type: 3}
       propertyPath: m_Name
-      value: Pretzel Variant
+      value: Pretzel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,4 +1,6 @@
+using Karin.PoolingSystem;
 using Leo.Entity.SO;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +18,11 @@ namespace JSY
             WaveManager.Instance.OnStartTurnEvent += HandleStartTurnEvent;
         }
 
+        private void OnDestroy()
+        {
+            WaveManager.Instance.OnStartTurnEvent -= HandleStartTurnEvent;
+        }
+
         private void HandleStartTurnEvent()
         {
             StartCoroutine(CreateEnemy());
@@ -25,10 +32,10 @@ namespace JSY
         {
             WaveSO wave = WaveManager.Instance.GetWave();
             var coolTime = new WaitForSeconds(wave.spawnDelay);
-            foreach (Enemy enemy in wave.enemies)
+            foreach (var enemy in wave.enemies)
             {
                 EnemyCountUI.Instance.UpdateCount(1);
-                Enemy obj = Instantiate(enemy, startTrm.position, Quaternion.identity, enemyParent);
+                Enemy obj = PoolManager.Instance.Pop(enemy) as Enemy;
                 obj.SetMovePoints(movePoints);
                 yield return coolTime;
             }

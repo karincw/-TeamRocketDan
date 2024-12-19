@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: _enemySO
       value: 
       objectReference: {fileID: 11400000, guid: 8b2a0c6eca2ed404ba78a8e68dc6fe2d, type: 2}
+    - target: {fileID: 905299708636873479, guid: 547540af18a42804ca8289a6d6b8ddcb, type: 3}
+      propertyPath: <type>k__BackingField
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1434665147266607765, guid: 547540af18a42804ca8289a6d6b8ddcb, type: 3}
       propertyPath: m_Name
       value: MarshMallow
