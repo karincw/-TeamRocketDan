@@ -36,8 +36,8 @@ namespace JSY
         public void InvokeStartTurn()
         {
             waveCount++;
+            NoticeUI.Instance.Notice("적이 출몰합니다!");
             OnStartTurnEvent?.Invoke();
         }
     }
-
 }
