@@ -9,6 +9,7 @@ namespace JSY
     {
         public event Action OnChangeTurnEvent;
         public event Action OnStartTurnEvent;
+        public event Action OnStartBossTurnEvent;
 
         [SerializeField] private List<WaveSO> waves = new List<WaveSO>();
         private int waveRepeatCount = 0;
@@ -36,7 +37,14 @@ namespace JSY
         public void InvokeStartTurn()
         {
             waveCount++;
-            NoticeUI.Instance.Notice("적이 출몰합니다!");
+            if (waves[waveRepeatCount].isBoss)
+            {
+                OnStartBossTurnEvent?.Invoke();
+                NoticeUI.Instance.Notice("보스가 출몰합니다!");
+            }
+            else
+                NoticeUI.Instance.Notice("적이 출몰합니다!");
+
             OnStartTurnEvent?.Invoke();
         }
     }

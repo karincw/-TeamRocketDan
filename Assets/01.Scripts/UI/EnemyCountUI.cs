@@ -16,19 +16,28 @@ namespace JSY
             UpdateCount(0);
         }
 
+        public bool isAllDead() => enemyCount == 0 ? true : false;
+
+        public void GameOver()
+        {
+            isEnd = true;
+            ResultUI.Instance.GameOver();
+        }
+
         public void UpdateCount(int value)
         {
             if (enemyCount == maxCount)
             {
                 if (!isEnd)
                 {
-                    isEnd = true;
-                    ResultUI.Instance.GameOver();
+                    GameOver();
                 }
                 return;
             }
             enemyCount += value;
             countText.text = enemyCount + "/" + maxCount + "¸¶¸®";
         }
+
+        
     }
 }
