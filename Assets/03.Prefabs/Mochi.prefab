@@ -53,6 +53,7 @@ MonoBehaviour:
   _collisionCollider: {fileID: 5981399697595825130}
   isDrag: 0
   _mochiData: {fileID: 11400000, guid: 8e57072c264bc6f49854a75b06b6ab3f, type: 2}
+  <type>k__BackingField: 19
   isStun: 0
   stunEffect: {fileID: 7016959729605456105, guid: 862cd24790f408a428091bd5e2067fed, type: 3}
   _interpolatePosition: {x: 0, y: 0.825, z: 0}

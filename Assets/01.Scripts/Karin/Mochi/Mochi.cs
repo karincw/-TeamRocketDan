@@ -1,3 +1,4 @@
+using Karin.PoolingSystem;
 using Leo.Animation;
 using Leo.Interface;
 using System.Collections;
@@ -7,10 +8,11 @@ using UnityEngine;
 
 namespace Karin
 {
-    public class Mochi : DragAndDropObject, IStunable
+    public class Mochi : DragAndDropObject, IStunable, IPoolable
     {
         [SerializeField] private MochiDataSO _mochiData;
         public MochiDataSO MochiData { get => _mochiData; set => _mochiData = value; }
+        [field:SerializeField] public PoolingType type { get; set; }
 
         private List<MochiCompo> _mochiCompos;
         public bool CanAttack => !isStun && !moving;
@@ -56,6 +58,22 @@ namespace Karin
             yield return new WaitForSeconds(time);
             isStun = false;
             Destroy(se.gameObject);
+        }
+
+        
+        public GameObject GetGameObject()
+        {
+            return gameObject;
+        }
+
+        public void ResetItem()
+        {
+            // Pop
+        }
+
+        public void OnPush()
+        {
+            // Push
         }
     }
 }

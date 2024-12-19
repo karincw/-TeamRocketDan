@@ -1,5 +1,6 @@
 using AYellowpaper.SerializedCollections;
 using JSY;
+using Karin.PoolingSystem;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,9 +26,10 @@ namespace Karin
 
         public Mochi InstantiateMochi(MochiDataSO data)
         {
-            var mochi = Instantiate(_mochiPrefab, MochiMove.Instance.transform);
+            var mochi = PoolManager.Instance.Pop(PoolingType.Tower_MochiBase) as Mochi;
             mochi.transform.position = spawnPos.position;
             mochi.MochiData = data;
+            //todo: mochi Release
             mochi.SetUp();
             return mochi;
         }

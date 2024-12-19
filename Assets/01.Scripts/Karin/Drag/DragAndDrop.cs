@@ -1,3 +1,4 @@
+using Karin.PoolingSystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -100,8 +101,8 @@ namespace Karin
 
                 if (!_disableMergeDeleta)
                 {
-                    Destroy(mochi.gameObject);
-                    Destroy(_dragObject.gameObject);
+                    PoolManager.Instance.Push(mochi);
+                    PoolManager.Instance.Push(_dragObject as Mochi);
                     _mergeEffect.gameObject.transform.position = mousePos;
                     _mergeEffect.Play();
                 }

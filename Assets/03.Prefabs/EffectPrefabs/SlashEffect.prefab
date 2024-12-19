@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _visual: {fileID: 8198895076389942574}
   _trailRenderer: {fileID: 3095765498383146148}
+  <type>k__BackingField: 18
 --- !u!1 &8198895076389942574
 GameObject:
   m_ObjectHideFlags: 0
