@@ -16,8 +16,7 @@ namespace Karin.DialogSystem
         public void Activate()
         {
             PlayDialogEvent?.Invoke(dialogType);
-            if(dialogType != DialogType.Outro)
-                dialogType += 1;
+            dialogType += 1;
         }
     }
 }
