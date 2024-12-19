@@ -16,5 +16,5 @@ MonoBehaviour:
   damage: 2
   defense: 2
   speed: 2
-  isBoss: 0
+  reward: 4
   sprite: {fileID: 21300000, guid: f84ad3a8d2d99b4459e92fe7c3139f8e, type: 3}
