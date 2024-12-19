@@ -7,7 +7,7 @@ namespace JSY
     public class Enemy : MonoBehaviour
     {
         [SerializeField] private List<MovePoint> movePoints = new List<MovePoint>();
-        [SerializeField] private EnemySO _enemySO;
+        [SerializeField] protected EnemySO _enemySO;
         private int value;
         public EnemyHealth EnemyHealth { get; private set; }
         protected SpriteRenderer _spriteCompo;

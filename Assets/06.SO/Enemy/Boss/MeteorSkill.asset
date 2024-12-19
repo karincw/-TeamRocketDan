@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MeteorSkill
   m_EditorClassIdentifier: 
   Meteor: {fileID: 5155809709088828655, guid: 79bf82e0ce2732645a8d80f877a80590, type: 3}
-  spawnPos: {x: 0, y: 0}
+  spawnPos: {x: -20, y: 20}

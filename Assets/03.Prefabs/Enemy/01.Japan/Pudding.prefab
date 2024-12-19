@@ -56,8 +56,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8447239182438724620, guid: 547540af18a42804ca8289a6d6b8ddcb, type: 3}
+      propertyPath: attackText
+      value: 
+      objectReference: {fileID: 5755601761642431108, guid: c05df414e1775f243a3ab985c3edabcc, type: 3}
+    m_RemovedComponents:
+    - {fileID: 905299708636873479, guid: 547540af18a42804ca8289a6d6b8ddcb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1434665147266607765, guid: 547540af18a42804ca8289a6d6b8ddcb, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: -5149599489560093900}
   m_SourcePrefab: {fileID: 100100000, guid: 547540af18a42804ca8289a6d6b8ddcb, type: 3}
+--- !u!1 &5019023869508416858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1434665147266607765, guid: 547540af18a42804ca8289a6d6b8ddcb, type: 3}
+  m_PrefabInstance: {fileID: 6219422464879157199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-5149599489560093900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5019023869508416858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d515b5b59c9049e8ba135b17e53c499e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movePoints: []
+  _enemySO: {fileID: 11400000, guid: 5f85267882b93aa4e8ae9c69a72ca909, type: 2}
+  _whatIsMochi:
+    serializedVersion: 2
+    m_Bits: 64
+  _stunTime: 1
+  _bossSkill: {fileID: 11400000, guid: b22a8aac6e396b64690ea1406cf2ebf2, type: 2}
