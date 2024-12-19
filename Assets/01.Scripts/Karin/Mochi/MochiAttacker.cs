@@ -69,7 +69,7 @@ namespace Karin
                 var effect = Instantiate(attackData.attackEffect, transform);
                 if (effect is CircleSpinAttacker spin)
                 {
-                    spin.SetData(attackData.attackRange, attackData.count);
+                    spin.SetData(attackData.attackRange, attackData.count, 1);
                     StarLite sl = (spin.GetDamageCaster() as StarLite);
                     sl.SetImage(attackData.starLiteImage);
                     sl.SetDamage(attackData.damage);

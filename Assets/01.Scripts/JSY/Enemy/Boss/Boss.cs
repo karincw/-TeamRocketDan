@@ -8,7 +8,7 @@ namespace JSY.Boss
         [SerializeField] private LayerMask _whatIsMochi;
         [SerializeField] public float _stunTime = 1f;
         [SerializeField] private BossSkillSO _bossSkill;
-        
+        [SerializeField] private bool isStop;
         private Collider2D[] _colliders = new Collider2D[1];
         public bool IsSkillUse { get; set; }
 
@@ -18,6 +18,7 @@ namespace JSY.Boss
             base.Start();
             _bossSkill = Instantiate(_bossSkill);
             _bossSkill.SetOwner(this);
+            transform.localScale = new Vector3(1.5f, 1.5f, 1f);
             StartCoroutine(FindMochi());
         }
 
@@ -51,7 +52,8 @@ namespace JSY.Boss
         
         private void TakeSkill(Transform target)
         {
-            IsSkillUse = true;
+            if (isStop)
+                IsSkillUse = true;
             _bossSkill.UseSkill(target);
         }
     }
