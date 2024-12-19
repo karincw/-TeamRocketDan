@@ -1,0 +1,20 @@
+<UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/DialogSystem/DialogTree/Editor/UxmlElement/DialogNodeView.uss?fileID=7433441132597879392&amp;guid=0177dbc2b840aa34a8829c76c00d0078&amp;type=3#DialogNodeView" />
+    <ui:VisualElement name="node-border" style="flex-direction: row;">
+        <ui:VisualElement name="Left-Container" class="side-container">
+            <ui:VisualElement name="input" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Center-Container" style="flex-grow: 1;">
+            <ui:VisualElement name="title" style="-unity-font-style: bold; font-size: 12px; -unity-text-align: upper-center; color: rgb(55, 55, 55);">
+                <ui:Label name="title-label" text="TextNode" class="unity-text-element unity-label" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Contents" style="flex-grow: 1;">
+                <ui:TextField placeholder-text="Dialog Text here" name="DialogText" style="font-size: 10px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Right-Container" class="side-container">
+            <ui:VisualElement name="output" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="selection-border" picking-mode="Ignore" />
+</UXML>

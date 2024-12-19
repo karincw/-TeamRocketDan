@@ -17,6 +17,7 @@ namespace JSY
         private RectTransform rectTrm => transform as RectTransform;
 
         private Sequence seq;
+        private Sequence bossSeq;
 
         private void Awake()
         {
@@ -28,6 +29,7 @@ namespace JSY
 
         private void WaveDelay()
         {
+            bossSeq.Kill();
             skipButton.gameObject.SetActive(true);
             if (waveRoutine != null)
                 StopCoroutine(waveRoutine);
@@ -54,14 +56,14 @@ namespace JSY
             if (checkEnemyRoutine != null)
                 StopCoroutine(checkEnemyRoutine);
 
-            Sequence seq = DOTween.Sequence();
-            seq.AppendCallback(() =>
+            bossSeq = DOTween.Sequence();
+            bossSeq.AppendCallback(() =>
             {
                 checkEnemyRoutine = StartCoroutine(CheckEnemy());
                 waveRoutine = StartCoroutine(SetTimePanel(WaveManager.Instance.GetWave().bossTimeLimit));
             });
-            seq.AppendInterval(WaveManager.Instance.GetWave().bossTimeLimit);
-            seq.AppendCallback(() =>
+            bossSeq.AppendInterval(WaveManager.Instance.GetWave().bossTimeLimit);
+            bossSeq.AppendCallback(() =>
             {
                 StopCoroutine(waveRoutine);
                 if (EnemyCountUI.Instance.IsAllDead())
