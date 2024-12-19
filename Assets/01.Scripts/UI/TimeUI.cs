@@ -64,7 +64,8 @@ namespace JSY
             yield return new WaitForSeconds(1f);
             while (true)
             {
-                if(Time.time - startTime > WaveManager.Instance.GetWave().bossTimeLimit +1) EnemyCountUI.Instance.GameOver();
+                if(Time.time - startTime > WaveManager.Instance.GetWave().bossTimeLimit +1) 
+                    EnemyCountUI.Instance.GameOver();
 
                 if (EnemyCountUI.Instance.IsAllDead())
                 {
