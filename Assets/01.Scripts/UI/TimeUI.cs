@@ -66,15 +66,12 @@ namespace JSY
             {
                 if (Time.time - startTime > WaveManager.Instance.GetWave().bossTimeLimit + 1)
                 {
-                    Debug.Log("게임오버");
                     EnemyCountUI.Instance.GameOver();
                 }
                 yield return new WaitForSeconds(0.5f);
                 if (EnemyCountUI.Instance.IsAllDead())
                 {
-                    Debug.Log("보스물리침");
                     WaveManager.Instance.TurnEnd();
-                    NoticeUI.Instance.Notice("보스를 물리쳤습니다!");
                     yield break;
                 }
                 yield return null;
