@@ -11,9 +11,9 @@ namespace Leo.Animation
         public float speed;
         private float _angle;
 
-        private void Start()
+        public void SetCenter(Vector3 center)
         {
-            _center = transform.position;
+            _center = center;
         }
         
         private void Update()

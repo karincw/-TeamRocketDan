@@ -11,6 +11,11 @@ namespace Leo.Damage
         [SerializeField] private float _fallSpeed = 5f;
         [SerializeField] private Vector2 _fallDir;
         [SerializeField] private ParticleSystem _explodeParticle;
+        
+        public void SetFallDir(Vector2 dir)
+        {
+            _fallDir = dir;
+        }
 
         private void Update()
         {
