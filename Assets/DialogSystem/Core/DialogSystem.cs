@@ -23,6 +23,7 @@ namespace Karin.DialogSystem
         public Action EndEvent;
         [SerializeField] private Karin.DialogSystem.Tree.BlackBoard _board;
         [SerializeField] private List<GameObject> noTouchs;
+        [SerializeField] private CanvasGroup group;
 
         private void Awake()
         {
@@ -35,6 +36,7 @@ namespace Karin.DialogSystem
             });
             _board.owner = this;
             _board.canvas = GetComponent<DialogCanvas>();
+            group.blocksRaycasts = false;
         }
 
         private void OnDestroy()
@@ -59,12 +61,15 @@ namespace Karin.DialogSystem
         public IEnumerator PlayTextsCoroutine(DialogType type, List<string> texts)
         {
             AllDisable();
+            group.blocksRaycasts = true;
             foreach (string text in texts)
             {
                 _board.canvas.SetDialogText(text, 1.3f, false);
                 yield return new WaitForSeconds(2.3f);
             }
-            _board.canvas.SetDialogText("", 0.01f, true);
+            _board.canvas.SetDialogText("", 0.01f, true, 0.3f);
+            yield return new WaitForSeconds(0.3f);
+            group.blocksRaycasts = false;
             HandleEndEvent(type);
         }
 

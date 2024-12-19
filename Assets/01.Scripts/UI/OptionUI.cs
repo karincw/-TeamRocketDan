@@ -68,7 +68,8 @@ namespace JSY
             if(!isOpen) timeScale = Time.timeScale;
 
             isOpen = !isOpen;
-            Time.timeScale = isOpen ? 0 : timeScale;
+            if(SceneManager.GetActiveScene().name != "JSY")
+                Time.timeScale = isOpen ? 0 : timeScale;
             popupCanvasGroup.blocksRaycasts = isOpen;
             SettingPanel(popupUI, isOpen);
         }
