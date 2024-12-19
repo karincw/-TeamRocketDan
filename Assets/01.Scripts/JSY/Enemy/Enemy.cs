@@ -13,7 +13,11 @@ namespace JSY
         public EnemyHealth EnemyHealth { get; private set; }
         protected SpriteRenderer _spriteCompo;
         private bool isTeleport;
-        public void SetMovePoints(List<MovePoint> movePoints) => this.movePoints = movePoints;
+        public void SetMovePoints(List<MovePoint> movePoints)
+        {
+            this.movePoints = movePoints;
+            value = 0;
+        }
 
         private void Awake()
         {

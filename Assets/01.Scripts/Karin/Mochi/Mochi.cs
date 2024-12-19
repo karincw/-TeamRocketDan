@@ -77,6 +77,7 @@ namespace Karin
             {
                 compo.Release();
             });
+            transform.parent = PoolManager.Instance.transform;
         }
     }
 }

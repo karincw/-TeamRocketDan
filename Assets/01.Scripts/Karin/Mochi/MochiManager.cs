@@ -29,7 +29,7 @@ namespace Karin
             var mochi = PoolManager.Instance.Pop(PoolingType.Tower_MochiBase) as Mochi;
             mochi.transform.position = spawnPos.position;
             mochi.MochiData = data;
-            //todo: mochi Release
+            mochi.transform.parent = MochiMove.Instance.transform;
             mochi.SetUp();
             return mochi;
         }
