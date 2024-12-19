@@ -24,10 +24,10 @@ namespace JSY
             _lifeText.text = life.ToString();
         }
 
-        private void OnDestroy()
+        /*private void OnDestroy()
         {
             EnemyCountUI.Instance.UpdateCount(-1);    
-        }
+        }*/
 
         protected override void Update()
         {

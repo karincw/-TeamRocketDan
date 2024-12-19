@@ -17,7 +17,7 @@ namespace JSY
             UpdateCount(0);
         }
 
-        public bool IsAllDead() => enemyCount <= 0 ? true : false;
+        public bool IsAllDead() => enemyCount == 0 ? true : false;
 
         public void GameOver()
         {
