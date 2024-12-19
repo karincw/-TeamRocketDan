@@ -35,6 +35,7 @@ namespace Karin
 
             if (Time.time - lastAttacktime >= attackData.attackCooldown)
             {
+                if (_enemies.Count < 1) return;
                 var attackEffect = Instantiate(attackData.attackEffect, _enemies[0].transform.position, Quaternion.identity);
                 if (attackEffect is IEffectable effect)
                 {
