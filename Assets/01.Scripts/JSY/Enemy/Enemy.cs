@@ -20,6 +20,7 @@ namespace JSY
             EnemyHealth = GetComponent<EnemyHealth>();
             _spriteCompo = GetComponentInChildren<SpriteRenderer>();
             EnemyHealth.SetOwner(this);
+            _enemySO = Instantiate(_enemySO);
         }
 
         protected virtual void Start()
