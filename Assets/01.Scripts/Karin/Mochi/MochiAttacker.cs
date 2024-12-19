@@ -35,31 +35,39 @@ namespace Karin
 
             if (Time.time - lastAttacktime >= attackData.attackCooldown)
             {
-                if (_enemies.Count < 1) return;
-                var attackEffect = Instantiate(attackData.attackEffect, _enemies[0].transform.position, Quaternion.identity);
-                if (attackEffect is IEffectable effect)
+                try
                 {
-                    if (attackEffect is IColorChangeable colorChange)
-                    {
-                        colorChange.SetColor(attackData.attackColor);
-                    }
-                    if(attackEffect is ISizeChangeable sizeChange)
-                    {
-                        sizeChange.SetSize(attackData.size);
-                    }
 
-                    var damageCaster = effect.GetDamageCaster();
-                    if (damageCaster)
+                    var attackEffect = Instantiate(attackData.attackEffect, _enemies[0].transform.position, Quaternion.identity);
+
+                    if (attackEffect is IEffectable effect)
                     {
-                        damageCaster.SetDamage(attackData.damage);
+                        if (attackEffect is IColorChangeable colorChange)
+                        {
+                            colorChange.SetColor(attackData.attackColor);
+                        }
+                        if (attackEffect is ISizeChangeable sizeChange)
+                        {
+                            sizeChange.SetSize(attackData.size);
+                        }
+
+                        var damageCaster = effect.GetDamageCaster();
+                        if (damageCaster)
+                        {
+                            damageCaster.SetDamage(attackData.damage);
+                        }
+                        else
+                        {
+                            _enemies[0].EnemyHealth.TakeDamage(attackData.damage);
+                        }
+                        effect.Play();
                     }
-                    else
-                    {
-                        _enemies[0].EnemyHealth.TakeDamage(attackData.damage);
-                    }
-                    effect.Play();
+                    lastAttacktime = Time.time;
                 }
-                lastAttacktime = Time.time;
+                catch
+                {
+                    Debug.Log("터짐");
+                }
             }
 
         }
