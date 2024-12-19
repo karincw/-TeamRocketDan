@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74e7f46d2d071984cbe18b3d78cd6d1f, type: 3}
-  m_Name: Pool_Pretzel
+  m_Name: Pool_MiniBoss_Pretzel
   m_EditorClassIdentifier: 
-  type: 0
-  typeName: Pretzel
+  typeName: MiniBoss_Pretzel
   name: Pretzel
   prefab: {fileID: 6848631018576944823, guid: 3e767e15c6e5c3d499654efd986a6e75, type: 3}
   count: 5

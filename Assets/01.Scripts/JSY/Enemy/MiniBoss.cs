@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -27,14 +27,18 @@ namespace JSY
         protected override void Update()
         {
             base.Update();
+            if (_timer <= 0)
+            {
+                var particles = Instantiate(_particleSystem, transform.position, Quaternion.identity);
+                particles.Play();
+            }
             _timer -= Time.deltaTime;
             SetLifeText(Mathf.RoundToInt(_timer));
         }
 
         private void OnDestroy()
         {
-            var particles = Instantiate(_particleSystem, transform.position, Quaternion.identity);
-            particles.Play();
+            EnemyCountUI.Instance.UpdateCount(-1);
         }
     }
 }
