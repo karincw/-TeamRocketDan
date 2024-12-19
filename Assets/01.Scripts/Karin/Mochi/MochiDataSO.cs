@@ -40,7 +40,7 @@ namespace Karin
         public float speedTimeMultiply;
 
         [Space, Header("Explosion")]
-        public Vector3 size;
+        public float size;
     }
 
 }
