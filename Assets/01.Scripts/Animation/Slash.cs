@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections;
 using DG.Tweening;
+using Karin.PoolingSystem;
 using Leo.Damage;
 using Leo.Interface;
 using UnityEngine;
 
 namespace Leo.Animation
 {
-    public class Slash : MonoBehaviour, IEffectable, IColorChangeable
+    public class Slash : MonoBehaviour, IEffectable, IColorChangeable, IPoolable
     {
         [SerializeField] private GameObject _visual;
         [SerializeField] private TrailRenderer _trailRenderer;
@@ -48,7 +49,7 @@ namespace Leo.Animation
             yield return new WaitForSeconds(0.1f);
             _visual.transform.localPosition = new Vector3(-1f, -1f);
             yield return new WaitForSeconds(0.1f);
-            Destroy(gameObject);
+            PoolManager.Instance.Push(this);
         }
 
 #if UNITY_EDITOR
@@ -76,6 +77,21 @@ namespace Leo.Animation
         public void SetSize(float size)
         {
             transform.localScale = new Vector3(size, size, 1);
+        }
+
+        [field:SerializeField] public PoolingType type { get; set; }
+        public GameObject GetGameObject()
+        {
+            return gameObject;
+        }
+
+        public void ResetItem()
+        {
+        }
+
+        public void OnPush()
+        {
+            transform.parent = PoolManager.Instance.transform;
         }
     }
 }

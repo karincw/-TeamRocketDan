@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74e7f46d2d071984cbe18b3d78cd6d1f, type: 3}
-  m_Name: Pool_Madeleine
+  m_Name: Pool_Effect_Slash
   m_EditorClassIdentifier: 
-  type: 0
-  typeName: Madeleine
-  name: Madeleine
-  prefab: {fileID: 8341936785702468077, guid: a2a2cf27af2fe8e44b6c9310adcd0523, type: 3}
+  typeName: Effect_Slash
+  name: Slash
+  prefab: {fileID: 6896592598090281251, guid: 8c459a3edd36fa641ba272708d49b07f, type: 3}
   count: 5
