@@ -37,6 +37,7 @@ namespace Karin
         public bool isStarlite;
         public int count;
         public Sprite starLiteImage;
+        public float speedTimeMultiply;
 
         [Space, Header("Explosion")]
         public Vector3 size;
