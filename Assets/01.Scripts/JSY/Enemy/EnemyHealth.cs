@@ -6,6 +6,7 @@ namespace JSY
 {
     public class EnemyHealth : MonoBehaviour, IDamageable
     {
+        [SerializeField] private AttackText attackText;
         public int HP { get; set; }
         public int defense { get; set; }
         
@@ -17,8 +18,10 @@ namespace JSY
         
         public void TakeDamage(int damage)
         {
-            Debug.Log("Hit");
-            HP -= damage - (int)(defense * 0.5f);
+            int hitAmount = damage - Mathf.CeilToInt(defense * 0.5f);
+            var text = Instantiate(attackText, transform.position, Quaternion.identity);
+            text.SetText(hitAmount.ToString());
+            HP -= hitAmount;
             if (HP <= 0)
                 Die();
         }

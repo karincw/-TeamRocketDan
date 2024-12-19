@@ -74,6 +74,7 @@ namespace Karin
                     sl.SetImage(attackData.starLiteImage);
                     sl.SetDamage(attackData.damage);
                     spin.Play();
+                    spin.SetColor(attackData.attackColor);
                 }
             }
 
