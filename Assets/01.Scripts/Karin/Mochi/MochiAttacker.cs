@@ -90,7 +90,6 @@ namespace Karin
                 if (attackData.isStarlite)
                 {
                     effect.transform.parent = transform;
-                    Debug.Log(effect.transform.parent.name);
                     effect.SetPos(transform);
                     effect.SetData(attackData.attackRange, attackData.count, 1);
                     StarLite sl = (effect.GetDamageCaster() as StarLite);
