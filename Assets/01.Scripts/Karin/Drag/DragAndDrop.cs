@@ -107,7 +107,7 @@ namespace Karin
                     PoolManager.Instance.Push(_dragObject as Mochi);
                     _mergeEffect.gameObject.transform.position = mousePos;
                     _mergeEffect.Play();
-                    _soundObject.Play();
+                    _soundObject?.Play();
                 }
 
                 newMochi.transform.position = mousePos;
