@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 
 namespace JSY
@@ -25,6 +26,11 @@ namespace JSY
             ResultUI.Instance.GameOver();
         }
 
+        private void Update()
+        {
+            UpdateCount(0);
+        }
+
         public void UpdateCount(int value)
         {
             if (enemyCount == maxCount)
@@ -35,7 +41,8 @@ namespace JSY
                 }
                 return;
             }
-            enemyCount += value;
+
+            enemyCount = EnemyCreateManager.Instance.enemyParent.childCount;
             countText.text = enemyCount + "/" + maxCount + "마리";
         }
 

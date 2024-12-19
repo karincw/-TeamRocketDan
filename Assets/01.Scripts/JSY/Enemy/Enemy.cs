@@ -84,7 +84,7 @@ namespace JSY
             _collider.enabled = true;
         }
 
-        public void OnPush()
+        public virtual void OnPush()
         {
             _collider.enabled = false;
             transform.parent = PoolManager.Instance.transform;

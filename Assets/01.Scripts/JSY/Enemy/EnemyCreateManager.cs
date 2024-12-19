@@ -10,7 +10,7 @@ namespace JSY
 {
     public class EnemyCreateManager : MonoSingleton<EnemyCreateManager>
     {
-        [SerializeField] private Transform enemyParent;
+        [SerializeField] public Transform enemyParent;
         [SerializeField] private Transform startTrm;
         [SerializeField] private List<MovePoint> movePoints = new List<MovePoint>();
 
@@ -35,8 +35,12 @@ namespace JSY
             var coolTime = new WaitForSeconds(wave.spawnDelay);
             foreach (var enemy in wave.enemies)
             {
-                EnemyCountUI.Instance.UpdateCount(1);
+                
                 Enemy obj = PoolManager.Instance.Pop(enemy) as Enemy;
+                if (obj is not MiniBoss)
+                {
+                    EnemyCountUI.Instance.UpdateCount(1);
+                }
                 obj.transform.position = startTrm.position;
                 obj.transform.parent = enemyParent;
                 obj.SetMovePoints(movePoints);

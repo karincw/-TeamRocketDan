@@ -50,7 +50,11 @@ namespace JSY
         public void Die()
         {
             Debug.Log("Die");
-            EnemyCountUI.Instance.UpdateCount(-1);
+            if (_owner is not MiniBoss)
+            {
+                EnemyCountUI.Instance.UpdateCount(-1);
+            }
+
             ResultUI.Instance.AddDeadEnemy();
             MoneyUI.Instance.ModifyMoney(reward);
             _deadSound.Play();
