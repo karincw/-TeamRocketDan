@@ -93,7 +93,6 @@ namespace JSY
             for (int i = 0; i <= time; i++)
             {
                 timeText.text = time - i + "초"; 
-                Debug.Log(time - i);
                 yield return waitTime;
             }
             rectTrm.DOAnchorPosY(0, 0.5f);
