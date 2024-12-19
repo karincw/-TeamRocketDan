@@ -29565,7 +29565,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "35/35\uB9C8\uB9AC"
+  m_text: "30/30\uB9C8\uB9AC"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
   m_sharedMaterial: {fileID: 1984041586264309300, guid: 594ac8a7eefae104480a168b1dc1d3e3, type: 2}
