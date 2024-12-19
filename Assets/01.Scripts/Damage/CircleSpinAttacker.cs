@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Leo.Damage
 {
-    public class CircleSpinAttacker : MonoBehaviour, IEffectable
+    public class CircleSpinAttacker : MonoBehaviour, IEffectable, IColorChangeable
     {
         [SerializeField] private StarLite damageCaster;
         [SerializeField] private int _count;
@@ -49,6 +49,11 @@ namespace Leo.Damage
         public DamageCaster GetDamageCaster()
         {
             return damageCaster;
+        }
+
+        public void SetColor(Color color)
+        {
+            // 구현 해주
         }
     }
 }
