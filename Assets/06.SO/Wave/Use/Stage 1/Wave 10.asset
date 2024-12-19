@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8cf8477b464c57b8454f2a59553f80, type: 3}
   m_Name: Wave 10
   m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: -8095141106176499412, guid: 1f449008aed6a004d86c12cc5f534349, type: 3}
+  enemies: 03000000
   isBoss: 1
-  bossTimeLimit: 50
-  spawnDelay: 0.5
+  bossTimeLimit: 100
+  spawnDelay: 1.5
   waveDelay: 50

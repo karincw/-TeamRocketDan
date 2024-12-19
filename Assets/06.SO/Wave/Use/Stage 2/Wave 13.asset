@@ -12,13 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8cf8477b464c57b8454f2a59553f80, type: 3}
   m_Name: Wave 13
   m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 6548117921923865800, guid: e9efd8010116e484b91dda5b6314e740, type: 3}
-  - {fileID: 6548117921923865800, guid: e9efd8010116e484b91dda5b6314e740, type: 3}
-  - {fileID: 6548117921923865800, guid: e9efd8010116e484b91dda5b6314e740, type: 3}
-  - {fileID: 6548117921923865800, guid: e9efd8010116e484b91dda5b6314e740, type: 3}
-  - {fileID: 6548117921923865800, guid: e9efd8010116e484b91dda5b6314e740, type: 3}
+  enemies: 06000000060000000600000006000000060000000600000006000000060000000600000006000000
   isBoss: 0
   bossTimeLimit: 0
-  spawnDelay: 0.5
+  spawnDelay: 1.5
   waveDelay: 30
