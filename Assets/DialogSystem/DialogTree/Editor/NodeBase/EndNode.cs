@@ -10,6 +10,7 @@ namespace Karin.DialogSystem.Tree
         protected override void OnStart()
         {
             Debug.Log("Dialog End");
+            blackBoard.owner.EndEvent?.Invoke();
             DialogSystem.IsPlayed = false;
         }
 

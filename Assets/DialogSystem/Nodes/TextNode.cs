@@ -14,11 +14,7 @@ namespace Karin.DialogSystem.Tree
 
         protected override void OnStart()
         {
-            if (tree.position == DialogPosition.OnHead)
-            {
-                blackBoard.canvas.SetHeadText(script.outputText, time, child is EndNode);
-            }
-            else if(tree.position == DialogPosition.UnderBar)
+            if(tree.position == DialogPosition.UnderBar)
             {
                 blackBoard.canvas.SetDialogText(script.outputText, time, child is EndNode);
             }

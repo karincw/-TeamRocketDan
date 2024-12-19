@@ -12,6 +12,10 @@ namespace Karin
         public SerializedDictionary<TowerRanking, List<MochiDataSO>> mochiDictionary;
         [SerializeField] private Mochi _mochiPrefab;
 
+        protected override void Awake()
+        {
+            UpdateSpawnPos(transform);
+        }
         public MochiDataSO GetNextMochi(TowerRanking rank)
         {
             var mochis = mochiDictionary[rank + 1];

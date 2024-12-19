@@ -2,6 +2,7 @@ using Karin;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace JSY
@@ -23,12 +24,8 @@ namespace JSY
 
         private void Update()
         {
-#if UNITY_EDITOR
-            if(Keyboard.current.cKey.wasPressedThisFrame)
-            {
-                ModifyMoney(400);
-            }
-#endif
+            if (SceneManager.GetActiveScene().name == "JSY") return;
+
             if(Keyboard.current.spaceKey.wasPressedThisFrame)
             {
                 HandleBuyButton();

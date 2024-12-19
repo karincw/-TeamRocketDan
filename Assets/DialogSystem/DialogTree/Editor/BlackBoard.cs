@@ -7,5 +7,6 @@ namespace Karin.DialogSystem.Tree
     {
         public DialogCanvas canvas;
         public AudioSource audioSource;
+        public DialogSystem owner;
     }
 }

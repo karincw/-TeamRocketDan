@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4420187250019139545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11960f686a02024499d959ae8cfc45ed, type: 3}
+  m_Name: TextNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ca1f46745096c394990995950b9419f8
+  position: {x: 0, y: 0}
+  blackBoard:
+    canvas: {fileID: 0}
+    audioSource: {fileID: 0}
+    owner: {fileID: 0}
+  tree: {fileID: 11400000}
+  child: {fileID: 0}
+  script:
+    outputText: 
+    showCharacter: 0
+  time: 1
+  delaytime: 1
+  textSkip: 0
+  dialogSkip: 0
+--- !u!114 &-1428123599540025452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 790689625ed50c54b8e68dee24fd7ddd, type: 3}
+  m_Name: EndNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 57b04fab15091084f86ec3d4a5fc9696
+  position: {x: 427.1667, y: 181.60004}
+  blackBoard:
+    canvas: {fileID: 0}
+    audioSource: {fileID: 0}
+    owner: {fileID: 0}
+  tree: {fileID: 11400000}
+  child: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af874ecc236807499581e33e7f34a52, type: 3}
+  m_Name: Tuto_Outro
+  m_EditorClassIdentifier: 
+  position: 0
+  rootNode: {fileID: 3342741842030229017}
+  endNode: {fileID: -1428123599540025452}
+  treeState: 0
+  nodes:
+  - {fileID: 3342741842030229017}
+  - {fileID: -1428123599540025452}
+  - {fileID: 6375115161134818893}
+  - {fileID: 8361816206274994984}
+  - {fileID: -4420187250019139545}
+  blackboard:
+    canvas: {fileID: 0}
+    audioSource: {fileID: 0}
+    owner: {fileID: 0}
+--- !u!114 &3342741842030229017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 628ceeedafa966f4d886366d35aefc2a, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e6c923906dd6bd64e8e80ff6ecb4279c
+  position: {x: 0, y: 0}
+  blackBoard:
+    canvas: {fileID: 0}
+    audioSource: {fileID: 0}
+    owner: {fileID: 0}
+  tree: {fileID: 11400000}
+  child: {fileID: 0}
+--- !u!114 &6375115161134818893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11960f686a02024499d959ae8cfc45ed, type: 3}
+  m_Name: TextNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 22138c186404adc44a0b4aab9adfb349
+  position: {x: 123.33331, y: -5.3333282}
+  blackBoard:
+    canvas: {fileID: 0}
+    audioSource: {fileID: 0}
+    owner: {fileID: 0}
+  tree: {fileID: 11400000}
+  child: {fileID: 0}
+  script:
+    outputText: "\uC798\uD558\uC168\uC2B5\uB2C8\uB2E4. \uC5EC\uAE30\uC11C \uC0C1\uB2E8\uC758
+      \uBC84\uD2BC\uC744 \uD1B5\uD574 \uC6D0\uD558\uB294 \uCE90\uB9AD\uD130\uB97C
+      \uCC3E\uC744 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+    showCharacter: 0
+  time: 1
+  delaytime: 1
+  textSkip: 0
+  dialogSkip: 0
+--- !u!114 &8361816206274994984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11960f686a02024499d959ae8cfc45ed, type: 3}
+  m_Name: TextNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 99bc054d703169441883f18cc18eef44
+  position: {x: 123.33331, y: 78.6667}
+  blackBoard:
+    canvas: {fileID: 0}
+    audioSource: {fileID: 0}
+    owner: {fileID: 0}
+  tree: {fileID: 11400000}
+  child: {fileID: 0}
+  script:
+    outputText: "\uC81C\uAC00 \uC900\uBE44\uD55C \uC815\uBCF4\uB294 \uC5EC\uAE30\uAE4C\uC9C0\uC785\uB2C8\uB2E4."
+    showCharacter: 0
+  time: 1
+  delaytime: 1
+  textSkip: 0
+  dialogSkip: 0

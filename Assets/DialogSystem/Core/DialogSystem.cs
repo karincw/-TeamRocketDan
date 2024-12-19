@@ -1,6 +1,8 @@
 using AYellowpaper.SerializedCollections;
 using Karin.DialogSystem.Tree;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Karin.DialogSystem
@@ -13,17 +15,18 @@ namespace Karin.DialogSystem
         public SerializedDictionary<DialogType, DialogTree> dialogDictionary;
         [SerializeField] private BlackBoard _board = new();
         private DialogTree _currentDialog;
+        public Action EndEvent;
 
         private void Awake()
         {
             IsPlayed = false;
             List<IDialogActivator> activators = new();
-            GetComponents<IDialogActivator>(activators);
+            activators = GetComponents<IDialogActivator>().ToList();
             activators.ForEach(activator =>
             {
                 activator.PlayDialogEvent += HandlePlayDialog;
             });
-
+            _board.owner = this;
             _board.canvas = GetComponent<DialogCanvas>();
         }
 

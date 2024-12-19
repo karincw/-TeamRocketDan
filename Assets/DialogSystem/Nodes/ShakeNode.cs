@@ -9,7 +9,6 @@ namespace Karin.DialogSystem.Tree
 
         protected override void OnStart()
         {
-            TMP_Text tmpText = blackBoard.canvas.GetCurrentText(tree.position);
             //tmpText.mesh
         }
 
