@@ -66,5 +66,13 @@ namespace Leo.Damage
                 star.SetColor(color);
             }
         }
+
+        public void SetSize(float size)
+        {
+            foreach (var star in _starLites)
+            {
+                star.transform.localScale = new Vector3(size, size, 1);
+            }
+        }
     }
 }

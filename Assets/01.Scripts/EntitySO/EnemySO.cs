@@ -7,9 +7,8 @@ namespace Leo.Entity.SO
     {
         [Header("Enemy Info")]
         public int maxHealth;
-        public int damage;
-        public int defense;
         public float speed;
+        public int defense;
         public int reward;
         
         [Header("Enemy Description")]

@@ -23,3 +23,5 @@ MonoBehaviour:
     isStarlite: 1
     count: 3
     starLiteImage: {fileID: 7430218742958770901, guid: 80292c07216455245bc1b41dc9381831, type: 3}
+    speedTimeMultiply: 0
+    size: 1

@@ -7,10 +7,16 @@ namespace JSY.Boss
     public class MeteorSkill : BossSkillSO
     {
         public Meteor Meteor;
-        public Vector2 spawnPos;
+        public Vector2 minSpawnPos;
+        public Vector2 maxSpawnPos;
         public override void UseSkill(Transform target)
         {
-            Instantiate(Meteor, spawnPos, Quaternion.identity);
+            Instantiate(Meteor, GetRandomPosition(), Quaternion.identity);
+        }
+        
+        private Vector2 GetRandomPosition()
+        {
+            return new Vector2(Random.Range(minSpawnPos.x, maxSpawnPos.x), Random.Range(minSpawnPos.y, maxSpawnPos.y));
         }
     }
 }
