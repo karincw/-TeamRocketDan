@@ -47,6 +47,8 @@ namespace Leo.Animation
             _visual.SetActive(true);
             yield return new WaitForSeconds(0.1f);
             _visual.transform.localPosition = new Vector3(-1f, -1f);
+            yield return new WaitForSeconds(0.1f);
+            Destroy(gameObject);
         }
 
 #if UNITY_EDITOR

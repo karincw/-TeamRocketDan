@@ -11,7 +11,8 @@ namespace JSY.Boss
         public Vector2 maxSpawnPos;
         public override void UseSkill(Transform target)
         {
-            Instantiate(Meteor, GetRandomPosition(), Quaternion.identity);
+            var meteor = Instantiate(Meteor, GetRandomPosition(), Quaternion.identity);
+            meteor.SetFallDir(target.position - meteor.transform.position);
         }
         
         private Vector2 GetRandomPosition()
