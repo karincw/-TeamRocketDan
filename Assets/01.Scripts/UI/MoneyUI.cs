@@ -6,19 +6,19 @@ using UnityEngine.UI;
 
 namespace JSY
 {
-    public class MoneyUI : MonoBehaviour
+    public class MoneyUI : MonoSingleton<MoneyUI>
     {
         [SerializeField] private MochiDataSO data;
         [SerializeField] private TextMeshProUGUI moneyText;
         private Button buyButton;
         private int money = 0;
 
-        private void Awake()
+        protected override void Awake()
         {
             buyButton = transform.Find("BuyBtn").GetComponent<Button>();
 
             buyButton.onClick.AddListener(HandleBuyButton);
-            ModifyMoney(0);
+            ModifyMoney(150);
         }
 
         private void Update()
@@ -35,7 +35,7 @@ namespace JSY
             }
         }
 
-        private void ModifyMoney(int value)
+        public void ModifyMoney(int value)
         {
             money += value;
             moneyText.text = money + " G";

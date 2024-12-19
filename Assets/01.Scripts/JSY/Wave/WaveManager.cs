@@ -40,10 +40,10 @@ namespace JSY
             if (waves[waveRepeatCount].isBoss)
             {
                 OnStartBossTurnEvent?.Invoke();
-                NoticeUI.Instance.Notice("º¸½º°¡ Ãâ¸ôÇÕ´Ï´Ù!");
+                NoticeUI.Instance.Notice("ë³´ìŠ¤ê°€ ì¶œëª°í•©ë‹ˆë‹¤!");
             }
             else
-                NoticeUI.Instance.Notice("ÀûÀÌ Ãâ¸ôÇÕ´Ï´Ù!");
+                NoticeUI.Instance.Notice("ì ì´ ì¶œëª°í•©ë‹ˆë‹¤!");
 
             OnStartTurnEvent?.Invoke();
         }
