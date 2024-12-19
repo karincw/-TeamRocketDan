@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Leo.Sound;
 using System;
 using TMPro;
 using UnityEngine;
@@ -10,6 +11,7 @@ namespace JSY
 {
     public class ResultUI : MonoSingleton<ResultUI>
     {
+        [SerializeField] private SoundObject _gameOverSound;
         [SerializeField] private Image background;
         [SerializeField] private RectTransform panel;
         [SerializeField] private Transform resultValueGroup;
@@ -44,6 +46,7 @@ namespace JSY
             isEnd = true;
 
             EnemyCreateManager.Instance.DeadEnemy();
+            _gameOverSound.Play();
 
             endTime = DateTime.Now;
             TimeSpan playDuration = endTime - startTime;

@@ -2,6 +2,28 @@ namespace Karin.PoolingSystem
 {
     public enum PoolingType
     {
-        HoneyRiceCake,Boss_SongPyeon,Walnut,Yakgwa,Bamboo,Dango,Manjuu,Boss_Pudding,Boss_Cupcake,Donut,MarshMallow,Waffle,Cannele,Boss_Ferrero,Macaroon,Tart,MiniBoss_Madeleine,MiniBoss_Pretzel,Effect_Slash,Tower_MochiBase,Effect_Explosion,Effect_Explosion1,
+        HoneyRiceCake,
+        Walnut,
+        Yakgwa,
+        Boss_SongPyeon,
+        Dango,
+        Manjuu,
+        Bamboo,
+        Boss_Pudding,
+        Donut,
+        MarshMallow,
+        Waffle,
+        Boss_Cupcake,
+        Macaroon,
+        Tart,
+        Cannele,
+        Boss_Ferrero,
+        MiniBoss_Madeleine,
+        MiniBoss_Pretzel,
+        Effect_Slash,
+        Tower_MochiBase,
+        Effect_Explosion,
+        Effect_Explosion1,
+        Effect_StarLight,
     }
 }

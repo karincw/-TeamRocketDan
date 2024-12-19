@@ -1,4 +1,5 @@
 using Karin.PoolingSystem;
+using Leo.Sound;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -7,6 +8,7 @@ namespace Karin
 {
     public class DragAndDrop : MonoSingleton<DragAndDrop>
     {
+        [SerializeField] private SoundObject _soundObject;
         [SerializeField] private DragAndDropObject _dragObject;
         [SerializeField] private InputReaderSO _inputReader;
 
@@ -105,6 +107,7 @@ namespace Karin
                     PoolManager.Instance.Push(_dragObject as Mochi);
                     _mergeEffect.gameObject.transform.position = mousePos;
                     _mergeEffect.Play();
+                    _soundObject.Play();
                 }
 
                 newMochi.transform.position = mousePos;

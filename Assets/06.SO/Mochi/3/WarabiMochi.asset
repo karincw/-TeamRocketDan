@@ -17,7 +17,7 @@ MonoBehaviour:
   attackData:
     damage: 8
     attackRange: 2
-    attackCooldown: 0.5
+    attackCooldown: 0.4
     attackEffect: 20
     attackColor: {r: 0.74213827, g: 0.74213827, b: 0.74213827, a: 0.69411767}
     isStarlite: 0
@@ -25,3 +25,4 @@ MonoBehaviour:
     starLiteImage: {fileID: 0}
     speedTimeMultiply: 0
     size: 1
+  circleSpinAttacker: {fileID: 0}

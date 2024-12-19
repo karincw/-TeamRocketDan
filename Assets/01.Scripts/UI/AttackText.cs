@@ -5,17 +5,6 @@ using UnityEngine;
 public class AttackText : MonoBehaviour
 {
     [SerializeField] private TextMeshPro _text;
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-            Test();
-    }
-
-    public void Test()
-    {
-        SetText("1432");
-    }
     public void SetText(string text)
     {
         _text.text = text;

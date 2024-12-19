@@ -53,6 +53,14 @@ namespace Leo.Damage
             }
         }
 
+        public void SetActive(bool state)
+        {
+            _starLites.ForEach(star =>
+            {
+                star.canAttack = state;
+            });
+        }
+
         public DamageCaster GetDamageCaster()
         {
             return damageCaster;

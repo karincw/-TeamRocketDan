@@ -12,11 +12,12 @@ namespace JSY
 
         protected override void Awake()
         {
+            base.Awake();
             countText = GetComponentInChildren<TextMeshProUGUI>();
             UpdateCount(0);
         }
 
-        public bool IsAllDead() => enemyCount == 0 ? true : false;
+        public bool IsAllDead() => enemyCount <= 0 ? true : false;
 
         public void GameOver()
         {
