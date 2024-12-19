@@ -24,10 +24,11 @@ namespace Karin
 
         private void Update()
         {
+            if (effect != null)
+                effect.SetActive(_owner.CanAttack);
+
             if (_owner.CanAttack)
-            {
                 Attack();
-            }
         }
 
         public void Attack()
@@ -79,6 +80,7 @@ namespace Karin
             {
                 PoolManager.Instance.Push(effect);
             }
+            _enemies.Clear();
         }
 
         public override void SetUp()
@@ -88,7 +90,7 @@ namespace Karin
             var attackData = _owner.MochiData.attackData;
             if (attackData.isStarlite)
             {
-                 effect = PoolManager.Instance.Pop(attackData.attackEffect) as CircleSpinAttacker;
+                effect = PoolManager.Instance.Pop(attackData.attackEffect) as CircleSpinAttacker;
                 effect.transform.parent = transform;
                 effect.SetPos(transform);
                 effect.SetData(attackData.attackRange, attackData.count, 1);

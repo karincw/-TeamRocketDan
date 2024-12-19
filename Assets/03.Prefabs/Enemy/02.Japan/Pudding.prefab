@@ -97,5 +97,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _stunTime: 1
-  _bossSkill: {fileID: 11400000, guid: b22a8aac6e396b64690ea1406cf2ebf2, type: 2}
+  _bossSkill: {fileID: 0}
   isStop: 0

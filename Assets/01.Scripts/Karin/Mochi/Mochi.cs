@@ -31,6 +31,7 @@ namespace Karin
             {
                 compo.SetUp();
             });
+            stunEffect.gameObject.SetActive(false);
         }
 
         public override void ShowRadius(bool state)
@@ -52,12 +53,12 @@ namespace Karin
 
         private IEnumerator StunCoroutine(float time)
         {
+            stunEffect.SetCenter(transform.position + _interpolatePosition);
+            stunEffect.gameObject.SetActive(true);
             isStun = true;
-            var se = Instantiate(stunEffect, transform);
-            se.SetCenter(transform.position + _interpolatePosition);
             yield return new WaitForSeconds(time);
             isStun = false;
-            Destroy(se.gameObject);
+            stunEffect.gameObject.SetActive(false);
         }
 
         

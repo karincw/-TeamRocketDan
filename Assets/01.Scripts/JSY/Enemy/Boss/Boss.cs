@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using UnityEngine;
 
 namespace JSY.Boss
@@ -16,18 +16,23 @@ namespace JSY.Boss
         protected override void Start()
         {
             base.Start();
-            _bossSkill = Instantiate(_bossSkill);
-            _bossSkill.SetOwner(this);
+            if (_bossSkill != null)
+            {
+                _bossSkill = Instantiate(_bossSkill);
+                _bossSkill.SetOwner(this);
+                StartCoroutine(FindMochi());
+            }
             transform.localScale = new Vector3(1.5f, 1.5f, 1f);
-            StartCoroutine(FindMochi());
         }
-        
+
         public override void ResetItem()
         {
             base.ResetItem();
-            
-            _bossSkill.SetOwner(this);
-            StartCoroutine(FindMochi());
+            if (_bossSkill != null)
+            {
+                _bossSkill.SetOwner(this);
+                StartCoroutine(FindMochi());
+            }
         }
 
         protected override void Update()
@@ -46,6 +51,7 @@ namespace JSY.Boss
                 _bossSkill.ResetSkill();
                 IsSkillUse = false;
                 yield return new WaitForSeconds(2f);
+
             }
         }
 
@@ -57,12 +63,15 @@ namespace JSY.Boss
                 TakeSkill(_colliders[0].transform);
             }
         }
-        
+
         private void TakeSkill(Transform target)
         {
             if (isStop)
                 IsSkillUse = true;
-            _bossSkill.UseSkill(target);
+            if (_bossSkill != null)
+            {
+                _bossSkill.UseSkill(target);
+            }
         }
     }
 }

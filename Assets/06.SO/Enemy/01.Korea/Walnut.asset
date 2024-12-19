@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dddd127325fa146997a74419690f41, type: 3}
   m_Name: Walnut
   m_EditorClassIdentifier: 
-  maxHealth: 3
-  speed: 4
+  maxHealth: 10
+  speed: 2.5
   defense: 0
   reward: 1
   sprite: {fileID: 21300000, guid: 795a4a9bf42b88241b3dc801b71bf147, type: 3}

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dddd127325fa146997a74419690f41, type: 3}
   m_Name: Tart
   m_EditorClassIdentifier: 
-  maxHealth: 50
-  speed: 2.5
+  maxHealth: 100
+  speed: 3
   defense: 0
   reward: 8
   sprite: {fileID: 21300000, guid: 4ddbef08977221940b212222b6d5e4e9, type: 3}
