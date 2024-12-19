@@ -83,7 +83,6 @@ namespace JSY
 
         public void OnPush()
         {
-            Init();
             transform.parent = PoolManager.Instance.transform;
         }
 

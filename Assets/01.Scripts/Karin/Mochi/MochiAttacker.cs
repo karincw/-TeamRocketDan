@@ -3,6 +3,7 @@ using JSY;
 using Karin.PoolingSystem;
 using Leo.Damage;
 using Leo.Interface;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,8 +25,6 @@ namespace Karin
 
         private void Update()
         {
-            if (effect != null)
-                effect.SetActive(_owner.CanAttack);
 
             if (_owner.CanAttack)
                 Attack();
@@ -76,29 +75,30 @@ namespace Karin
 
         public override void Release()
         {
-            if (effect is not null)
-            {
-                PoolManager.Instance.Push(effect);
-            }
             _enemies.Clear();
+            if (effect != null)
+                Destroy(effect.gameObject);
         }
 
         public override void SetUp()
         {
             _collider.radius = _owner.MochiData.attackData.attackRange;
-
-            var attackData = _owner.MochiData.attackData;
-            if (attackData.isStarlite)
+            if (_owner.MochiData.attackData.isStarlite)
             {
-                effect = PoolManager.Instance.Pop(attackData.attackEffect) as CircleSpinAttacker;
-                effect.transform.parent = transform;
-                effect.SetPos(transform);
-                effect.SetData(attackData.attackRange, attackData.count, 1);
-                StarLite sl = (effect.GetDamageCaster() as StarLite);
-                sl.SetImage(attackData.starLiteImage);
-                sl.SetDamage(attackData.damage);
-                effect.Play();
-                effect.SetColor(attackData.attackColor);
+                effect = Instantiate(_owner.MochiData.circleSpinAttacker, transform);
+                var attackData = _owner.MochiData.attackData;
+                if (attackData.isStarlite)
+                {
+                    effect.transform.parent = transform;
+                    Debug.Log(effect.transform.parent.name);
+                    effect.SetPos(transform);
+                    effect.SetData(attackData.attackRange, attackData.count, 1);
+                    StarLite sl = (effect.GetDamageCaster() as StarLite);
+                    sl.SetImage(attackData.starLiteImage);
+                    sl.SetDamage(attackData.damage);
+                    effect.Play();
+                    effect.SetColor(attackData.attackColor);
+                }
             }
 
         }
