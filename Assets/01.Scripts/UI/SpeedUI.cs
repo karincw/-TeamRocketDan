@@ -24,7 +24,6 @@ namespace JSY
 
         public void ChangeSpeed()
         {
-            Debug.Log((int)speed);
             speed = (Speed)((int)speed * 2);
             if ((int)speed == 8) speed = Speed.normalSpeed;
             iconImage.sprite = speedIcon[(int)speed];

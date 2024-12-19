@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3631521250561371781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 790689625ed50c54b8e68dee24fd7ddd, type: 3}
+  m_Name: EndNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 8c748027cb59ddd4194070ce2960104a
+  position: {x: 426.64, y: 95.44}
+  blackBoard:
+    canvas: {fileID: 0}
+    audioSource: {fileID: 0}
+  tree: {fileID: 11400000}
+  child: {fileID: 0}
+--- !u!114 &-1551863922520760714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 628ceeedafa966f4d886366d35aefc2a, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ea1d4a885a90784448f029f1b5911c80
+  position: {x: -46.95999, y: 125.00001}
+  blackBoard:
+    canvas: {fileID: 0}
+    audioSource: {fileID: 0}
+  tree: {fileID: 11400000}
+  child: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af874ecc236807499581e33e7f34a52, type: 3}
+  m_Name: DialogTree
+  m_EditorClassIdentifier: 
+  position: 0
+  rootNode: {fileID: -1551863922520760714}
+  endNode: {fileID: -3631521250561371781}
+  treeState: 0
+  nodes:
+  - {fileID: -1551863922520760714}
+  - {fileID: -3631521250561371781}
+  - {fileID: 7679535873563457655}
+  blackboard:
+    canvas: {fileID: 0}
+    audioSource: {fileID: 0}
+--- !u!114 &7679535873563457655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11960f686a02024499d959ae8cfc45ed, type: 3}
+  m_Name: TextNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 759a851d7ef86ba4a99d31e33fda9030
+  position: {x: 0, y: 0}
+  blackBoard:
+    canvas: {fileID: 0}
+    audioSource: {fileID: 0}
+  tree: {fileID: 11400000}
+  child: {fileID: 0}
+  script:
+    outputText: 
+    showCharacter: 0
+  time: 1
+  delaytime: 1
+  textSkip: 0
+  dialogSkip: 0
