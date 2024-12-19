@@ -35,7 +35,7 @@ namespace Karin
             var attackData = _owner.MochiData.attackData;
             if (attackData.isStarlite || _enemies.Count < 1 || attackData.attackEffect == null) return;
 
-            if (Time.time - lastAttacktime >= attackData.attackCooldown)
+            if (Time.time - lastAttacktime >= attackData.attackCooldown && !_enemies[0].EnemyHealth.IsDead)
             {
                 try
                 {

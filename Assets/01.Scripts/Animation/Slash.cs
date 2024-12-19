@@ -4,12 +4,14 @@ using DG.Tweening;
 using Karin.PoolingSystem;
 using Leo.Damage;
 using Leo.Interface;
+using Leo.Sound;
 using UnityEngine;
 
 namespace Leo.Animation
 {
     public class Slash : MonoBehaviour, IEffectable, IColorChangeable, IPoolable
     {
+        [SerializeField] private SoundObject _soundObject;
         [SerializeField] private GameObject _visual;
         [SerializeField] private TrailRenderer _trailRenderer;
         private Material _material;
@@ -35,6 +37,7 @@ namespace Leo.Animation
         [ContextMenu("StartSlash")]
         public void StartSlash()
         {
+            _soundObject.Play();
             transform.DOKill();
 
             StartCoroutine(SlashEffect());

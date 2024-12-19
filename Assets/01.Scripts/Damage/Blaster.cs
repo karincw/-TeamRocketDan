@@ -1,12 +1,14 @@
 ﻿using DG.Tweening;
 using Leo.Core;
 using Leo.Interface;
+using Leo.Sound;
 using UnityEngine;
 
 namespace Leo.Damage
 {
     public class Blaster : MonoBehaviour
     {
+        [SerializeField] private SoundObject _soundObject;
         [SerializeField] private ParticleSystem _particleSystem;
         [SerializeField] private GameObject _visual;
         [SerializeField] private GameObject _visual2;
@@ -31,6 +33,7 @@ namespace Leo.Damage
                 .AppendInterval(1f)
                 .AppendCallback(() =>
                 {
+                    _soundObject.Play();
                     _visual2.SetActive(false);
                     CameraManager.Instance.ShakeCamera(0.03f, _duration);
                 })
