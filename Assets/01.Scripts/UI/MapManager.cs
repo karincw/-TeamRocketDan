@@ -55,7 +55,6 @@ namespace JSY
 
         private void HandleBossTurnEvent()
         {
-            Debug.Log("isChange " + isChange);
             isChange = true;
             nextMapIndex++;
             if(nextMapIndex >= mapPrefabs.Count) nextMapIndex = 0;

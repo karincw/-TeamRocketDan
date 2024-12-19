@@ -62,7 +62,6 @@ namespace Leo.Damage
         {
             foreach (var star in _starLites)
             {
-                Debug.Log("SetColor");
                 star.SetColor(color);
             }
         }
