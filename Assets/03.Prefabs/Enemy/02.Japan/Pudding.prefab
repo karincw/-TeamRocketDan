@@ -189,8 +189,6 @@ MonoBehaviour:
   _stunTime: 1
   _bossSkill: {fileID: 0}
   isStop: 0
-  _shild: {fileID: 2741262332710538056}
-  _isPudding: 1
 --- !u!4 &7959313976072392772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4051825845968048011, guid: 547540af18a42804ca8289a6d6b8ddcb, type: 3}

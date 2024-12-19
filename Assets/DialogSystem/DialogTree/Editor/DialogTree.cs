@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -26,7 +26,7 @@ namespace Karin.DialogSystem.Tree
             }
             return treeState;
         }
-
+#if UNITY_EDITOR
         public NodeSO CreateNode(System.Type type)
         {
             var node = ScriptableObject.CreateInstance(type) as NodeSO;
@@ -46,6 +46,7 @@ namespace Karin.DialogSystem.Tree
             AssetDatabase.RemoveObjectFromAsset(node);
             AssetDatabase.SaveAssets();
         }
+#endif
 
         public void AddChild(NodeSO parent, NodeSO child)
         {
@@ -165,4 +166,3 @@ namespace Karin.DialogSystem.Tree
     }
 #endif
 }
-#endif

@@ -19,11 +19,12 @@ namespace Karin.DialogSystem.Tree
         public BlackBoard blackBoard;
         public DialogTree tree;
 
+        #if UNITY_EDITOR
         /// <summary>
         /// Editor Only
         /// </summary>
         [HideInInspector] public NodeView view;
-
+        #endif
         public NodeState Update()
         {
             if (!started)

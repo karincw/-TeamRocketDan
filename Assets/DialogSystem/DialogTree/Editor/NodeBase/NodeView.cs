@@ -1,3 +1,4 @@
+#if UNITY_EDITOR	
 using System;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -37,7 +38,9 @@ namespace Karin.DialogSystem.Tree
         public NodeView(NodeSO node) : base("Assets/DialogSystem/DialogTree/Editor/UxmlElement/NodeView.uxml")
         {
             this.node = node;
+            #if UNITY_EDITOR
             this.node.view = this;
+            #endif
             this.title = node.name;
             this.viewDataKey = node.guid;
             style.left = node.position.x;
@@ -96,3 +99,4 @@ namespace Karin.DialogSystem.Tree
         }
     }
 }
+#endif

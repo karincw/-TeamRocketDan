@@ -1,4 +1,4 @@
-
+#if UNITY_EDITOR
 using UnityEngine;
 
 namespace Karin.DialogSystem.Tree
@@ -30,3 +30,4 @@ namespace Karin.DialogSystem.Tree
         }
     }
 }
+#endif

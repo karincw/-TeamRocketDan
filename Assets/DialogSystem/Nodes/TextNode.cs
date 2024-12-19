@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using DG.Tweening;
 using UnityEditor;
 using UnityEngine;
@@ -64,3 +65,4 @@ namespace Karin.DialogSystem.Tree
     }
 #endif
 }
+#endif

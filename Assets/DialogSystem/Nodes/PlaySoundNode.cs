@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -24,3 +25,4 @@ namespace Karin.DialogSystem.Tree
         }
     }
 }
+#endif
