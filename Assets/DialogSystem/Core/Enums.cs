@@ -18,7 +18,6 @@ namespace Karin.DialogSystem
         MochiCreate = 2,
         MochiMove = 3,
         Option = 4,
-        Dictionary = 5,
-        Outro = 6,
+        Outro = 5,
     }
 }

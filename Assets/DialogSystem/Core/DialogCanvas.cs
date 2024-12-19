@@ -18,7 +18,7 @@ namespace Karin.DialogSystem
         public void SetDialogText(string text, float textTime, bool fade = true, float fadeTime = 1.2f)
         {
             _dialogCanvasGroup.alpha = 1;
-            dialogText.text = text;
+            dialogText.text = "";
 
             Sequence seq = DOTween.Sequence()
                 .Append(DOTween.To(() => dialogText.text = "", t => dialogText.text = t, text, textTime).SetEase(Ease.Linear)).SetId(32)
