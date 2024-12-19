@@ -41,7 +41,6 @@ namespace Karin
             bool vaild = !(v.magnitude > 0.5f);
             if (!vaild)
             {
-                Debug.Log("asd");
                 transform.position = vaildPosition;
             }
         }

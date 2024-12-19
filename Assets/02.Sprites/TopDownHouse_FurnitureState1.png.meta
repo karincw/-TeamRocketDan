@@ -1,0 +1,245 @@
+fileFormatVersion: 2
+guid: f20b91255e33c044fbc3bc9074604796
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5280097977772955952
+    second: TopDownHouse_FurnitureState1_0
+  - first:
+      213: -8440415529595329880
+    second: TopDownHouse_FurnitureState1_1
+  - first:
+      213: -585591954500325218
+    second: TopDownHouse_FurnitureState1_2
+  - first:
+      213: -7482480099739175381
+    second: TopDownHouse_FurnitureState1_3
+  - first:
+      213: -2909096876751415182
+    second: TopDownHouse_FurnitureState1_4
+  - first:
+      213: 2427700795184512329
+    second: TopDownHouse_FurnitureState1_5
+  - first:
+      213: -6503336491285589323
+    second: TopDownHouse_FurnitureState1_6
+  - first:
+      213: -1244099573194075809
+    second: TopDownHouse_FurnitureState1_7
+  - first:
+      213: -7079836506687959180
+    second: TopDownHouse_FurnitureState1_8
+  - first:
+      213: -7550143784507887573
+    second: TopDownHouse_FurnitureState1_9
+  - first:
+      213: 2904015818217375649
+    second: TopDownHouse_FurnitureState1_10
+  - first:
+      213: 3118064626333518303
+    second: TopDownHouse_FurnitureState1_11
+  - first:
+      213: 4539013286279311583
+    second: TopDownHouse_FurnitureState1_12
+  - first:
+      213: -6218050132621710829
+    second: TopDownHouse_FurnitureState1_13
+  - first:
+      213: -4673423147141154670
+    second: TopDownHouse_FurnitureState1_14
+  - first:
+      213: -2304552921846071083
+    second: TopDownHouse_FurnitureState1_15
+  - first:
+      213: -7195719756900815299
+    second: TopDownHouse_FurnitureState1_16
+  - first:
+      213: -8201384590792660065
+    second: TopDownHouse_FurnitureState1_17
+  - first:
+      213: -5382962567238427765
+    second: TopDownHouse_FurnitureState1_18
+  - first:
+      213: 4456107197285994944
+    second: TopDownHouse_FurnitureState1_19
+  - first:
+      213: -1543917754227665891
+    second: TopDownHouse_FurnitureState1_20
+  - first:
+      213: 6414951453976176155
+    second: TopDownHouse_FurnitureState1_21
+  - first:
+      213: 4207965616721438819
+    second: TopDownHouse_FurnitureState1_22
+  - first:
+      213: -2377263903056115397
+    second: TopDownHouse_FurnitureState1_23
+  - first:
+      213: 854679488709032820
+    second: TopDownHouse_FurnitureState1_24
+  - first:
+      213: 7770570160812174069
+    second: TopDownHouse_FurnitureState1_25
+  - first:
+      213: -1768428992852760683
+    second: TopDownHouse_FurnitureState1_26
+  - first:
+      213: -8835237733455150945
+    second: TopDownHouse_FurnitureState1_27
+  - first:
+      213: 6524025677165895665
+    second: TopDownHouse_FurnitureState1_28
+  - first:
+      213: -6408228327049933033
+    second: TopDownHouse_FurnitureState1_29
+  - first:
+      213: -5445501136322591867
+    second: TopDownHouse_FurnitureState1_30
+  - first:
+      213: -6320239999672098737
+    second: TopDownHouse_FurnitureState1_31
+  - first:
+      213: 5166786592505586647
+    second: TopDownHouse_FurnitureState1_32
+  - first:
+      213: 3851118045614292850
+    second: TopDownHouse_FurnitureState1_33
+  - first:
+      213: -2153082540091431001
+    second: TopDownHouse_FurnitureState1_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TopDownHouse_FurnitureState1_0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 223
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0395a68b22da64940800000000000000
+      internalID: 5280097977772955952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 81c54eb38dd0569469a69187af0294bd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TopDownHouse_FurnitureState1_0: 5280097977772955952
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

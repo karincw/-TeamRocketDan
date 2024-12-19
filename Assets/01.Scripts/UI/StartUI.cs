@@ -2,6 +2,7 @@ using DG.Tweening;
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class StartUI : MonoBehaviour
@@ -26,8 +27,7 @@ public class StartUI : MonoBehaviour
 
     private void HandleStartButton()
     {
-        Debug.Log("°ÔÀÓÀ» ½ÃÀÛÇÕ´Ï´Ù. ÇöÀç ¿¬°áµÈ ¾ÀÀÌ ¾ø½À´Ï´Ù.");
-        // Scene
+        SceneManager.LoadScene("MapScene");
     }
 
     private void HandleExitButton()
@@ -35,7 +35,7 @@ public class StartUI : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-        Application.Quit(); // ¾îÇÃ¸®ÄÉÀÌ¼Ç Á¾·á
+        Application.Quit(); // ì–´í”Œë¦¬ì¼€ì´ì…˜ ì¢…ë£Œ
 #endif
     }
 }

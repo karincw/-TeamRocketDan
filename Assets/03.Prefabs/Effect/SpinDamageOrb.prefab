@@ -4886,7 +4886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6c1830fc605014e8ef73a84ff08b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 1
+  _damage: 3
   canAttack: 1
   <SrCompo>k__BackingField: {fileID: 3387273366154476125}
   _particleSystem: {fileID: 598869836132968086}
@@ -5115,7 +5115,7 @@ SpriteRenderer:
   m_SortingLayerID: -2073138463
   m_SortingLayer: 4
   m_SortingOrder: 10
-  m_Sprite: {fileID: 2379641805153947552, guid: c2258ca99317ac941b80a43630073111, type: 3}
+  m_Sprite: {fileID: 7430218742958770901, guid: 80292c07216455245bc1b41dc9381831, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
