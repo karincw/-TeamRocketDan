@@ -30,12 +30,18 @@ namespace Karin
             }
         }
 
+        public void SetVailPos(Vector3 pos)
+        {
+            vaildPosition = pos;
+        }
+
         public void VaildCheck()
         {
             Vector2 v = (Vector2)transform.position - vaildPosition;
             bool vaild = !(v.magnitude > 0.5f);
             if (!vaild)
             {
+                Debug.Log("asd");
                 transform.position = vaildPosition;
             }
         }
