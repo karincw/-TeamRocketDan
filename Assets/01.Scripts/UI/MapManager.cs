@@ -1,12 +1,20 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace JSY
 {
+    [Serializable]
+    public struct MapObject
+    {
+        public GameObject levelObj;
+        public Transform startTrm;
+        public List<MovePoint> pointGroup;
+    }
+
     public class MapManager : MonoBehaviour
     {
-        [SerializeField] private Transform level;
-        [SerializeField] private List<GameObject> mapPrefabs = new List<GameObject>();
+        [SerializeField] private List<MapObject> mapPrefabs = new List<MapObject>();
 
         private int mapIndex = 0, nextMapIndex;
         private bool isChange = false;
@@ -15,23 +23,27 @@ namespace JSY
         {
             WaveManager.Instance.OnStartBossTurnEvent += HandleBossTurnEvent;
             WaveManager.Instance.OnChangeTurnEvent += HandleChangeTurnEvent;
-        }
 
+            EnemyCreateManager.Instance.UpdatePoints(mapPrefabs[mapIndex].startTrm, mapPrefabs[mapIndex].pointGroup);
+        }
+        
         private void HandleChangeTurnEvent()
         {
             if (!isChange) return;
             if (EnemyCountUI.Instance.isEnd) return;
             isChange = false;
-            level.GetChild(mapIndex).gameObject.SetActive(false);
+            mapPrefabs[mapIndex].levelObj.gameObject.SetActive(false);
             mapIndex = nextMapIndex;
-            level.GetChild(mapIndex).gameObject.SetActive(true);
+            mapPrefabs[mapIndex].levelObj.gameObject.SetActive(true);
+            EnemyCreateManager.Instance.UpdatePoints(mapPrefabs[mapIndex].startTrm, mapPrefabs[mapIndex].pointGroup);
         }
 
         private void HandleBossTurnEvent()
         {
+            Debug.Log("isChange " + isChange);
             isChange = true;
             nextMapIndex++;
-            if(mapIndex >= mapPrefabs.Count) mapIndex = 0;
+            if(mapIndex >= mapPrefabs.Count) nextMapIndex = 0;
         }
     }
 }

@@ -5,13 +5,13 @@ using UnityEngine;
 
 namespace JSY
 {
-    public class EnemyCreateManager : MonoBehaviour
+    public class EnemyCreateManager : MonoSingleton<EnemyCreateManager>
     {
         [SerializeField] private Transform enemyParent;
         [SerializeField] private Transform startTrm;
         [SerializeField] private List<MovePoint> movePoints = new List<MovePoint>();
 
-        private void Awake()
+        protected override void Awake()
         {
             WaveManager.Instance.OnStartTurnEvent += HandleStartTurnEvent;
         }
@@ -32,8 +32,15 @@ namespace JSY
                 obj.SetMovePoints(movePoints);
                 yield return coolTime;
             }
-            if(!wave.isBoss)
+            if (!wave.isBoss)
                 WaveManager.Instance.TurnEnd();
+        }
+
+        public void UpdatePoints(Transform startTrm,  List<MovePoint> movePoints)
+        {
+            this.movePoints.Clear();
+            this.startTrm = startTrm;
+            this.movePoints = movePoints;
         }
     }
 }

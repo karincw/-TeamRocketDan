@@ -1,4 +1,4 @@
-﻿using Leo.Entity.SO;
+using Leo.Entity.SO;
 using Leo.Interface;
 using UnityEngine;
 
@@ -9,12 +9,15 @@ namespace JSY
         [SerializeField] private AttackText attackText;
         public int HP { get; set; }
         public int defense { get; set; }
+        public int reward { get; set; }
+
         
         public void SetData(EnemySO enemySO)
         {
             HP = enemySO.maxHealth;
             defense = enemySO.defense;
             HP = Mathf.Clamp(HP, 0, enemySO.maxHealth);
+            reward = enemySO.reward;
         }
         
         public void TakeDamage(int damage)
@@ -32,6 +35,7 @@ namespace JSY
         public void Die()
         {
             EnemyCountUI.Instance.UpdateCount(-1);
+            MoneyUI.Instance.ModifyMoney(reward);
             Destroy(gameObject);
         }
     }

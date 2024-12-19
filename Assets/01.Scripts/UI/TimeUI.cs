@@ -13,6 +13,7 @@ namespace JSY
 
         private TextMeshProUGUI timeText;
         private Coroutine waveRoutine;
+        private Coroutine checkEnemyRoutine;
         private RectTransform rectTrm => transform as RectTransform;
 
         private void Awake()
@@ -45,19 +46,39 @@ namespace JSY
         {
             if (waveRoutine != null)
                 StopCoroutine(waveRoutine);
+            if (checkEnemyRoutine != null)
+                StopCoroutine(waveRoutine);
+
             Sequence seq = DOTween.Sequence();
             seq.AppendCallback(() =>
             {
+                checkEnemyRoutine = StartCoroutine(CheckEnemy());
                 waveRoutine = StartCoroutine(SetTimePanel(WaveManager.Instance.GetWave().bossTimeLimit));
             });
             seq.AppendInterval(WaveManager.Instance.GetWave().bossTimeLimit);
             seq.AppendCallback(() =>
             {
-                if (EnemyCountUI.Instance.isAllDead())
+                StopCoroutine(waveRoutine);
+                if (EnemyCountUI.Instance.IsAllDead())
                     WaveManager.Instance.TurnEnd();
                 else
                     EnemyCountUI.Instance.GameOver();
             });
+        }
+
+        private IEnumerator CheckEnemy()
+        {
+            yield return new WaitForSeconds(1f);
+            while (true)
+            {
+                if (EnemyCountUI.Instance.IsAllDead())
+                {
+                    WaveManager.Instance.TurnEnd();
+                    NoticeUI.Instance.Notice("보스를 물리쳤습니다!");
+                    yield break;
+                }
+                yield return null;
+            }
         }
 
         private IEnumerator SetTimePanel(int time)
@@ -66,7 +87,7 @@ namespace JSY
             var waitTime = new WaitForSeconds(1f);
             for (int i = 0; i <= time; i++)
             {
-                timeText.text = time - i + "��";
+                timeText.text = time - i + "초";
                 yield return waitTime;
             }
             rectTrm.DOAnchorPosY(0, 0.5f);
