@@ -42,6 +42,10 @@ namespace Karin
                     {
                         colorChange.SetColor(attackData.attackColor);
                     }
+                    if(attackEffect is ISizeChangeable sizeChange)
+                    {
+                        sizeChange.SetSize(attackData.size);
+                    }
 
                     var damageCaster = effect.GetDamageCaster();
                     if (damageCaster)
