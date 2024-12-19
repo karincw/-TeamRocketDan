@@ -18,7 +18,7 @@ namespace JSY
             buyButton = transform.Find("BuyBtn").GetComponent<Button>();
 
             buyButton.onClick.AddListener(HandleBuyButton);
-            ModifyMoney(0);
+            ModifyMoney(150);
         }
 
         private void Update()

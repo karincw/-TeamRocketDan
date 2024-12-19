@@ -29,14 +29,6 @@ namespace JSY
 
         public void AddDeadEnemy() => deadEnemyCount++;
 
-        private void Update()
-        {
-            if (Keyboard.current.pKey.wasPressedThisFrame)
-            {
-                GameOver();
-            }
-        }
-
         public void GameOver()
         {
             endTime = DateTime.Now;

@@ -8,7 +8,7 @@ namespace JSY
         private int enemyCount = 0;
         private int maxCount = 35;
 
-        private bool isEnd;
+        public bool isEnd { get; private set; }
 
         protected override void Awake()
         {
@@ -35,7 +35,7 @@ namespace JSY
                 return;
             }
             enemyCount += value;
-            countText.text = enemyCount + "/" + maxCount + "¸¶¸®";
+            countText.text = enemyCount + "/" + maxCount + "ë§ˆë¦¬";
         }
 
         
