@@ -14,7 +14,11 @@ namespace Karin.DialogSystem
     }
     public enum DialogType
     {
-        Talk,
-        Find,
+        Intro = 1,
+        MochiCreate = 2,
+        MochiMove = 3,
+        Option = 4,
+        Dictionary = 5,
+        Outro = 6,
     }
 }

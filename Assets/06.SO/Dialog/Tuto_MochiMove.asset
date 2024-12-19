@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9190919912705829047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 628ceeedafa966f4d886366d35aefc2a, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 9df8787c6b99232488d1868ca3192e50
+  position: {x: -286.56738, y: -75.50457}
+  blackBoard:
+    canvas: {fileID: 0}
+    audioSource: {fileID: 0}
+  tree: {fileID: 11400000}
+  child: {fileID: -4229317637438304198}
+--- !u!114 &-4229317637438304198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11960f686a02024499d959ae8cfc45ed, type: 3}
+  m_Name: TextNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a7c4d2d0fd050664fbc7a1808af3d8d0
+  position: {x: -148.00002, y: -80}
+  blackBoard:
+    canvas: {fileID: 0}
+    audioSource: {fileID: 0}
+  tree: {fileID: 11400000}
+  child: {fileID: 49956919149684302}
+  script:
+    outputText: "\uC798\uD558\uC168\uC2B5\uB2C8\uB2E4, \uB9C8\uC655\uB2D8."
+    showCharacter: 0
+  time: 1
+  delaytime: 1
+  textSkip: 0
+  dialogSkip: 0
+--- !u!114 &-3018056393112401068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 790689625ed50c54b8e68dee24fd7ddd, type: 3}
+  m_Name: EndNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 2357f204a5f4dc342b4de96f1cb604b0
+  position: {x: 209.69626, y: 82.66666}
+  blackBoard:
+    canvas: {fileID: 0}
+    audioSource: {fileID: 0}
+  tree: {fileID: 11400000}
+  child: {fileID: 0}
+--- !u!114 &-2975940356699415333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11960f686a02024499d959ae8cfc45ed, type: 3}
+  m_Name: TextNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a75c7ebe9143ae24bb9be81c99961cee
+  position: {x: -146.00003, y: 74.79648}
+  blackBoard:
+    canvas: {fileID: 0}
+    audioSource: {fileID: 0}
+  tree: {fileID: 11400000}
+  child: {fileID: -3018056393112401068}
+  script:
+    outputText: "\uBAA8\uCC0C\uB97C \uC6C0\uC9C1\uC5EC \uC5C5\uADF8\uB808\uC774\uB4DC
+      \uC2DC\uCF1C\uBD05\uC2DC\uB2E4."
+    showCharacter: 0
+  time: 1
+  delaytime: 1
+  textSkip: 0
+  dialogSkip: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af874ecc236807499581e33e7f34a52, type: 3}
+  m_Name: Tuto_MochiMove
+  m_EditorClassIdentifier: 
+  position: 0
+  rootNode: {fileID: -9190919912705829047}
+  endNode: {fileID: -3018056393112401068}
+  treeState: 0
+  nodes:
+  - {fileID: -9190919912705829047}
+  - {fileID: -3018056393112401068}
+  - {fileID: -4229317637438304198}
+  - {fileID: 49956919149684302}
+  - {fileID: -2975940356699415333}
+  blackboard:
+    canvas: {fileID: 0}
+    audioSource: {fileID: 0}
+--- !u!114 &49956919149684302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11960f686a02024499d959ae8cfc45ed, type: 3}
+  m_Name: TextNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 0ebff83fbb8319e4294f406eaaefb803
+  position: {x: -148.86958, y: -3.782608}
+  blackBoard:
+    canvas: {fileID: 0}
+    audioSource: {fileID: 0}
+  tree: {fileID: 11400000}
+  child: {fileID: -2975940356699415333}
+  script:
+    outputText: "\uAC19\uC740 \uC678\uD615\uC758 \uBAA8\uCC0C\uB4E4\uC740 \uC11C\uB85C
+      \uD569\uCCD0\uC11C \uC5C5\uADF8\uB808\uC774\uB4DC \uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+    showCharacter: 0
+  time: 1
+  delaytime: 1
+  textSkip: 0
+  dialogSkip: 0

@@ -46,6 +46,8 @@ namespace JSY
 
         private void Update()
         {
+            if (SceneManager.GetActiveScene().name == "JSY") return;
+
             if (Keyboard.current.escapeKey.wasReleasedThisFrame)
             {
                 if (!isDicOpen)

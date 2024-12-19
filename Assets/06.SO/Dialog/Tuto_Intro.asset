@@ -19,6 +19,7 @@ MonoBehaviour:
   blackBoard:
     canvas: {fileID: 0}
     audioSource: {fileID: 0}
+    owner: {fileID: 0}
   tree: {fileID: 11400000}
   child: {fileID: 2136768952179595157}
   script:
@@ -26,8 +27,8 @@ MonoBehaviour:
       \uC704\uD574, \uB9C8\uC655\uB2D8\uC758 \uAD70\uB2E8\uC744 \uC9C0\uD718\uD558\uC5EC
       \uB514\uC800\uD2B8 \uC8FC\uBBFC\uB4E4\uC744 \uC81C\uC555\uD574\uC57C \uD569\uB2C8\uB2E4."
     showCharacter: 0
-  time: 1
-  delaytime: 2
+  time: 1.5
+  delaytime: 1
   textSkip: 0
   dialogSkip: 0
 --- !u!114 &-4198132045207936248
@@ -49,6 +50,7 @@ MonoBehaviour:
   blackBoard:
     canvas: {fileID: 0}
     audioSource: {fileID: 0}
+    owner: {fileID: 0}
   tree: {fileID: 11400000}
   child: {fileID: -7653555115361296648}
   script:
@@ -57,7 +59,7 @@ MonoBehaviour:
       \uAC70\uC138\uC9C0\uB294 \uBC14\uB78C\uC5D0 \uADF8\uB9CC \uACF5\uACA9\uC744
       \uB2F9\uD558\uC168\uC2B5\uB2C8\uB2E4."
     showCharacter: 0
-  time: 1
+  time: 2
   delaytime: 1
   textSkip: 0
   dialogSkip: 0
@@ -80,6 +82,7 @@ MonoBehaviour:
   blackBoard:
     canvas: {fileID: 0}
     audioSource: {fileID: 0}
+    owner: {fileID: 0}
   tree: {fileID: 11400000}
   child: {fileID: 0}
 --- !u!114 &-1551863922520760714
@@ -101,6 +104,7 @@ MonoBehaviour:
   blackBoard:
     canvas: {fileID: 0}
     audioSource: {fileID: 0}
+    owner: {fileID: 0}
   tree: {fileID: 11400000}
   child: {fileID: 7679535873563457655}
 --- !u!114 &11400000
@@ -113,7 +117,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5af874ecc236807499581e33e7f34a52, type: 3}
-  m_Name: DialogTree
+  m_Name: Tuto_Intro
   m_EditorClassIdentifier: 
   position: 0
   rootNode: {fileID: -1551863922520760714}
@@ -133,6 +137,7 @@ MonoBehaviour:
   blackboard:
     canvas: {fileID: 0}
     audioSource: {fileID: 0}
+    owner: {fileID: 0}
 --- !u!114 &2136768952179595157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,10 +153,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: eb2898fbb6487174d8ab761d4758ece3
-  position: {x: -9.999992, y: 289.30438}
+  position: {x: 0.6666565, y: 296.66666}
   blackBoard:
     canvas: {fileID: 0}
     audioSource: {fileID: 0}
+    owner: {fileID: 0}
   tree: {fileID: 11400000}
   child: {fileID: 5306322808592471652}
   script:
@@ -180,6 +186,7 @@ MonoBehaviour:
   blackBoard:
     canvas: {fileID: 0}
     audioSource: {fileID: 0}
+    owner: {fileID: 0}
   tree: {fileID: 11400000}
   child: {fileID: -4198132045207936248}
   script:
@@ -209,6 +216,7 @@ MonoBehaviour:
   blackBoard:
     canvas: {fileID: 0}
     audioSource: {fileID: 0}
+    owner: {fileID: 0}
   tree: {fileID: 11400000}
   child: {fileID: 7067508768033104110}
   script:
@@ -238,13 +246,14 @@ MonoBehaviour:
   blackBoard:
     canvas: {fileID: 0}
     audioSource: {fileID: 0}
+    owner: {fileID: 0}
   tree: {fileID: 11400000}
   child: {fileID: 5001161961669221323}
   script:
     outputText: "\uC544\uB2C8\uC5D0\uC694."
     showCharacter: 0
-  time: 1
-  delaytime: 1.5
+  time: 0.5
+  delaytime: 1
   textSkip: 0
   dialogSkip: 0
 --- !u!114 &7067508768033104110
@@ -262,10 +271,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: cca0127f59303064a96d2c4fff76eaea
-  position: {x: -1.9999809, y: 514.8261}
+  position: {x: 3.333318, y: 530.6667}
   blackBoard:
     canvas: {fileID: 0}
     audioSource: {fileID: 0}
+    owner: {fileID: 0}
   tree: {fileID: 11400000}
   child: {fileID: -3631521250561371781}
   script:
@@ -295,6 +305,7 @@ MonoBehaviour:
   blackBoard:
     canvas: {fileID: 0}
     audioSource: {fileID: 0}
+    owner: {fileID: 0}
   tree: {fileID: 11400000}
   child: {fileID: 2416853519103242126}
   script:
