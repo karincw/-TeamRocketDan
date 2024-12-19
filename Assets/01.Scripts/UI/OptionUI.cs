@@ -22,7 +22,8 @@ namespace JSY
         private bool isDicOpen = false;
         private bool isMochi = false;
 
-        float durationTime = 0.2f;
+        private float durationTime = 0.2f;
+        private float timeScale = 1;
 
         private void Awake()
         {
@@ -64,7 +65,10 @@ namespace JSY
 
         public void SettingOptionPanel()
         {
+            if(!isOpen) timeScale = Time.timeScale;
+
             isOpen = !isOpen;
+            Time.timeScale = isOpen ? 0 : timeScale;
             popupCanvasGroup.blocksRaycasts = isOpen;
             SettingPanel(popupUI, isOpen);
         }
@@ -99,10 +103,11 @@ namespace JSY
             float sizeValue = isOpen ? 1f : 0f;
 
             Sequence seq = DOTween.Sequence();
+            seq.SetUpdate(true);
             seq.AppendCallback(() =>
             {
                 if (isOpen || (!this.isOpen && !isDicOpen))
-                    background.DOFade(fadeValue, durationTime);
+                    background.DOFade(fadeValue, durationTime).SetUpdate(true);
             });
             seq.Join(panel.DOScale(sizeValue, durationTime));
             seq.OnComplete(() =>
