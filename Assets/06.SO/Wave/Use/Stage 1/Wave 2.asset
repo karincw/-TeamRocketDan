@@ -16,4 +16,4 @@ MonoBehaviour:
   isBoss: 0
   bossTimeLimit: 0
   spawnDelay: 0.7
-  waveDelay: 30
+  waveDelay: 20
