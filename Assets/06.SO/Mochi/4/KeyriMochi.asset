@@ -15,7 +15,7 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: dcce092505a4c0044878c177356c28eb, type: 3}
   ranking: 4
   attackData:
-    damage: 20
+    damage: 15
     attackRange: 3
     attackCooldown: 2
     attackEffect: 21

@@ -19,6 +19,7 @@ namespace JSY
             WaveManager.Instance.OnStartTurnEvent += HandleStartTurnEvent;
         }
 
+
         private void OnDestroy()
         {
             WaveManager.Instance.OnStartTurnEvent -= HandleStartTurnEvent;

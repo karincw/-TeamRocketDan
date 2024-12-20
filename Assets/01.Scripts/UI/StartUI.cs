@@ -20,6 +20,8 @@ public class StartUI : MonoBehaviour
         startButton.onClick.AddListener(HandleStartButton);
         tutoButton.onClick.AddListener(HandleTutoButton);
         exitButton.onClick.AddListener(HandleExitButton);
+
+        Time.timeScale = 1f;
     }
 
     private void Start()

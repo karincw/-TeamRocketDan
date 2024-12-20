@@ -19,7 +19,7 @@ namespace JSY
         private int repeatCount = 0;
         private int add = 40;
 
-        public int PoweredHp(int hp) => repeatCount != 0 ? hp * repeatCount + 40 * repeatCount : hp;
+        public int PoweredHp(int hp) => repeatCount != 0 ? hp * (repeatCount + 1) + 40 * repeatCount : hp;
         protected override void Awake()
         {
         }
@@ -31,6 +31,7 @@ namespace JSY
 
         public WaveSO GetWave() => waves[waveRepeatCount];
         public int GetWaveCount() => waveCount;
+        public int GetRepeatCount() => repeatCount;
 
         public void TurnEnd()
         {
