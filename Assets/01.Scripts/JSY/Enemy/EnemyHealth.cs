@@ -30,7 +30,7 @@ namespace JSY
             defense = enemySO.defense;
             maxHP = hp;
             HP = Mathf.Clamp(HP, 0, hp);
-            reward = enemySO.reward;
+            reward = WaveManager.Instance.PoweredReward(enemySO.reward);
             healthBar.SetHealthBar((float)HP / maxHP);
         }
 

@@ -47,7 +47,7 @@ namespace JSY
         protected override void Update()
         {
             base.Update();
-            if (_timer <= 0)
+            if (_timer <= 0 && EnemyHealth.IsDead)
             {
                 var particles = Instantiate(_particleSystem, transform.position, Quaternion.identity);
                 particles.Play();

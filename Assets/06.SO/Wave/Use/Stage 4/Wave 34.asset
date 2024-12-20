@@ -15,5 +15,5 @@ MonoBehaviour:
   enemies: 0d0000000d0000000d0000000d0000000d0000000e0000000e0000000e0000000e0000000e000000
   isBoss: 0
   bossTimeLimit: 0
-  spawnDelay: 0.8
+  spawnDelay: 2
   waveDelay: 30

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies: 0f000000
   isBoss: 1
-  bossTimeLimit: 100
+  bossTimeLimit: 120
   spawnDelay: 1.5
   waveDelay: 50

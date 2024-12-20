@@ -338,6 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 3a635fdd7ec78ad46a5b6391ed8ec1d2, type: 2}
   moneyText: {fileID: 1451783149}
+  costText: {fileID: 0}
 --- !u!114 &28458986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23657,6 +23658,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207364600}
   m_CullTransparentMesh: 1
+--- !u!114 &1208656305 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3508406038160986077, guid: 2bd42d6fa4c52b24cae0149c5f1a047c, type: 3}
+  m_PrefabInstance: {fileID: 2098844200}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1211905485
 GameObject:
   m_ObjectHideFlags: 0
@@ -35861,6 +35873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f0b82ea195d42d42b88dd936fda3698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxCount: 30
 --- !u!114 &1420839235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79790,6 +79803,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6497229969461601197, guid: 2bd42d6fa4c52b24cae0149c5f1a047c, type: 3}
+      propertyPath: costText
+      value: 
+      objectReference: {fileID: 1208656305}
     - target: {fileID: 6849981435436359446, guid: 2bd42d6fa4c52b24cae0149c5f1a047c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

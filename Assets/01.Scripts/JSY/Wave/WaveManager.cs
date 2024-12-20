@@ -20,6 +20,7 @@ namespace JSY
         private int add = 40;
 
         public int PoweredHp(int hp) => repeatCount != 0 ? hp * (repeatCount + 1) + 40 * repeatCount : hp;
+        public int PoweredReward(int r) => repeatCount != 0 ? r + 8 * repeatCount : r;
         protected override void Awake()
         {
         }
