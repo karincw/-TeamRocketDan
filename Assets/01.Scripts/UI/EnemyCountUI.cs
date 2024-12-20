@@ -42,9 +42,12 @@ namespace JSY
                 }
                 return;
             }
-
             enemyCount = EnemyCreateManager.Instance.enemyParent.childCount;
-            countText.text = enemyCount + "/" + maxCount + "마리";
+
+            if (enemyCount >= 20)
+                countText.text = "<color=red>" + enemyCount + "/" + maxCount + "마리";
+            else
+                countText.text = enemyCount + "/" + maxCount + "마리";
         }
 
         

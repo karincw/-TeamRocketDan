@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dddd127325fa146997a74419690f41, type: 3}
   m_Name: HoneyRiceCake
   m_EditorClassIdentifier: 
-  maxHealth: 7
+  maxHealth: 6
   speed: 3.2
   defense: 0
   reward: 1
