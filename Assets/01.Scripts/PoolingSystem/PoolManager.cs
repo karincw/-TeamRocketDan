@@ -39,12 +39,13 @@ namespace Karin.PoolingSystem
 
         public IPoolable Pop(PoolingType type)
         {
+            IPoolable item = _pools[type].Pop();
+
+            item.ResetItem();
+            return item;
             if (_pools.ContainsKey(type))
             {
-                IPoolable item = _pools[type].Pop();
-
-                item.ResetItem();
-                return item;
+                
             }
             Debug.LogError($"There is no pool {type.ToString()}");
             return null;
