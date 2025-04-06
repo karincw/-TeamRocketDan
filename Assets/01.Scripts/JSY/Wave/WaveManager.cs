@@ -16,12 +16,12 @@ namespace JSY
 
         [SerializeField] private List<WaveSO> waves = new List<WaveSO>();
         [SerializeField] private bool isRepeatMode = true;
-        private int waveRepeatCount = 0;
-        private int waveCount = 0;
-        private int repeatCount = 0;
+        [SerializeField] private int waveRepeatCount = 0;
+        [SerializeField] private int waveCount = 0;
+        [SerializeField] private int repeatCount = 0;
         private int add = 40;
 
-        public int PoweredHp(int hp) => repeatCount != 0 ? hp * (repeatCount + 1) + 40 * repeatCount : hp;
+        public int PoweredHp(int hp) => repeatCount != 0 ? hp * (waveCount - 38) + 40 * repeatCount : hp;
         public int PoweredReward(int r) => repeatCount != 0 ? r + 8 * repeatCount : r;
         protected override void Awake()
         {

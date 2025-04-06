@@ -2290,7 +2290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad87a42737f260145b9ee23ddfa997dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warningSound: {fileID: 0}
+  warningSound: {fileID: 1085227261}
   waves:
   - {fileID: 11400000, guid: 9df782cd5e26804489fc492e9d7ea46e, type: 2}
   - {fileID: 11400000, guid: 5390723363d04144a8cec17c8a07e401, type: 2}
@@ -54004,7 +54004,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.3846154
+  orthographic size: 8.307693
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
