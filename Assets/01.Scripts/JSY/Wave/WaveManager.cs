@@ -12,8 +12,10 @@ namespace JSY
         public event Action OnChangeTurnEvent;
         public event Action OnStartTurnEvent;
         public event Action OnStartBossTurnEvent;
+        public event Action OnStoryEndEvent;
 
         [SerializeField] private List<WaveSO> waves = new List<WaveSO>();
+        [SerializeField] private bool isRepeatMode = true;
         private int waveRepeatCount = 0;
         private int waveCount = 0;
         private int repeatCount = 0;
@@ -39,6 +41,11 @@ namespace JSY
             waveRepeatCount++;
             if (waveRepeatCount > waves.Count - 1)
             {
+                if(!isRepeatMode)
+                {
+                    OnStoryEndEvent?.Invoke();
+                    return;
+                }
                 repeatCount++;
                 waveRepeatCount = 0;
             }
