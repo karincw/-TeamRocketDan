@@ -53,11 +53,11 @@ namespace JSY
             Debug.Log("Die");
             if (_owner is not MiniBoss)
             {
-                EnemyCountUI.Instance.UpdateCount(-1);
+                UIManager.Instance.EnemyCountUI.UpdateCount(-1);
             }
 
-            ResultUI.Instance.AddDeadEnemy();
-            MoneyUI.Instance.ModifyMoney(reward);
+            UIManager.Instance.ResultUI.AddDeadEnemy();
+            UIManager.Instance.MoneyUI.ModifyMoney(reward);
             _deadSound.Play();
             PoolManager.Instance.Push(_owner);
         }

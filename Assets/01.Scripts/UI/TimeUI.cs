@@ -1,28 +1,27 @@
-using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
-using UnityEngine.Rendering;
 
 namespace JSY
 {
     public class TimeUI : MonoBehaviour
     {
+        [SerializeField] private Transform timeUITrm;
         [SerializeField] private Button skipButton;
 
         private TextMeshProUGUI timeText;
         private Coroutine waveRoutine;
         private Coroutine checkEnemyRoutine;
-        private RectTransform rectTrm => transform as RectTransform;
+        private RectTransform rectTrm => timeUITrm as RectTransform;
 
         private Sequence seq;
         private Sequence bossSeq;
 
         private void Awake()
         {
-            timeText = transform.Find("TimeTxt").GetComponent<TextMeshProUGUI>();
+            timeText = timeUITrm.Find("Panel").GetComponentInChildren<TextMeshProUGUI>();
             WaveManager.Instance.OnChangeTurnEvent += WaveDelay;
             WaveManager.Instance.OnStartBossTurnEvent += BossTimeLimit;
             skipButton.onClick.AddListener(SkipWaveCoolTime);
@@ -64,12 +63,12 @@ namespace JSY
             yield return new WaitForSeconds(1f);
             while (true)
             {
-                if (Time.time - startTime > WaveManager.Instance.GetWave().bossTimeLimit + 1)
+                if (Time.time - startTime >= WaveManager.Instance.GetWave().bossTimeLimit + 1)
                 {
-                    EnemyCountUI.Instance.GameOver();
+                    UIManager.Instance.EnemyCountUI.GameOver();
                 }
                 yield return new WaitForSeconds(0.5f);
-                if (EnemyCountUI.Instance.IsAllDead())
+                if (UIManager.Instance.EnemyCountUI.IsAllDead())
                 {
                     WaveManager.Instance.TurnEnd();
                     yield break;
@@ -96,7 +95,6 @@ namespace JSY
             rectTrm.DOAnchorPosY(0, 0.5f);
             WaveManager.Instance.InvokeStartTurn();
             skipButton.gameObject.SetActive(false);
-            
             
             seq.Kill();
         }

@@ -4,18 +4,18 @@ using UnityEngine;
 
 namespace JSY
 {
-    public class EnemyCountUI : MonoSingleton<EnemyCountUI>
+    public class EnemyCountUI : MonoBehaviour
     {
+        [SerializeField] private Transform enemyUITrm;
         private TextMeshProUGUI countText;
         private int enemyCount = 0;
         [SerializeField]private int maxCount = 30;
 
         public bool isEnd { get; private set; }
 
-        protected override void Awake()
+        protected void Awake()
         {
-            base.Awake(); 
-            countText = GetComponentInChildren<TextMeshProUGUI>();
+            countText = enemyUITrm.GetComponentInChildren<TextMeshProUGUI>();
             UpdateCount(0);
         }
 
@@ -24,7 +24,7 @@ namespace JSY
         public void GameOver()
         {
             isEnd = true;
-            ResultUI.Instance.GameOver();
+            UIManager.Instance.ResultUI.GameOver();
         }
 
         private void Update()

@@ -1,5 +1,4 @@
 using Karin;
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,8 +7,9 @@ using UnityEngine.UI;
 
 namespace JSY
 {
-    public class MoneyUI : MonoSingleton<MoneyUI>
+    public class MoneyUI : MonoBehaviour
     {
+        [SerializeField] private Transform bottomUITrm;
         [SerializeField] private MochiDataSO data;
         [SerializeField] private TextMeshProUGUI moneyText;
         [SerializeField] private TextMeshProUGUI costText;
@@ -17,10 +17,9 @@ namespace JSY
         private int money = 0;
         private int cost = 40;
 
-        protected override void Awake()
+        private void Awake()
         {
-            buyButton = transform.Find("BuyBtn").GetComponent<Button>();
-
+            buyButton = bottomUITrm.Find("BuyBtn").GetComponent<Button>();
             buyButton.onClick.AddListener(HandleBuyButton);
             ModifyMoney(162);
         }

@@ -40,7 +40,7 @@ namespace JSY
                 Enemy obj = PoolManager.Instance.Pop(enemy) as Enemy;
                 if (obj is not MiniBoss)
                 {
-                    EnemyCountUI.Instance.UpdateCount(1);
+                    UIManager.Instance.EnemyCountUI.UpdateCount(1);
                 }
                 obj.transform.position = startTrm.position;
                 obj.transform.parent = enemyParent;

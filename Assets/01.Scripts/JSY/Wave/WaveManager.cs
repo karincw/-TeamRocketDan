@@ -52,11 +52,11 @@ namespace JSY
             if (waves[waveRepeatCount].isBoss)
             {
                 OnStartBossTurnEvent?.Invoke();
-                NoticeUI.Instance.Notice("보스가 출몰합니다!");
+                UIManager.Instance.NoticeUI.Notice("보스가 출몰합니다!");
                 warningSound.Play();
             }
             else
-                NoticeUI.Instance.Notice("적이 출몰합니다!");
+                UIManager.Instance.NoticeUI.Notice("적이 출몰합니다!");
 
             OnStartTurnEvent?.Invoke();
         }
