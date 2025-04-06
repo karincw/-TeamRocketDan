@@ -7336,7 +7336,7 @@ MonoBehaviour:
   - {fileID: 990845615}
   - {fileID: 479080224}
   _soundObject: {fileID: 298934764}
-  _sceneName: MapScene
+  _sceneName: StoryScene
   _index: 0
 --- !u!1 &1195037081
 GameObject:
