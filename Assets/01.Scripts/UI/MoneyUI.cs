@@ -17,18 +17,20 @@ namespace JSY
         private int money = 0;
         private int cost = 40;
 
+        [SerializeField] private bool _debugMode = false;
+
         private void Awake()
         {
             buyButton = bottomUITrm.Find("BuyBtn").GetComponent<Button>();
             buyButton.onClick.AddListener(HandleBuyButton);
             ModifyMoney(162);
         }
-        
+
         private void Update()
         {
             if (SceneManager.GetActiveScene().name == "JSY") return;
 
-            if(Keyboard.current.spaceKey.wasPressedThisFrame)
+            if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
                 HandleBuyButton();
             }
@@ -49,6 +51,13 @@ namespace JSY
 
         private void HandleBuyButton()
         {
+            if (_debugMode)
+            {
+                HandleChangeTurnEvent();
+                Mochi mochis = MochiManager.Instance.InstantiateMochi(data);
+                ModifyMoney(-cost);
+                return;
+            }
             if (money < cost) return;
             ModifyMoney(-cost);
             HandleChangeTurnEvent();

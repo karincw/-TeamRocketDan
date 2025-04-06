@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 
 namespace Leo.Animation
@@ -21,7 +21,7 @@ namespace Leo.Animation
             _angle += speed * Time.deltaTime;
             var x = _center.x + Mathf.Cos(_angle) * widthRadius;
             var y = _center.y + Mathf.Sin(_angle) * heightRadius;
-            transform.position = _center + new Vector3(x, y, 0);
+            transform.localPosition = _center + new Vector3(x, y, 0);
         }
     }
 }

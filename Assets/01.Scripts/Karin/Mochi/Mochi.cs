@@ -12,7 +12,7 @@ namespace Karin
     {
         [SerializeField] private MochiDataSO _mochiData;
         public MochiDataSO MochiData { get => _mochiData; set => _mochiData = value; }
-        [field:SerializeField] public PoolingType type { get; set; }
+        [field: SerializeField] public PoolingType type { get; set; }
 
         private List<MochiCompo> _mochiCompos;
         public bool CanAttack => !isStun && !moving;
@@ -44,6 +44,13 @@ namespace Karin
                     loader.SetAttackDistance(state);
                 }
             });
+
+        }
+
+        [ContextMenu("stunTest")]
+        private void TestStun()
+        {
+            Stun(3f);
         }
 
         public void Stun(float duration)
@@ -53,15 +60,15 @@ namespace Karin
 
         private IEnumerator StunCoroutine(float time)
         {
-            //stunEffect.SetCenter(transform.position + _interpolatePosition);
-            //stunEffect.gameObject.SetActive(true);
+            stunEffect.SetCenter(_interpolatePosition);
+            stunEffect.gameObject.SetActive(true);
             isStun = true;
             yield return new WaitForSeconds(time);
             isStun = false;
-            //stunEffect.gameObject.SetActive(false);
+            stunEffect.gameObject.SetActive(false);
         }
 
-        
+
         public GameObject GetGameObject()
         {
             return gameObject;
