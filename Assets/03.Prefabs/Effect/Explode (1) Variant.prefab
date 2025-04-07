@@ -29,6 +29,10 @@ PrefabInstance:
       value: Explode (1) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5512835382050742961, guid: 1c55d4b1054e98a4ba3101b3058b72e1, type: 3}
+      propertyPath: stopAction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512835382050742961, guid: 1c55d4b1054e98a4ba3101b3058b72e1, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 1
       objectReference: {fileID: 0}

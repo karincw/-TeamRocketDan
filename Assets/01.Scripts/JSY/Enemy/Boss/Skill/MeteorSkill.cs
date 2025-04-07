@@ -12,6 +12,7 @@ namespace JSY.Boss
         public override void UseSkill(Transform target)
         {
             var meteor = Instantiate(Meteor, GetRandomPosition(), Quaternion.identity);
+            meteor.SetTarget(target.position);
             meteor.SetFallDir(target.position - meteor.transform.position);
         }
         
