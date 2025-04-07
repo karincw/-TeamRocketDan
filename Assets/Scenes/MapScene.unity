@@ -1621,7 +1621,19 @@ MonoBehaviour:
   m_Value: 0.0001
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 393607230}
+        m_TargetAssemblyTypeName: SoundUI, Assembly-CSharp
+        m_MethodName: SetSFXLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &122447176
 GameObject:
   m_ObjectHideFlags: 0
@@ -2333,6 +2345,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f45b4582b5cdcc74583ec905cc5065bc, type: 2}
   - {fileID: 11400000, guid: 51f1a9656f3196c4899c08185e5759a7, type: 2}
   isRepeatMode: 1
+  waveRepeatCount: 0
+  waveCount: 0
+  repeatCount: 0
 --- !u!1 &218935890
 GameObject:
   m_ObjectHideFlags: 0
@@ -44232,6 +44247,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 3a635fdd7ec78ad46a5b6391ed8ec1d2, type: 2}
   moneyText: {fileID: 1407810152}
   costText: {fileID: 1216665066}
+  _debugMode: 0
 --- !u!114 &815295975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51751,7 +51767,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -52632,7 +52648,19 @@ MonoBehaviour:
   m_Value: 0.0001
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 393607230}
+        m_TargetAssemblyTypeName: SoundUI, Assembly-CSharp
+        m_MethodName: SetBGMLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1579032903
 GameObject:
   m_ObjectHideFlags: 0
@@ -54004,7 +54032,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.307693
+  orthographic size: 11.815385
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
