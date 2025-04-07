@@ -23,6 +23,7 @@ namespace JSY
         {
             buyButton = bottomUITrm.Find("BuyBtn").GetComponent<Button>();
             buyButton.onClick.AddListener(HandleBuyButton);
+            ModifyMoney(0);
         }
 
         private void Update()
