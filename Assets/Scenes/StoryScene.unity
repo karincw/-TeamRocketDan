@@ -28528,7 +28528,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 600b0ea288c804f4d9539d5fa7a208cf, type: 2}
   - {fileID: 11400000, guid: f45b4582b5cdcc74583ec905cc5065bc, type: 2}
   - {fileID: 11400000, guid: 51f1a9656f3196c4899c08185e5759a7, type: 2}
-  isRepeatMode: 1
+  isRepeatMode: 0
   waveRepeatCount: 0
   waveCount: 0
   repeatCount: 0
@@ -30304,19 +30304,7 @@ MonoBehaviour:
   m_Value: 0.0001
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 916797975}
-        m_TargetAssemblyTypeName: SoundUI, Assembly-CSharp
-        m_MethodName: SetSFXLevel
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &447189614
 GameObject:
   m_ObjectHideFlags: 0
@@ -62911,7 +62899,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.815385
+  orthographic size: 8.307693
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -76104,19 +76092,7 @@ MonoBehaviour:
   m_Value: 0.0001
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 916797975}
-        m_TargetAssemblyTypeName: SoundUI, Assembly-CSharp
-        m_MethodName: SetBGMLevel
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1955830544
 GameObject:
   m_ObjectHideFlags: 0

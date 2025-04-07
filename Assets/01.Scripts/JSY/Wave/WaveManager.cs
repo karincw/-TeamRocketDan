@@ -3,6 +3,7 @@ using Leo.Sound;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace JSY
 {
@@ -43,7 +44,7 @@ namespace JSY
             {
                 if(!isRepeatMode)
                 {
-                    OnStoryEndEvent?.Invoke();
+                    SceneManager.LoadScene("ClearCutScene");
                     return;
                 }
                 repeatCount++;
