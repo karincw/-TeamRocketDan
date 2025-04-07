@@ -47,10 +47,7 @@ namespace JSY
                 }
                 if (obj is Boss.Boss)
                 {
-                    for (int i = 0; i < 3; i++)
-                    {
-                        VolumeManager.Instance.GetComponent<Vignette>().color.DOColor(Color.red, 0.1f, () => VolumeManager.Instance.GetComponent<Vignette>().color.DOColor(Color.black, 0.1f));
-                    }
+                    StartCoroutine(BossWarning());
                 }
                 obj.transform.position = startTrm.position;
                 obj.transform.parent = enemyParent;
@@ -59,6 +56,16 @@ namespace JSY
             }
             if (!wave.isBoss)
                 WaveManager.Instance.TurnEnd();
+        }
+
+        private IEnumerator BossWarning()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                VolumeManager.Instance.GetComponent<Vignette>().color.DOColor(Color.red, 0.5f,
+                    () => VolumeManager.Instance.GetComponent<Vignette>().color.DOColor(Color.black, 0.5f));
+                yield return new WaitForSeconds(0.5f);
+            }
         }
 
         public void UpdatePoints(Transform startTrm, List<MovePoint> movePoints)

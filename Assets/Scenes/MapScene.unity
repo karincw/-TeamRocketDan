@@ -2333,6 +2333,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f45b4582b5cdcc74583ec905cc5065bc, type: 2}
   - {fileID: 11400000, guid: 51f1a9656f3196c4899c08185e5759a7, type: 2}
   isRepeatMode: 1
+  waveRepeatCount: 0
+  waveCount: 0
+  repeatCount: 0
 --- !u!1 &218935890
 GameObject:
   m_ObjectHideFlags: 0
@@ -44232,6 +44235,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 3a635fdd7ec78ad46a5b6391ed8ec1d2, type: 2}
   moneyText: {fileID: 1407810152}
   costText: {fileID: 1216665066}
+  _debugMode: 0
 --- !u!114 &815295975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57035,6 +57039,7 @@ Transform:
   - {fileID: 436695268}
   - {fileID: 1574187745}
   - {fileID: 1141927608}
+  - {fileID: 1962259338}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1881405680
@@ -68046,6 +68051,51 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3107022869005696627, guid: 47e0e742a6880f74bac219d4a97c87a0, type: 3}
   m_PrefabInstance: {fileID: 1960265159}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1962259336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1962259338}
+  - component: {fileID: 1962259337}
+  m_Layer: 0
+  m_Name: VolumeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1962259337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962259336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88fe66a41ae46799bf93f5301a77dd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _volume: {fileID: 1846551481}
+--- !u!4 &1962259338
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962259336}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1870644435}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1973210925
 PrefabInstance:
   m_ObjectHideFlags: 0
