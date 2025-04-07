@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class PopupUI : PanelUI
 {
     [SerializeField] private Button exitButton;
+    [SerializeField] private bool isStop = true;
     private float fadeDuration = 0.3f;
     private bool isPanel = false;
 
@@ -17,7 +18,7 @@ public class PopupUI : PanelUI
 
     private void SetPanel(bool isActive)
     {
-        Time.timeScale = isActive ? 0 : (int)GameUISystem.GameSpeed;
+        if(isStop) Time.timeScale = isActive ? 0 : (int)GameUISystem.GameSpeed;
         PanelGroup.DOFade(isActive ? 1f : 0f, fadeDuration).SetUpdate(true);
         PanelGroup.blocksRaycasts = isActive;
         PanelGroup.interactable = isActive;

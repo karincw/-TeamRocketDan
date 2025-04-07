@@ -33,7 +33,7 @@ public class StartUI : MonoBehaviour
 
     private void HandleTutoButton()
     {
-        SceneManager.LoadScene("JSY");
+        SceneManager.LoadScene("Tutorial");
     }
 
     private void HandleStartButton()
