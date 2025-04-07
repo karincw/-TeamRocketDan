@@ -1,10 +1,13 @@
 using Karin.PoolingSystem;
+using Leo.Core;
 using Leo.Entity.SO;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using DG.Tweening;
 
 namespace JSY
 {
@@ -40,6 +43,13 @@ namespace JSY
                 if (obj is not MiniBoss)
                 {
                     EnemyCountUI.Instance.UpdateCount(1);
+                }
+                if (obj is Boss.Boss)
+                {
+                    for (int i = 0; i < 3; i++)
+                    {
+                        VolumeManager.Instance.GetComponent<Vignette>().color.DOColor(Color.red, 0.1f, () => VolumeManager.Instance.GetComponent<Vignette>().color.DOColor(Color.black, 0.1f));
+                    }
                 }
                 obj.transform.position = startTrm.position;
                 obj.transform.parent = enemyParent;
