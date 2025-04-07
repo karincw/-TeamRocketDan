@@ -12,10 +12,17 @@ namespace JSY
         public event Action OnChangeTurnEvent;
         public event Action OnStartTurnEvent;
         public event Action OnStartBossTurnEvent;
+        public event Action OnStoryEndEvent;
 
         [SerializeField] private List<WaveSO> waves = new List<WaveSO>();
-        private int waveRepeatCount = 0;
-        private int waveCount = 0;
+        [SerializeField] private bool isRepeatMode = true;
+        [SerializeField] private int waveRepeatCount = 0;
+        [SerializeField] private int waveCount = 0;
+        [SerializeField] private int repeatCount = 0;
+        private int add = 40;
+
+        public int PoweredHp(int hp) => repeatCount != 0 ? hp * (waveCount - 38) + 40 * repeatCount : hp;
+        public int PoweredReward(int r) => repeatCount != 0 ? r + 8 * repeatCount : r;
         protected override void Awake()
         {
         }
@@ -27,12 +34,21 @@ namespace JSY
 
         public WaveSO GetWave() => waves[waveRepeatCount];
         public int GetWaveCount() => waveCount;
+        public int GetRepeatCount() => repeatCount;
 
         public void TurnEnd()
         {
             waveRepeatCount++;
             if (waveRepeatCount > waves.Count - 1)
+            {
+                if(!isRepeatMode)
+                {
+                    OnStoryEndEvent?.Invoke();
+                    return;
+                }
+                repeatCount++;
                 waveRepeatCount = 0;
+            }
 
             OnChangeTurnEvent?.Invoke();
         }
@@ -43,11 +59,11 @@ namespace JSY
             if (waves[waveRepeatCount].isBoss)
             {
                 OnStartBossTurnEvent?.Invoke();
-                NoticeUI.Instance.Notice("보스가 출몰합니다!");
+                UIManager.Instance.NoticeUI.Notice("보스가 출몰합니다!");
                 warningSound.Play();
             }
             else
-                NoticeUI.Instance.Notice("적이 출몰합니다!");
+                UIManager.Instance.NoticeUI.Notice("적이 출몰합니다!");
 
             OnStartTurnEvent?.Invoke();
         }

@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: ad6c26eeb23571448af44806c3c74593, type: 3}
-  _isBgm: 0
+  _isPlayOnAwake: 0
 --- !u!82 &298934765
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7336,6 +7336,7 @@ MonoBehaviour:
   - {fileID: 990845615}
   - {fileID: 479080224}
   _soundObject: {fileID: 298934764}
+  _sceneName: MapScene
   _index: 0
 --- !u!1 &1195037081
 GameObject:

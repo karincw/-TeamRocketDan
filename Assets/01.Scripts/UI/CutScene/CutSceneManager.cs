@@ -10,6 +10,7 @@ namespace Leo.UI
     {
         [SerializeField] private List<CutSceneCell> _cutSceneCells = new();
         [SerializeField] private SoundObject _soundObject;
+        [SerializeField] private string _sceneName;
          public int _index = 0;
 
          private void Start()
@@ -37,7 +38,7 @@ namespace Leo.UI
 
         private void LoadMapScene()
         {
-            SceneManager.LoadScene("MapScene");
+            SceneManager.LoadScene(_sceneName);
         }
     }
 }

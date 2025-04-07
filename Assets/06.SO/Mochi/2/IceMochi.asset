@@ -17,7 +17,7 @@ MonoBehaviour:
   attackData:
     damage: 2
     attackRange: 3
-    attackCooldown: 0.5
+    attackCooldown: 0.75
     attackEffect: 21
     attackColor: {r: 0.17295581, g: 0.6614375, b: 1, a: 1}
     isStarlite: 0

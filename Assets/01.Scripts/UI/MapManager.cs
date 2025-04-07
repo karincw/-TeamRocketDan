@@ -42,7 +42,7 @@ namespace JSY
         private void HandleChangeTurnEvent()
         {
             if (!isChange) return;
-            if (EnemyCountUI.Instance.isEnd) return;
+            if (UIManager.Instance.EnemyCountUI.isEnd) return;
             isChange = false;
             mapPrefabs[mapIndex].levelObj.gameObject.SetActive(false);
             mapIndex = nextMapIndex;

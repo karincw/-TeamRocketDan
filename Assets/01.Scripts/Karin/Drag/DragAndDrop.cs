@@ -41,15 +41,14 @@ namespace Karin
             if (_dragObject == null) return;
 
             Camera cam = Camera.main;
-            Vector3 mousePos = cam.ScreenToWorldPoint(Mouse.current.position.value);
 
-            _dragObject.gameObject.transform.position = mousePos + _interpolationVector;
+            _dragObject.gameObject.transform.position = GetInputPosition() + _interpolationVector;
         }
 
         private void HandleLeftClick()
         {
             Camera cam = Camera.main;
-            Vector3 mousePos = cam.ScreenToWorldPoint(Mouse.current.position.value);
+            Vector3 mousePos = GetInputPosition();
             Collider2D col = Physics2D.OverlapCircle(mousePos, _pointRadius, _dragLayer);
 
             if (col == null) return;
@@ -59,8 +58,18 @@ namespace Karin
             _dragObject.ColliderTrigger(true);
             _dragObject.ShowRadius(true);
             _dragObject.isDrag = true;
+        }
 
+        private Vector3 GetInputPosition()
+        {
+            Vector3 inputPos;
 
+            if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
+                inputPos = Touchscreen.current.primaryTouch.position.value;
+            else
+                inputPos = Mouse.current.position.value;
+
+            return Camera.main.ScreenToWorldPoint(new Vector3(inputPos.x, inputPos.y, 10));
         }
 
         private void HandleLeftClickRelease()
@@ -79,10 +88,9 @@ namespace Karin
             if ((_dragObject as Mochi).MochiData.ranking == TowerRanking.five)
                 return;
             Camera cam = Camera.main;
-            Vector3 mousePos = cam.ScreenToWorldPoint(Mouse.current.position.value);
-            mousePos.z = 0;
+            Vector3 mousePos = GetInputPosition();
 
-            Collider2D[] cols = Physics2D.OverlapCircleAll(mousePos, _mergeRadius, _dragLayer);
+            Collider2D[] cols = Physics2D.OverlapCircleAll(_dragObject.transform.position, _mergeRadius, _dragLayer);
             Mochi mochi = null;
             foreach (var col in cols)
             {
@@ -105,12 +113,11 @@ namespace Karin
                 {
                     PoolManager.Instance.Push(mochi);
                     PoolManager.Instance.Push(_dragObject as Mochi);
-                    _mergeEffect.gameObject.transform.position = mousePos;
                     _mergeEffect.Play();
                     _soundObject?.Play();
                 }
 
-                newMochi.transform.position = mousePos;
+                newMochi.transform.position = _dragObject.transform.position;
             }
 
         }

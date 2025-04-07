@@ -22,6 +22,7 @@ namespace JSY
             WaveManager.Instance.OnStartTurnEvent += HandleStartTurnEvent;
         }
 
+
         private void OnDestroy()
         {
             WaveManager.Instance.OnStartTurnEvent -= HandleStartTurnEvent;
@@ -42,7 +43,7 @@ namespace JSY
                 Enemy obj = PoolManager.Instance.Pop(enemy) as Enemy;
                 if (obj is not MiniBoss)
                 {
-                    EnemyCountUI.Instance.UpdateCount(1);
+                    UIManager.Instance.EnemyCountUI.UpdateCount(1);
                 }
                 if (obj is Boss.Boss)
                 {

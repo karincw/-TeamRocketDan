@@ -25,14 +25,15 @@ namespace JSY
         
         public void SetData(EnemySO enemySO)
         {
-            HP = enemySO.maxHealth;
+            var hp = WaveManager.Instance.PoweredHp(enemySO.maxHealth);
+            HP = hp;
             defense = enemySO.defense;
-            maxHP = enemySO.maxHealth;
-            HP = Mathf.Clamp(HP, 0, enemySO.maxHealth);
-            reward = enemySO.reward;
+            maxHP = hp;
+            HP = Mathf.Clamp(HP, 0, hp);
+            reward = WaveManager.Instance.PoweredReward(enemySO.reward);
             healthBar.SetHealthBar((float)HP / maxHP);
         }
-        
+
         public void TakeDamage(int damage)
         {
             int hitAmount = damage - Mathf.CeilToInt(defense * 0.5f);
@@ -52,11 +53,11 @@ namespace JSY
             Debug.Log("Die");
             if (_owner is not MiniBoss)
             {
-                EnemyCountUI.Instance.UpdateCount(-1);
+                UIManager.Instance.EnemyCountUI.UpdateCount(-1);
             }
 
-            ResultUI.Instance.AddDeadEnemy();
-            MoneyUI.Instance.ModifyMoney(reward);
+            UIManager.Instance.ResultUI.AddDeadEnemy();
+            UIManager.Instance.MoneyUI.ModifyMoney(reward);
             _deadSound.Play();
             PoolManager.Instance.Push(_owner);
         }

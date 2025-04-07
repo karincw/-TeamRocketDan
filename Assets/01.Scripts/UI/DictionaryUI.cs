@@ -13,7 +13,7 @@ public struct dicPanel
 
 namespace JSY
 {
-    public class DictionaryUI : MonoBehaviour
+    public class DictionaryUI : PopupUI
     {
         [SerializeField] private List<dicPanel> dicPanels = new List<dicPanel>();
 
@@ -21,12 +21,11 @@ namespace JSY
 
         private void Awake()
         {
-            Transform buttonGroup = transform.GetChild(0).GetChild(0).Find("ButtonGroup");
-
             foreach(var panel in dicPanels)
             {
                 panel.button.onClick.AddListener(() => HandleDicButton(panel.index));
             }
+            ExitButton.onClick.AddListener(ClosePanel);
         }
 
         private void HandleDicButton(int value)

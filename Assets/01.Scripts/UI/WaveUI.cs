@@ -5,12 +5,13 @@ namespace JSY
 {
     public class WaveUI : MonoBehaviour
     {
+        [SerializeField] private Transform waveUITrm;
         private TextMeshProUGUI waveText;
         private int waveCount = -1;
 
         private void Awake()
         {
-            waveText = GetComponentInChildren<TextMeshProUGUI>();
+            waveText = waveUITrm.GetComponentInChildren<TextMeshProUGUI>();
             HandleStartTurnEvent();
             WaveManager.Instance.OnStartTurnEvent += HandleStartTurnEvent;
         }
@@ -18,7 +19,7 @@ namespace JSY
         private void HandleStartTurnEvent()
         {
             waveCount++;
-            waveText.text = "ø˛¿Ã∫Í " + waveCount;
+            waveText.text = "Ïõ®Ïù¥Î∏å " + waveCount;
         }
     }
 }

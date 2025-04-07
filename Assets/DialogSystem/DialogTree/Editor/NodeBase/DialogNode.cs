@@ -1,4 +1,3 @@
-#if UNITY_EDITOR || PLATFORM_STANDALONE_WIN
 using UnityEngine.UIElements;
 namespace Karin.DialogSystem.Tree
 {
@@ -26,4 +25,3 @@ namespace Karin.DialogSystem.Tree
     }
         
 }
-#endif

@@ -15,9 +15,9 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: dcce092505a4c0044878c177356c28eb, type: 3}
   ranking: 4
   attackData:
-    damage: 20
+    damage: 15
     attackRange: 3
-    attackCooldown: 2
+    attackCooldown: 1
     attackEffect: 21
     attackColor: {r: 0.7686275, g: 0.74509805, b: 0.70980394, a: 1}
     isStarlite: 0

@@ -1,34 +1,35 @@
 using System;
 using TMPro;
+using UnityEngine;
 
 namespace JSY
 {
-    public class EnemyCountUI : MonoSingleton<EnemyCountUI>
+    public class EnemyCountUI : MonoBehaviour
     {
+        [SerializeField] private Transform enemyUITrm;
         private TextMeshProUGUI countText;
         private int enemyCount = 0;
-        private int maxCount = 35;
+        [SerializeField]private int maxCount = 30;
 
         public bool isEnd { get; private set; }
 
-        protected override void Awake()
+        protected void Awake()
         {
-            base.Awake();
-            countText = GetComponentInChildren<TextMeshProUGUI>();
+            countText = enemyUITrm.GetComponentInChildren<TextMeshProUGUI>();
             UpdateCount(0);
         }
 
-        public bool IsAllDead() => enemyCount <= 0 ? true : false;
+        public bool IsAllDead() => enemyCount == 0 ? true : false;
 
         public void GameOver()
         {
             isEnd = true;
-            ResultUI.Instance.GameOver();
+            UIManager.Instance.ResultUI.GameOver();
         }
 
         private void Update()
         {
-            UpdateCount(0);
+            UpdateCount(0); 
         }
 
         public void UpdateCount(int value)
@@ -41,9 +42,12 @@ namespace JSY
                 }
                 return;
             }
-
             enemyCount = EnemyCreateManager.Instance.enemyParent.childCount;
-            countText.text = enemyCount + "/" + maxCount + "마리";
+
+            if (enemyCount >= 20)
+                countText.text = "<color=red>" + enemyCount + "/" + maxCount + "마리";
+            else
+                countText.text = enemyCount + "/" + maxCount + "마리";
         }
 
         

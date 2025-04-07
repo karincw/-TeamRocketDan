@@ -89,7 +89,7 @@ public class InputReaderSO : ScriptableObject, IPlayerActions, IUIActions
 
     public void OnLeftClick(InputAction.CallbackContext context)
     {
-        if(context.performed)
+        if (context.performed)
         {
             LeftClickEvent?.Invoke();
         }
